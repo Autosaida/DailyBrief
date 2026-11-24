@@ -1,100 +1,89 @@
 # AGENTS.md
 
-Operational knowledge for any AI coding agent working on this repo (Claude Code, Codex, Cursor, Continue.dev, Aider, etc.). Claude Code users get a richer SKILL.md auto-loaded; this file is the universal subset everyone reads.
+Operational knowledge for any AI coding agent working on this repo.
 
 ## What this project is
 
-`daily-brief` is a local-first pipeline that fetches 23 RSS / API news sources daily (22 in en mode after locale filtering), runs LLM enrichment, and renders a single self-contained HTML report. It runs on the user's machine via the OS scheduler, OR in GitHub Actions publishing to GitHub Pages. No web framework, no DB, no servers.
+A customized, static, local-first & GitHub-Actions-first **daily blockchain / smart-contract / security research tracker** (forked from `leiting-eric/DailyBrief` for its multi-backend LLM layer, timezone-gated Actions workflow, and static archive publishing; all content, fetchers, prompts, and rendering are custom-built).
 
-The repo's `CLAUDE.md` includes this file via `@AGENTS.md`. Don't add stack-specific lore (Next.js, etc.) — there's none in this codebase.
+It produces a self-contained single-file HTML report with **3 parallel primary tabs**, publishes to GitHub Pages (`gh-pages`), and optionally emails a daily summary via Resend:
 
-## Project layout (essentials)
+1. **arXiv 今日论文（区块链）** — arXiv OAI-PMH `arXivRaw` incremental full-fetch (`set=cs`) for the previous day, distinguishing `v1 新投稿` vs `v2+ 更新`, with AI noise filtering, implicit priority sorting (application / security / SE / measurement first; infra / consensus / cryptography later), free-form topics, full author list, and Chinese academic summaries.
+2. **会议 / 期刊正式发表论文** — OpenAlex API daily tracker across **68 venues** in `venues.config.json` (all 58 CCF 7th-ed. A-tier conferences + 7 CCF-A security/SE journals + FC / SIGMETRICS / IMC), matched by previous-day `created_date`, with full authors + institutions and per-venue secondary tabs.
+3. **安全与行业快讯** — 21 security/intel/research/news sources in `news-sources.config.json` (DeFiLlama Hacks, Rekt News, Chainalysis, TRM Labs, SlowMist, BlockSec, PeckShield, Trail of Bits, Immunefi, Zellic, Sigma Prime, ethresear.ch, Ethereum Magicians, Flashbots, Vitalik, a16z Crypto, DL News, The Block, Blockworks, CoinDesk, The Defiant), filtered and grouped into 3 sections.
+
+No web framework, no DB, no servers.
+
+## Project layout
 
 ```
+sources.config.json          # Top-level source registry (3 sources + keywords)
+venues.config.json           # 68 tracked conferences & journals (OpenAlex IDs / LNCS patterns)
+news-sources.config.json     # 21 security & industry news RSS/API sources
 lib/
-  ai/           # LLM dispatcher + 5 backend implementations + prompts
-  sources/      # fetcher dispatch + per-source TS modules
-  trading/      # Yahoo finance + technical indicators + watchlist
-  output/       # render.ts (HTML+MD generation), all CSS inlined
-  utils.ts      # tiny shared helpers (todayKey, getReportTz)
+  retry.ts                   # Shared HTTP 429/5xx/network backoff + transient LLM error helper
+  utils.ts                   # todayKey / yesterdayKey / getReportTz (honors REPORT_TZ)
+  ai/
+    llm.ts                   # Pluggable LLM dispatcher (runLlm / getModelTag / validateBackendCredentials)
+    backends/                # openai-compat / anthropic-compat / claude-cli
+    arxiv-blockchain.ts      # arXiv CS paper filtering, sorting & Chinese analysis (batch size 8)
+    venue-papers.ts          # OpenAlex venue paper filtering, sorting & Chinese analysis (batch size 8)
+    security-news.ts         # Security & industry news filtering, grouping & summary (batch size 6)
+  sources/
+    dispatch.ts              # Routes source.id -> custom fetcher or generic rss.ts
+    arxiv-blockchain.ts      # arXiv OAI-PMH arXivRaw full-fetch + word-boundary keyword match
+    openalex-venues.ts       # OpenAlex batched cursor fetcher + client-side created_date match
+    security-news.ts         # DeFiLlama Hacks API + concurrent RSS fetcher with price-noise pre-filter
+    registry.ts / types.ts   # JSON loader & shared RawArticle types
+  output/
+    render.ts                # 3-tab single-file HTML + Markdown renderer (all CSS/JS inlined)
 scripts/
-  _env.ts             # dotenv preload — imported FIRST by every entry script
-  daily.ts            # main pipeline (5-8 min, ~6 LLM calls)
-  dry-run.ts          # fetch-only validation (~30s, no LLM)
-  render.ts           # re-render HTML/MD from cached sidecar (~1s)
-  regen-trading.ts    # rerun just the trading commentary
-  regen-enrich.ts     # top up missing summaries for a subgroup
-  build-site.mjs      # generate index.html + archive.html for static hosting
-  deploy.mjs          # scp HTML to a remote nginx host (opt-in)
-  sources.ts          # `npm run sources` — list/validate sources.config.json
-  install.mjs         # cross-platform OS scheduler registration
-  run-daily.mjs       # scheduler wrapper (daily + log + deploy + open)
-  open-report.mjs     # cross-platform "open latest report" helper
-  uninstall.mjs       # tear down scheduler + ~/.claude/ links
-  quota-report.ts     # LLM call usage summary
-sources.config.json   # SINGLE SOURCE OF TRUTH for the source registry
+  _env.ts                    # dotenv preload — imported FIRST by every entry script
+  daily.ts                   # Main pipeline (fetch 3 sources -> AI analyze -> write JSON/HTML)
+  dry-run.ts                 # Fetch-only validation (no LLM)
+  render.ts                  # Re-render HTML/MD from cached daily_reports/<date>/<date>.json (<1s)
+  build-site.mjs             # Generate index.html + archive.html (with per-day model badge) + .nojekyll
+  send-email.ts              # Resend REST API daily email sender (skips cleanly if unset)
+  sources.ts                 # `npm run sources` / `npm run sources:check`
+  quota-report.ts            # LLM call usage summary from logs/llm-calls.jsonl
 ```
 
 ## Core invariants
 
-1. **`sources.config.json` is the only place sources live.** `lib/sources/registry.ts` is just a JSON loader + locale filter. Never hardcode a source list in TS.
+1. **Configuration files are the single source of truth.**
+   - `sources.config.json` — top-level sources & keywords
+   - `venues.config.json` — tracked conferences/journals & OpenAlex IDs
+   - `news-sources.config.json` — tracked security/research/industry feeds
+   Never hardcode source/venue lists in TS.
 
-2. **LLM calls go through `lib/ai/llm.ts` `runLlm()`.** Five backends behind `LLM_BACKEND` env var: `claude-cli` (default), `anthropic`, `openai`, `deepseek`, `minimax`. Never import a specific backend directly — that defeats the switch.
+2. **All LLM calls go through `lib/ai/llm.ts` `runLlm()`.** Never import a specific backend directly.
 
-3. **Date keying uses `lib/utils.ts` `todayKey()`.** Honors `REPORT_TZ` env var; defaults to system local TZ. Don't hardcode `Asia/Shanghai` or `UTC` anywhere.
+3. **All external HTTP fetches use `lib/retry.ts` `fetchWithRetry()`** (bounded exponential backoff on 429/5xx/network errors; honors `Retry-After`). Multi-batch LLM calls keep a 4s cooldown between batches and backoff on transient errors.
 
-4. **Localization via `REPORT_LOCALE` (`zh` | `en`).** All UI text in render.ts goes through `STR.<key>`; LLM prompts have ZH/EN pairs picked at module-init. When adding strings, add both.
+4. **Date keying uses `lib/utils.ts` `todayKey()` / `yesterdayKey()`.** Always honors `REPORT_TZ`. Never hardcode `Asia/Shanghai` or `UTC`. Target dates strictly query the previous day (no fallback to older days, preventing weekend duplicates); optional debug overrides `ARXIV_TARGET_DATE`, `OPENALEX_TARGET_DATE`, `NEWS_TARGET_DATE` are supported.
 
-5. **Per-source fetch errors are non-fatal.** `scripts/daily.ts` has a try/catch per source. Never `process.exit()` inside a fetcher.
+5. **Per-source fetch errors are non-fatal.** Never `process.exit()` inside a fetcher.
 
-6. **No agent-specific build steps.** No `next build`, no bundling. `tsx` runs TS directly. The HTML is hand-rendered, CSS is inlined string-templated.
+6. **No build/bundle step.** `tsx` runs TypeScript directly; HTML/CSS/JS is hand-rendered in `lib/output/render.ts`.
 
 ## Commands
 
-| Task | Command | Cost |
-|---|---|---|
-| Full pipeline | `npm run daily` | ~5-8 min, ~6 LLM calls |
-| Fetch-only sanity check | `npm run dry-run` | ~30s, no LLM |
-| Re-render from cache | `npm run render [date]` | <1s |
-| Re-run trading section | `npm run regen-trading [date]` | ~2 min, 1 LLM call |
-| Top up missing summaries | `npm run regen-enrich <cat:sub> [date]` | ~30s, 1 LLM call |
-| Static-site generator | `npm run build-site` | <1s |
-| List sources by status | `npm run sources` | instant |
-| Validate sources.config.json | `npm run sources:check` | instant |
-
-`[date]` defaults to today in `REPORT_TZ`. Output is `daily_reports/<date>/<date>.html` + `<date>.json` + `<date>-articles.json` (note the hyphen in the articles cache filename); add `<date>.md` if `OUTPUT_MARKDOWN=true`.
-
-## Adding a source
-
-1. Edit `sources.config.json` — append an entry. Fields: `id` (unique), `name`, `type` (`rss`/`api`/`scrape`), `url`, `category` (`tech`/`finance`/`politics`), optional `subcategory`, `enabled`, `useCurl`, `lang`, `locales`, `notes`.
-2. For non-RSS types: add a fetcher in `lib/sources/<id>.ts` exporting `fetchXxx(sourceId)` returning `RawArticle[]`, then add a branch in `lib/sources/dispatch.ts`.
-3. Run `npm run sources:check` to validate the JSON, then `npm run dry-run` to verify the fetch.
-
-## Adding an LLM backend
-
-1. New file `lib/ai/backends/<name>.ts` exporting a function compatible with the existing backends (see `claude-cli.ts` as the minimum reference).
-2. Add a branch in `lib/ai/llm.ts` `runLlm()`.
-3. Add `<NAME>_API_KEY` + optional `<NAME>_BASE_URL` to `.env.example`.
-
-## Debugging a failed run
-
-1. `logs/daily-<YYYY-MM-DD>.log` — full pipeline output for that day (date in local time, NOT UTC)
-2. `logs/llm-calls.jsonl` — every LLM call with input size, latency, success, error category
-3. `npm run quota-report` — usage summary by backend
-4. If a tab renders wrong but the data is right, `npm run render` (1s) usually fixes display-only bugs without rerunning LLM
+| Task | Command |
+|---|---|
+| Full pipeline | `npm run daily` |
+| Fetch-only sanity check | `npm run dry-run` |
+| Re-render HTML from cache | `npm run render [date]` |
+| Build static site + archive | `npm run build-site` |
+| Send daily email via Resend | `npm run send-email [date]` |
+| List / validate sources | `npm run sources` / `npm run sources:check` |
+| LLM usage summary | `npm run quota-report` |
+| Unit tests | `npm test` |
+| Typecheck | `npx tsc --noEmit` |
 
 ## What NOT to do
 
-- Don't add Playwright / Puppeteer for fetching — the project stays light with curl + JSON APIs
-- Don't import a specific LLM backend module directly; always go through `runLlm`
-- Don't hardcode sources in TS — use `sources.config.json`
-- Don't write into `daily_reports/` directly from agent code; let `scripts/daily.ts` or `render.ts` own that
-- Don't add a web framework (Next.js, Express, etc.) — the project is intentionally static
-- Don't bypass the per-source try/catch — let `daily.ts` aggregate failures
-
-## Where to learn more
-
-- `README.md` — user-facing intro, install, configuration
-- `FORKING.md` — common customizations (LLM provider, sources, layout, styling)
-- `.claude/skills/daily-brief/SKILL.md` — fuller operational reference (Claude Code auto-loads it; other agents can read it directly)
-- `sources.config.json` — see what sources look like in practice
+- Don't add Playwright / Puppeteer or heavy web frameworks (Next.js, Express, etc.)
+- Don't import a specific LLM backend directly; always use `runLlm()`
+- Don't add scores/ratings or preset topic lists to the arXiv / venue paper outputs (topics must be model-generated; priority sorting stays implicit in prompts and is not shown in the UI)
+- Don't truncate author lists in paper cards
+- Don't commit `.env.local` or `daily_reports/`
