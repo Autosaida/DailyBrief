@@ -1,0 +1,755 @@
+{
+  "date": "2026-11-25",
+  "model": "openai-gemini-3.6-flash",
+  "generated_at": "2026-11-24T23:35:08.253Z",
+  "arxiv": {
+    "date": "2026-11-25",
+    "query_date": "2026-11-24",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "total_fetched": 9,
+    "kept_count": 9,
+    "filtered_count": 0,
+    "papers": [
+      {
+        "url": "https://arxiv.org/abs/2610.18230",
+        "arxiv_id": "2610.18230",
+        "pdf_url": "https://arxiv.org/pdf/2610.18230",
+        "title_en": "Holding Agents Accountable with Verifiable Agent Insurance",
+        "title_zh": "可验证智能体保险：基于以太坊 Layer-2 的 AI 智能体合约审计与追责框架",
+        "authors": [
+          "Cheng Hua",
+          "Taro Tsuchiya",
+          "Nicolas Christin",
+          "Giulia Fanti"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.AI"
+        ],
+        "published_at": "2026-11-22T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2026-10-13",
+        "updated_date": "2026-11-22",
+        "comment": "22 pages, 1 figure, 9 tables; v2: measured results on updated harnesses replace the projected coverage, adds a human baseline for the labels, signed checkpoints, and claims funded in filing order",
+        "keep": true,
+        "topic": "AI智能体安全与追责",
+        "summary": "针对 AI 智能体在执行任务时可能发生的破坏性误行为，提出基于区块链的可验证智能体保险（VAI）框架。通过将提供者做出的策略承诺与托管资金嵌入以太坊 Layer-2 智能合约，并在用户检测到违规时触发验证器检查工具执行日志路径。测试表明，该框架在三个主流智能体基准测试中实现了 63.6% 的违规检测率；若智能体显式输出结构化安全记录，检测率可提高至 79.8%。",
+        "highlights": [
+          "首次提出基于 L2 智能合约托管与验证路径的 AI 保险框架",
+          "无须单独改造工具即可实现智能体违规行为的确定性审计与赔付",
+          "显式结构化数据输出可将智能体违规检测成功率提升至 79.8%"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.27987",
+        "arxiv_id": "2611.27987",
+        "pdf_url": "https://arxiv.org/pdf/2611.27987",
+        "title_en": "Empirical Limits of Risk-Averse Reinforcement Learning versus Gas-Aware Routing in Deterministic DeFi Execution",
+        "title_zh": "确定性 DeFi 执行中抗风险强化学习与 Gas 意识路由的实证局限性研究",
+        "authors": [
+          "Sri Sairam Gautam B"
+        ],
+        "categories": [
+          "q-fin.TR",
+          "cs.LG",
+          "math.OC"
+        ],
+        "published_at": "2026-05-18T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-05-18",
+        "updated_date": "2026-05-18",
+        "comment": "6 pages, 6 figures, 4 tables. Code and deterministic test suite available on GitHub",
+        "keep": true,
+        "topic": "DeFi交易执行与MEV优化",
+        "summary": "针对自动做市商（AMM）中恒定乘积滑点与受 Gas 成本调控的 MEV 夹心攻击，评估抗风险强化学习（PPO-CVaR）在 Uniswap V2 实时环境下的订单执行表现。研究发现先前文献因代码路径缺陷导致收益虚高 3 倍；修正漏洞后，最强 PPO 模型收益仅达到贪心 Gas 意识预言机（单区块计算复杂度仅 O(log ε⁻¹)）的 79%（46,542 对比 58,786 USDC），证明无模型 MLP 策略在确定性 DeFi 执行中难以超越低复杂度的贪心启发式算法。",
+        "highlights": [
+          "揭示 DeFi 强化学习交易执行中因代码漏洞导致的收益虚高规范博弈问题",
+          "证实无模型 RL 策略收益仅达低复杂度 Gas 意识预言机的 79%",
+          "为 AMM 环境下的确定性订单路由与 MEV 避险提供实证基准"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.29604",
+        "arxiv_id": "2611.29604",
+        "pdf_url": "https://arxiv.org/pdf/2611.29604",
+        "title_en": "fx(hash): Salvaging The Source Code of 28k Generative Artworks",
+        "title_zh": "拯救 2.8 万个生成艺术源码：生成式 NFT 链下代码脆弱性与归档实证研究",
+        "authors": [
+          "Benoit Baudry",
+          "Valeriia Bezklynska",
+          "Martin Monperrus"
+        ],
+        "categories": [
+          "cs.SE"
+        ],
+        "published_at": "2026-11-22T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-22",
+        "updated_date": "2026-11-22",
+        "keep": true,
+        "topic": "Web3生态与NFT软件工程",
+        "summary": "针对生成式 NFT 平台 fx(hash) 破产倒闭导致链下源码面临永久遗失风险的问题，揭示了区块链上数字所有权不可篡改与链下生成代码高度脆弱之间的矛盾。研究团队成功挽救并归档了由 5,532 名国际艺术家贡献的全部 28,193 个生成式艺术程序至 Software Heritage 永久代码库。论文分析了生成式 NFT 的代码依赖脆弱性，并提出了针对 Web3 文化数字遗产的确定性归档与保存方法。",
+        "highlights": [
+          "实证揭示 NFT 数字所有权链上永存与生成代码链下易失的严重冲突",
+          "成功抢救并永久归档 5,532 位艺术家的 28,193 个生成艺术程序",
+          "提出针对区块链生成式数字文化遗产的代码安全归档标准"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.28447",
+        "arxiv_id": "2611.28447",
+        "pdf_url": "https://arxiv.org/pdf/2611.28447",
+        "title_en": "Reimbursement as a Revenue Instrument in Costly Clock Auctions",
+        "title_zh": "包含交易成本的时钟拍卖中基于报销的卖方收益最大化机制",
+        "authors": [
+          "Miriam Nelson (Independent Researcher)",
+          "Jack Stanick (Boston College)",
+          "Edwin Lock (King's College London)",
+          "Francisco Marmolejo-Coss\\'{\\i}o (Boston College and IOG)"
+        ],
+        "categories": [
+          "cs.GT"
+        ],
+        "published_at": "2026-11-21T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-21",
+        "updated_date": "2026-11-21",
+        "keep": true,
+        "topic": "拍卖机制设计与Gas补偿",
+        "summary": "在基于区块链的递升时钟拍卖中，竞价者每次确认参与均需支付区块链交易手续费（Gas）。针对这一摩擦，研究提出卖方在拍卖前承诺交易成本报销费率的收益优化机制。通过线性规划求解维持竞价策略不变的最优补偿方案，并发现仅报销最后一个计划决策轮次能在特定环境下超越全额报销或不报销策略。实验表明该报销时间选择能有效防止竞价者中途流失，在扣除补偿开支后仍能显著提升卖方的净交易收益。",
+        "highlights": [
+          "首次将区块链交易手续费摩擦引入递升时钟拍卖的博弈论模型",
+          "证明仅报销特定轮次的动态补偿策略优于全额报销或不报销",
+          "给出在区块链智能合约上实现防遗失消息链上拍卖的具体要求"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.30453",
+        "arxiv_id": "2611.30453",
+        "pdf_url": "https://arxiv.org/pdf/2611.30453",
+        "title_en": "PLATRS: A Lattice-Based Linkable Accountable Ring Signature for Permissioned Blockchains",
+        "title_zh": "PLATRS：面向许可链的抗量子格基可追溯可关联环签名方案",
+        "authors": [
+          "Jie Zhang",
+          "Xiaohong Li",
+          "Honglin Mao",
+          "Ruitao Feng",
+          "Lingyun Yuan",
+          "Guangdong Bai"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-11-23T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-23",
+        "updated_date": "2026-11-23",
+        "comment": "19 pages, 2 figures, 7 tables",
+        "keep": true,
+        "topic": "密码学与隐私保护",
+        "summary": "针对联盟链跨域数据共享中匿名性与监管可追溯性的矛盾，提出基于模块格的可关联可追溯环签名方案 PLATRS。该方案允许签名者自主选择环成员，通过每事件标签实现无索引比对；在发生事件重复授权时触发监管开方解密并公布公钥组件。在 Hyperledger Fabric 上测试表明，签名耗时仅 9.886 ms，验证 3.919 ms，在 16 MiB 区块下吞吐量达到 60.5 签名/秒，签名速度较现有方案提升 3188 倍，为联盟链提供了高效率的抗量子安全保障。",
+        "highlights": [
+          "首个兼具抗量子安全、自主选环、事件可关联与单机构追溯的格签名方案",
+          "签名与验证速度比现有方案 FLLL+21 快达 3188 倍",
+          "在 Hyperledger Fabric 系统中实现 60.5 TPS 的实用吞吐性能"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2607.08666",
+        "arxiv_id": "2607.08666",
+        "pdf_url": "https://arxiv.org/pdf/2607.08666",
+        "title_en": "TRM-Raft: A Byzantine-Resistant Raft Consensus via Integrated Trust and Reputation Model",
+        "title_zh": "TRM-Raft：集成信任与声誉模型的抗拜占庭 Raft 共识机制",
+        "authors": [
+          "Jie Zhang",
+          "Xubo Fan",
+          "Xiaohong Li",
+          "Zhiyong Feng"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-07-09T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-07-09",
+        "updated_date": "2026-07-09",
+        "comment": "11 pages, 7 figures, 2 tables",
+        "keep": true,
+        "topic": "共识协议与容错机制",
+        "summary": "针对传统 Raft 共识协议无法抵抗拜占庭攻击（如选票伪造和日志篡改）且传统 BFT 开销过高的问题，提出非侵入式集成链上信任与声誉模型（B-TRM）的 TRM-Raft 协议。该方案通过多维行为量化与自适应惩罚机制区分无意故障与恶意行为，并将声誉值嵌入 Leader 选举与 Schnorr 签名日志复制中。在 Hyperledger Fabric 上评估显示，即使存在 40% 拜占庭节点，恶意 Leader 比例仍保持在 5% 以下，且吞吐量损失低于 10%，延迟增加小于 5%。",
+        "highlights": [
+          "非侵入式将链上信任与声誉模型嵌入 Raft 共识核心",
+          "在 40% 拜占庭节点下将恶意 Leader 比例压制在 5% 以下",
+          "相比原生 Raft 仅有低于 10% 的吞吐量损失与低于 5% 的延迟增加"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2607.21021",
+        "arxiv_id": "2607.21021",
+        "pdf_url": "https://arxiv.org/pdf/2607.21021",
+        "title_en": "Multimmit: Low-Latency and Robust Transaction Ordering",
+        "title_zh": "Multimmit：基于单轮投票的高鲁棒低延迟区块链交易排序协议",
+        "authors": [
+          "Andrew Lewis-Pye",
+          "Patrick O'Grady",
+          "Ben Clabby"
+        ],
+        "categories": [
+          "cs.DC"
+        ],
+        "published_at": "2026-11-23T00:00:00.000Z",
+        "version": "v7",
+        "is_update": true,
+        "created_date": "2026-07-23",
+        "updated_date": "2026-11-23",
+        "keep": true,
+        "topic": "共识协议与交易排序",
+        "summary": "针对状态机复制（SMR）中交易排序延迟过高的问题，提出在 n ≥ 5f+1 网络假设下的交易排序协议 Multimmit。该协议引入扩展投票机制，使 Leader 区块仅需单轮投票即可终结，并将未被 Leader 包含的合规交易区块由下一终结区块自动接纳排序，消除了 Leader 对排序的绝对控制。在跨 13 个区域部署 50 个验证节点的测试中，10 万 TPS 下的中位数排序延迟仅 383 ms，且在 0.1% 丢包率下性能保持稳定。",
+        "highlights": [
+          "消除经典 SMR 的第二轮投票，实现 Leader 区块单轮投票终结",
+          "扩展投票机制防止 Leader 恶意操纵交易排序顺序",
+          "50 个分布式节点下 10 万 TPS 时排序延迟低至 383 ms"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2505.14914",
+        "arxiv_id": "2505.14914",
+        "pdf_url": "https://arxiv.org/pdf/2505.14914",
+        "title_en": "Sei Giga",
+        "title_zh": "Sei Giga：基于多并发生产者与解耦执行的高吞吐 EVM Layer 1 架构",
+        "authors": [
+          "Benjamin Marsh",
+          "Steven Landers",
+          "Jayendra Jog",
+          "Alejandro Ranchal-Pedrosa"
+        ],
+        "categories": [
+          "cs.DC",
+          "cs.CR"
+        ],
+        "published_at": "2026-11-23T00:00:00.000Z",
+        "version": "v4",
+        "is_update": true,
+        "created_date": "2025-05-20",
+        "updated_date": "2026-11-23",
+        "keep": true,
+        "topic": "Layer1基础设施架构",
+        "summary": "介绍 Sei Giga，一种基于多并发生产者并行执行的 EVM Layer 1 区块链架构。系统通过将数据可用性（DA）层与共识层解耦，在 DA 层获得 f+1 票 PoA 确认后即提交 Autobahn 共识机制，并采用异步区块执行与状态共识机制，彻底将合约执行从共识瓶颈中解耦。内部测试网实验结果显示，Sei Giga 实现了超过 5 gigagas/秒的执行吞吐量，并将最终确定性（Finality）延迟降至 250ms 以内。",
+        "highlights": [
+          "架构上解耦 DA 层与共识层，配合异步区块执行突破 SMR 瓶颈",
+          "内部测试网突破 5 gigagas/秒吞吐量",
+          "交易确定性延迟缩短至 250 ms 以内"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2510.20007",
+        "arxiv_id": "2510.20007",
+        "pdf_url": "https://arxiv.org/pdf/2510.20007",
+        "title_en": "zk-Agreements: A Privacy-Preserving Way to Establish Deterministic Trust in Confidential Agreements",
+        "title_zh": "zk-Agreements：隐私保护的高确定性机密协议构建机制",
+        "authors": [
+          "To-Wen Liu",
+          "Matthew Green"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-11-23T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2025-10-22",
+        "updated_date": "2026-11-23",
+        "comment": "The manuscript requires substantial revision in both its presentation and technical content. We believe that the current version does not make a sufficiently significant scientific contribution to warrant its continued availability in its present form",
+        "keep": true,
+        "topic": "可计算法律合约与隐私",
+        "summary": "针对传统自然语言法律文本缺乏计算可验证性，以及区块链智能合约公开敏感条款导致商业隐私泄露的问题，提出 zk-Agreements 协议。该框架结合零知识证明隐藏私密协议条款，利用安全两方计算进行私密合规性评估，并借助智能合约保障链上自动化强制执行。系统有效解决了区块链协议中透明性与保密性的内在矛盾，构建了兼顾隐私保护与计算可强制性的数字合约体系。",
+        "highlights": [
+          "融合 ZKP 与 2PC 实现机密法律文本的私密合规评估",
+          "利用智能合约自动执行，解决链上透明与商业隐私的矛盾"
+        ]
+      }
+    ],
+    "filtered_papers": [],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-24T23:26:52.658Z"
+  },
+  "venues": {
+    "date": "2026-11-25",
+    "query_date": "2026-11-24",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "venue_count": 68,
+    "total_fetched": 3,
+    "kept_count": 2,
+    "filtered_count": 1,
+    "papers": [
+      {
+        "url": "https://doi.org/10.1109/tdsc.2026.3756528",
+        "doi": "https://doi.org/10.1109/tdsc.2026.3756528",
+        "title_en": "Multi-Modal and Multi-Scale Vulnerability Detection for Deployed Smart Contract Bytecode",
+        "authors": [
+          "Chi Jiang (University of Electronic Science and Technology of China)",
+          "Hongbo Yin (University of Electronic Science and Technology of China)",
+          "Shuai Wang (University of Electronic Science and Technology of China)",
+          "Tianqing Zhu (City University of Macau)",
+          "Ming Tao (Dongguan University of Technology)",
+          "Yin Zhang⋆ (University of Electronic Science and Technology of China)",
+          "Yan Zhang (University of Electronic Science and Technology of China)"
+        ],
+        "venue_abbr": "TDSC",
+        "venue_name": "IEEE Transactions on Dependable and Secure Computing",
+        "venue_tier": "CCF-A",
+        "pub_date": "2026-01-01",
+        "created_date": "2026-11-24",
+        "title_zh": "已部署智能合约字节码的多模态与多尺度漏洞检测",
+        "keep": true,
+        "topic": "智能合约字节码漏洞检测",
+        "summary": "针对已部署智能合约字节码缺乏高层语义、传统分析工具难以准确捕获多粒度特征的问题，提出结合多模态与多尺度分析的字节码漏洞检测框架。通过融合字节码控制流、数据流以及不同尺度特征表示，有效提升对复杂逻辑缺陷与隐匿漏洞的识别能力，为链上合约安全审计提供高精准度检测支持。",
+        "highlights": [
+          "融合多模态与多尺度特征分析已部署字节码",
+          "解决底层字节码语义缺失引发的检测难题",
+          "提升链上已部署智能合约漏洞识别精准度"
+        ]
+      },
+      {
+        "url": "https://doi.org/10.1109/tdsc.2026.3756849",
+        "doi": "https://doi.org/10.1109/tdsc.2026.3756849",
+        "title_en": "A Multidimensional Interference Sample Generation Framework for Robustness Evaluation of Reentrancy Vulnerability Detection in Smart Contracts",
+        "authors": [
+          "Fei Tong (Southeast University)",
+          "Yifan Qi (Southeast University)",
+          "Yujian Zhang (Southeast University)",
+          "Guang Cheng (Southeast University)",
+          "Yuyang Peng (Tsinghua University)"
+        ],
+        "venue_abbr": "TDSC",
+        "venue_name": "IEEE Transactions on Dependable and Secure Computing",
+        "venue_tier": "CCF-A",
+        "pub_date": "2026-01-01",
+        "created_date": "2026-11-24",
+        "title_zh": "智能合约重入漏洞检测鲁棒性评估的多维干扰样本生成框架",
+        "keep": true,
+        "topic": "重入漏洞检测鲁棒性评估",
+        "summary": "针对现有智能合约重入漏洞检测模型在面对代码扰动与对抗攻击时鲁棒性不足的问题，提出多维干扰样本生成框架。通过构建涵盖代码结构变换、语义等效替换等多维干扰策略，自动生成高质量测试样本，系统评估检测模型在复杂对抗环境下的鲁棒性边界与脆弱点。",
+        "highlights": [
+          "提出多维干扰样本生成框架评估检测模型鲁棒性",
+          "涵盖代码结构变换与语义等效替换等多维策略",
+          "揭示重入漏洞检测模型在代码扰动下的性能边界"
+        ]
+      }
+    ],
+    "filtered_papers": [
+      {
+        "url": "https://doi.org/10.1109/tdsc.2026.3756473",
+        "doi": "https://doi.org/10.1109/tdsc.2026.3756473",
+        "title_en": "Policy-Hidden Attribute-Based Searchable Encryption With Edge Computing Using Smart Contract for Internet of Vehicles",
+        "authors": [
+          "Libin Chen (Huai'an University)",
+          "Yu Liu (Huai'an University)",
+          "Zhiquan Liu (Jinan University)"
+        ],
+        "venue_abbr": "TDSC",
+        "venue_name": "IEEE Transactions on Dependable and Secure Computing",
+        "venue_tier": "CCF-A",
+        "pub_date": "2026-01-01",
+        "created_date": "2026-11-24",
+        "title_zh": "Policy-Hidden Attribute-Based Searchable Encryption With Edge Computing Using Smart Contract for Internet of Vehicles",
+        "keep": false,
+        "topic": "其他",
+        "summary": "",
+        "highlights": [],
+        "discard_reason": "属于车联网应用，仅将智能合约作为辅助组件，缺乏对区块链核心技术的贡献。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-24T23:31:08.127Z"
+  },
+  "news": {
+    "date": "2026-11-25",
+    "query_date": "2026-11-24",
+    "source_count": 21,
+    "total_fetched": 24,
+    "kept_count": 14,
+    "filtered_count": 10,
+    "items": [
+      {
+        "url": "https://thedefiant.io/news/security/coinkite-explains-why-coldcard-flaw-escaped-checks",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:47:49.000Z",
+        "title_en": "Coinkite Explains Why Coldcard Flaw Escaped Checks",
+        "title_zh": "Coinkite 披露 Coldcard 固件漏洞原因，说明审核遗漏细节",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "漏洞复盘",
+        "summary": "硬件钱包制造商 Coinkite 发布漏洞复盘报告，解释了其 Coldcard 钱包中遗漏的固件路由错误。虽然新版固件已修复该漏洞，但无法修复此前已生成的旧助记词风险，目前官方尚未明确具体的赔偿方案。",
+        "highlights": [
+          "Coinkite 复盘 Coldcard 固件路由漏洞",
+          "新固件无法修复旧助记词安全隐患"
+        ]
+      },
+      {
+        "url": "https://thedefiant.io/news/security/bisq-2-urges-security-update-ahead-of-network-cutoff",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:23:18.000Z",
+        "title_en": "Bisq 2 Urges Security Update Ahead of Network Cutoff",
+        "title_zh": "Bisq 2 敦促用户完成安全升级，修复可导致代码执行的 Java 漏洞",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "漏洞预警",
+        "summary": "去中心化交易所 Bisq 2 发布紧急升级提醒，新的签名规则即将生效。最新桌面版本修复了一个可能允许攻击者执行任意代码的 Java 漏洞，官方要求用户在网络断连限制前完成升级以确保资产安全。",
+        "highlights": [
+          "Bisq 2 修复可导致代码执行的 Java 漏洞",
+          "新签名规则生效前须完成客户端升级"
+        ]
+      },
+      {
+        "url": "https://www.coindesk.com/markets/2026/11/24/a-wallet-linked-to-popular-crypto-trader-ansem-sold-usd2-million-in-memecoins-as-his-namesake-token-cratered",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T12:47:49.000Z",
+        "title_en": "Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold",
+        "title_zh": "加密交易员 Ansem 钱包疑遭黑客攻击，200 万美元代币被恶意抛售",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "私钥泄露",
+        "summary": "知名加密交易员 Ansem 表示其钱包疑遭黑客攻击，导致价值约 200 万美元的 Meme 币被恶意抛售。据其透露，攻击者可能入侵了交易终端 Bullpen 的账户，从而获取了导入该平台的钱包私钥。目前事件仍在进一步追踪中。",
+        "highlights": [
+          "损失金额达 200 万美元",
+          "疑因交易终端导入私钥被盗"
+        ]
+      },
+      {
+        "url": "https://defillama.com/hacks",
+        "source_name": "DeFiLlama Hacks",
+        "source_group": "安全事件",
+        "published_at": "2026-11-24T00:00:00.000Z",
+        "title_en": "[Hack] Bullpen ($2.57M · Solana)",
+        "title_zh": "Solana 生态 DeFi 协议 Bullpen 因逻辑漏洞遭攻击，损失约 257 万美元",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "链上攻击",
+        "summary": "Solana 生态 DeFi 协议 Bullpen 遭遇黑客攻击，因协议逻辑漏洞导致资金被盗，涉案损失金额约 257 万美元。目前攻击的具体技术细节尚在进一步排查与分析中。",
+        "highlights": [
+          "Solana 链上 DeFi 协议遭遇逻辑漏洞攻击",
+          "导致约 257 万美元加密资产损失"
+        ]
+      },
+      {
+        "url": "https://www.dlnews.com/articles/regulation/binance-obtains-usd65-billion-freezing-order-for-stolen-crypto/",
+        "source_name": "DL News",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T22:08:13.000Z",
+        "title_en": "Binance obtains $6.5 billion freezing order for stolen crypto",
+        "title_zh": "Binance 获阿布扎比法院 65 亿美元全球冻结令以追回被盗加密资产",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "链上追踪",
+        "summary": "Binance 宣布已获得阿布扎比法院签发的 65 亿美元全球冻结令，旨在追回于 10 月 29 日黑客攻击事件中被盗的加密资产，这是针对链上犯罪资金采取的重大司法追偿行动。",
+        "highlights": [
+          "Binance 获得 65 亿美元全球冻结令",
+          "旨在追回 10 月 29 日黑客攻击中被盗加密资产"
+        ]
+      },
+      {
+        "url": "https://collective.flashbots.net/t/chainlink-svr-hint-matching-and-simulation-in-mev-share/6144",
+        "source_name": "Flashbots Collective",
+        "source_group": "协议研究",
+        "published_at": "2026-11-24T15:33:14.000Z",
+        "title_en": "Chainlink SVR hint matching and simulation in MEV-Share",
+        "title_zh": "Flashbots 社区探讨 MEV-Share 中 Chainlink SVR 提示匹配与模拟机制",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "MEV 研究",
+        "summary": "在 Flashbots Collective 论坛上，开发者针对 mev-share-node 开源代码及 BuilderNet 生产路径提出技术问询，深入探讨了 MEV-Share 机制下 Chainlink SVR 提示信息的匹配规则、区块未入选时的模拟逻辑以及待挂单的模拟入块流程。",
+        "highlights": [
+          "关注 MEV-Share 模拟逻辑与 BuilderNet 生产路径对接"
+        ]
+      },
+      {
+        "url": "https://thedefiant.io/news/defi/euler-technologies-replaces-labs-in-commercial-push",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T15:36:48.000Z",
+        "title_en": "Euler Technologies Replaces Labs in Commercial Push",
+        "title_zh": "DeFi 借贷协议 Euler 将研发及管理权限移交至新实体 Euler Technologies",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "协议治理",
+        "summary": "DeFi 借贷协议 Euler 宣布由新实体 Euler Technologies 全面接管协议研发与应用运营，并任命 Christopher Cameron 出任战略主管。协议的行政与管理权限计划于 11 月底前完成交接，以全力推进其商业化进程。",
+        "highlights": [
+          "Euler 协议管理权限将于 11 月底前移交至新实体"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/erc-discussion-erc-20-transferable-timelock/30493",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-24T12:14:55.000Z",
+        "title_en": "ERC Discussion: ERC-20 Transferable Timelock",
+        "title_zh": "Ethereum Magicians 社区讨论 ERC-20 可转让时间锁扩展提案",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "EIP 提案",
+        "summary": "Ethereum Magicians 社区开发者提出一种 ERC-20 拓展提案，旨在阻止新铸造代币在同一区块内被恶意销毁。该方案通过追踪账户的时间锁余额，限制销毁操作仅能使用已解锁代币，同时保持代币在 DeFi 协议中的可转让性与兼容性。",
+        "highlights": [
+          "限制同区块铸造即销毁攻击手法",
+          "保持与常规 DeFi 协议的兼容性"
+        ]
+      },
+      {
+        "url": "https://ethresear.ch/t/do-bid-cancellations-matter/26287",
+        "source_name": "ethresear.ch",
+        "source_group": "协议研究",
+        "published_at": "2026-11-24T12:13:29.000Z",
+        "title_en": "Do bid cancellations matter?",
+        "title_zh": "ePBS 架构下的区块构建出价取消机制及其对提议者收益影响研究",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "MEV研究",
+        "summary": "研究探讨了 ePBS 架构下提议者是否会尊重构建者的出价取消。模型分析表明，提议者若承诺尊重取消则预期收益不变；若缺乏承诺，忽略取消直接签署最高出价可获额外收益（日均约 0.9 ETH，市场波动期尤显著）。",
+        "highlights": [
+          "忽略出价取消每日可为提议者增加约 0.9 ETH 额外收益",
+          "缺乏承诺机制下尊重出价取消并非纳什均衡"
+        ]
+      },
+      {
+        "url": "https://ethresear.ch/t/post-quantum-das-with-improved-provable-security/26285",
+        "source_name": "ethresear.ch",
+        "source_group": "协议研究",
+        "published_at": "2026-11-24T09:47:56.000Z",
+        "title_en": "Post-quantum DAS with improved provable security",
+        "title_zh": "具有更严密可证明安全性的抗量子数据可用性抽样（PQ-DAS）改进方案",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "密码学研究",
+        "summary": "研究人员提出了抗量子数据可用性抽样（PQ-DAS）方案的改进版本，并在 Lean 证明助手完成形式化验证。该方案通过优化 Merkle 树与 SNARKs 机制提供了更高的可证明安全级别，但牺牲了部分计算效率。",
+        "highlights": [
+          "基于 Lean 助手完成了抗量子 DAS 方案的形式化验证",
+          "以部分计算效率为代价换取更高的可证明安全级别"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/business/2026-11-24-ethereum-treasury-firm-btcs-sells-43-8-million-eth-cut-aave-debt-ceo-says-we-do-not-take-this-lightly-445562",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T15:27:50.000Z",
+        "title_en": "Ethereum treasury firm BTCS sells $43.8 million in ETH to cut Aave debt, CEO says ‘we do not take this lightly’",
+        "title_zh": "纳斯达克上市公司 BTCS 出售 4380 万美元 ETH 偿还 Aave 债务防范清算",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "链上清算",
+        "summary": "纳斯达克上市公司 BTCS 在加密市场剧烈波动期间抛售 2.73 万枚 ETH（约 4380 万美元），用于偿还其在 DeFi 借贷协议 Aave 上的去中心化债务。公司 CEO 表示此举旨在大幅降低抵押物强平风险并保障资产负债表安全。",
+        "highlights": [
+          "BTCS 抛售 2.73 万枚 ETH 用于降低 Aave 协议清算风险"
+        ]
+      },
+      {
+        "url": "https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:40:53.000Z",
+        "title_en": "South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment",
+        "title_zh": "韩国拟取消自 2017 年实施的 ICO 禁令以吸引加密投资回流",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "韩国提出取消自 2017 年起实施的 ICO 禁令，旨在促进本土就业并吸引加密投资回流。新提案要求代币发行方必须详细披露资金使用计划；若存在误导投资者的行为，相关责任人将面临刑事指控。",
+        "highlights": [
+          "韩国拟解禁封禁多年的 ICO 融资",
+          "代币发行方误导投资者或面临刑事指控"
+        ]
+      },
+      {
+        "url": "https://www.trmlabs.com/resources/blog/ofac-designates-companies-in-the-iran-linked-rahbar-network",
+        "source_name": "TRM Labs",
+        "source_group": "安全机构",
+        "published_at": "2026-11-23T22:13:00.000Z",
+        "title_en": "OFAC Designates Exchange Houses and Companies in Iran-Linked Rahbar Network | TRM Labs",
+        "title_zh": "美国 OFAC 制裁与伊朗 Rahbar 网络相关的多家加密交易所及实体",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "美国财政部外国资产控制办公室（OFAC）正式将与伊朗 Rahbar 网络相关的多家交易所与公司列入制裁名单。泄露记录显示，其中 9 家实体参与了相关交易，涉及超过 5300 笔支付订单。",
+        "highlights": [
+          "OFAC 将伊朗 Rahbar 网络相关交易所列入制裁名单",
+          "泄露记录显示相关实体涉及超过 5300 笔支付订单"
+        ]
+      },
+      {
+        "url": "https://www.dlnews.com/articles/regulation/cftc-orders-kalshi-to-pause-certain-trump-speech-contracts/",
+        "source_name": "DL News",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T22:07:21.000Z",
+        "title_en": "CFTC orders Kalshi to pause certain Trump speech contracts",
+        "title_zh": "美国 CFTC 出于操纵担忧指令预测市场 Kalshi 暂停特朗普演讲相关合约",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "美国商品期货交易委员会（CFTC）因担忧市场操纵风险，要求预测市场平台 Kalshi 暂停涉及特朗普演讲用词的相关预测合约。Kalshi 已暂停交易，并须在 12 月 11 日前作出回应。",
+        "highlights": [
+          "CFTC 因操纵疑虑暂停 Kalshi 的特朗普发言预测合约",
+          "Kalshi 须在 12 月 11 日前就监管关注作出回应"
+        ]
+      }
+    ],
+    "filtered_items": [
+      {
+        "url": "https://thedefiant.io/frontier/regulation/us-blacklists-megaspeed-tightening-access-to-ai-chips",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T15:42:04.000Z",
+        "title_en": "US Blacklists Megaspeed, Tightening Access to AI Chips",
+        "title_zh": "US Blacklists Megaspeed, Tightening Access to AI Chips",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Commerce's licensing restrictions reach suppliers beyond Nvidia. The action came the same day Jensen Huang returned as CEO.",
+        "highlights": [],
+        "discard_reason": "属于传统 AI 芯片硬件出口限制，不涉及区块链技术、加密安全或 Web3 动态。"
+      },
+      {
+        "url": "https://thedefiant.io/converge/tradfi-and-fintech/fidelity-crypto-adds-aave-link-and-uni-to-its-lineup",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T15:31:45.000Z",
+        "title_en": "Fidelity Crypto Adds AAVE, LINK and UNI to Its Lineup",
+        "title_zh": "Fidelity Crypto Adds AAVE, LINK and UNI to Its Lineup",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Eligible customers can trade the tokens in individual, joint and crypto IRA accounts, with Oregon excluded and a 1% fee on buys and sells.",
+        "highlights": [],
+        "discard_reason": "属于券商平台常规上币与交易对新增，缺少核心技术创新或安全深度。"
+      },
+      {
+        "url": "https://www.coindesk.com/business/2026/11/24/anchorage-digital-to-unveil-new-asset-management-subsidiary",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T15:06:32.000Z",
+        "title_en": "Anchorage Digital to unveil new asset-management subsidiary",
+        "title_zh": "Anchorage Digital to unveil new asset-management subsidiary",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The crypto custody technology firm said it will unveil a separate subsidiary called 61st Parallel Asset Management.",
+        "highlights": [],
+        "discard_reason": "属于托管机构常规商业拓展与子公司设立公关新闻，无实质技术或行业影响。"
+      },
+      {
+        "url": "https://a16zfrontier.com/posts/article/300-books-to-read-gift-guide/",
+        "source_name": "a16z Crypto",
+        "source_group": "协议研究",
+        "published_at": "2026-11-24T15:00:13.000Z",
+        "title_en": "300+ books to read: A gift guide for curious readers",
+        "title_zh": "300+ books to read: A gift guide for curious readers",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "300+ science/ fiction, history, business, and technology books drawn from four years of reading lists for builders and others",
+        "highlights": [],
+        "discard_reason": "属于日常图书推荐与礼物指南，无实质区块链技术、安全或行业信息量。"
+      },
+      {
+        "url": "https://www.theblock.co/learn/campus/crypto-market-structure-basics-442986",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:40:12.000Z",
+        "title_en": "Crypto Market Structure Basics",
+        "title_zh": "Crypto Market Structure Basics",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Crypto Market Structure 101 explains how crypto markets work for beginners. It covers centralized and decentralized exchanges, trading pairs and settlement, order types, leverage and perpetual futures, market makers, key market players, and",
+        "highlights": [],
+        "discard_reason": "属于基础普及教程，缺乏突发安全性或深度技术研究价值。"
+      },
+      {
+        "url": "https://www.theblock.co/news/markets/2026-11-24-bitcoin-etfs-another-570-million-net-outflows-november-total-nears-5-billion-btc-dips-below-60k-445548",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:32:21.000Z",
+        "title_en": "Bitcoin ETFs see another $570 million in net outflows as November total nears $5 billion and BTC dips below $60K",
+        "title_zh": "Bitcoin ETFs see another $570 million in net outflows as November total nears $5 billion and BTC dips below $60K",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "BlackRock's IBIT bitcoin exchange-traded fund again led the outflows, with $509.3 million exiting the fund on Monday.",
+        "highlights": [],
+        "discard_reason": "属于纯粹的行情涨跌与 ETF 每日资金流向播报，缺乏技术或安全价值。"
+      },
+      {
+        "url": "https://www.theblock.co/news/markets/2026-11-24-xrpl-dex-volume-q3-2026-evernorth-report-445395",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:00:02.000Z",
+        "title_en": "XRP Ledger DEX volume hits 4.51 million XRP a day in Q3 as big traders take over: Evernorth",
+        "title_zh": "XRP Ledger DEX volume hits 4.51 million XRP a day in Q3 as big traders take over: Evernorth",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "XRP Ledger DEX order-book volume averaged 4.51M XRP a day in Q3, Evernorth says, as top accounts drove 65% of trading and RLUSD rose 74%.",
+        "highlights": [],
+        "discard_reason": "属于常规 DEX 交易量统计与分析，缺乏链上安全或底层技术信息。"
+      },
+      {
+        "url": "https://www.theblock.co/news/business/2026-11-24-ledn-launches-us-custody-account-bitcoin-gold-stablecoins-lending-445411",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T14:00:00.000Z",
+        "title_en": "Ledn brings US business onshore with account to hold, swap and borrow against bitcoin",
+        "title_zh": "Ledn brings US business onshore with account to hold, swap and borrow against bitcoin",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Ledn's new U.S. custody account lets customers hold bitcoin, gold, stablecoins and dollars, swap with no trading fees and borrow against bitcoin without selling.",
+        "highlights": [],
+        "discard_reason": "属于商业托管与借贷产品宣传公告，缺乏区块链安全或技术研究价值。"
+      },
+      {
+        "url": "https://www.coindesk.com/tech/2026/11/24/live-updates-bitcoin-pulls-back-to-usd60-000-as-stock-rally-fails-to-budge-crypto",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T12:47:40.000Z",
+        "title_en": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
+        "title_zh": "Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The Trump Administration could unveil tariff hikes against China, Japan, South Korea and other countries as soon as this week, according to a WSJ report.",
+        "highlights": [],
+        "discard_reason": "属于纯代币价格涨跌与宏观关税行情播报，缺乏区块链安全或技术价值。"
+      },
+      {
+        "url": "https://www.coindesk.com/daybook-us/2026/11/24/bitcoin-drops-as-november-spot-etf-outflows-increase-to-record-usd4-71-billion",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-24T12:36:28.000Z",
+        "title_en": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion",
+        "title_zh": "Bitcoin drops as November spot ETF outflows increase to record $4.71 billion",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Your day-ahead look for Nov. 24, 2026",
+        "highlights": [],
+        "discard_reason": "属于纯现货 ETF 资金流出与币价下跌新闻，无链上安全或技术沉淀。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-24T23:35:08.253Z"
+  }
+}
