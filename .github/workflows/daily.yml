@@ -232,6 +232,7 @@ jobs:
           # vars above take precedence when both are set.
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           REPORT_LOCALE: ${{ vars.REPORT_LOCALE || 'zh' }}
           REPORT_TZ: ${{ vars.REPORT_TZ }}
           # Sources to skip in CI (comma-separated ids). linux.do's WAF blocks
@@ -255,3 +256,13 @@ jobs:
           publish_branch: gh-pages
           keep_files: false  # we restored everything above, so a clean publish is fine
           commit_message: 'daily: report for ${{ github.run_id }}'
+
+      - name: Send daily email via Resend (optional)
+        continue-on-error: true
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          MAIL_TO: ${{ vars.MAIL_TO }}
+          MAIL_FROM: ${{ vars.MAIL_FROM }}
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          REPORT_TZ: ${{ vars.REPORT_TZ }}
+        run: npm run send-email

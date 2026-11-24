@@ -21,3 +21,14 @@ export function todayKey(d: Date = new Date()): string {
   });
   return fmt.format(d);
 }
+
+/**
+ * Return the calendar date (YYYY-MM-DD) immediately preceding `todayKey(d)`
+ * in the active REPORT_TZ.
+ */
+export function yesterdayKey(d: Date = new Date()): string {
+  const today = todayKey(d);
+  const [y, m, day] = today.split("-").map(Number);
+  const utc = new Date(Date.UTC(y, m - 1, day - 1));
+  return utc.toISOString().slice(0, 10);
+}

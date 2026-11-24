@@ -45,23 +45,48 @@ fs.writeFileSync(path.join(ROOT, "index.html"), latestHtml, "utf8");
 console.log(`[build-site] index.html  ← ${latest}/${latest}.html`);
 
 // --- archive.html = list of all reports ---
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function readReportMeta(d) {
+  const jsonPath = path.join(ROOT, d, `${d}.json`);
+  if (!fs.existsSync(jsonPath)) return { model: "" };
+  try {
+    const data = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
+    return {
+      model: typeof data.model === "string" ? data.model.trim() : "",
+    };
+  } catch {
+    return { model: "" };
+  }
+}
+
 const rows = dates
   .map((d) => {
     const size = (fs.statSync(path.join(ROOT, d, `${d}.html`)).size / 1024).toFixed(0);
-    return `      <li><a href="./${d}/${d}.html">${d}</a> <span class="size">${size} KB</span></li>`;
+    const { model } = readReportMeta(d);
+    const modelTag = model
+      ? `<span class="model">${escHtml(model)}</span>`
+      : "";
+    return `      <li><a href="./${d}/${d}.html">${d}</a><span class="right">${modelTag}<span class="size">${size} KB</span></span></li>`;
   })
   .join("\n");
 
 const archiveHtml = `<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>daily-brief — archive</title>
+<title>区块链每日论文追踪 — 历史归档</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root { color-scheme: light dark; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", Roboto, Helvetica, Arial, sans-serif;
     max-width: 720px;
     margin: 3rem auto;
     padding: 0 1.5rem;
@@ -71,18 +96,28 @@ const archiveHtml = `<!doctype html>
   .meta { color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
   ul { list-style: none; padding: 0; }
   li {
-    padding: 0.5rem 0;
+    padding: 0.55rem 0;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
   }
   @media (prefers-color-scheme: dark) {
     li { border-bottom-color: #2a2a2a; }
   }
-  li a { text-decoration: none; }
+  li a { text-decoration: none; font-weight: 500; }
   li a:hover { text-decoration: underline; }
-  .size { color: #999; font-size: 0.85rem; }
+  .right { display: inline-flex; align-items: center; gap: 0.75rem; }
+  .model {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.76rem;
+    color: #888;
+    background: rgba(128, 128, 128, 0.12);
+    padding: 0.1rem 0.45rem;
+    border-radius: 5px;
+  }
+  .size { color: #999; font-size: 0.84rem; min-width: 3.4rem; text-align: right; }
   .top {
     margin-bottom: 2rem;
     padding: 0.75rem 1rem;
@@ -95,10 +130,10 @@ const archiveHtml = `<!doctype html>
 </style>
 </head>
 <body>
-  <h1>daily-brief — archive</h1>
-  <p class="meta">${dates.length} report${dates.length === 1 ? "" : "s"} · newest first · generated ${new Date().toISOString().slice(0, 10)}</p>
+  <h1>区块链每日论文追踪 — 历史归档</h1>
+  <p class="meta">共 ${dates.length} 期 · 按日期倒序 · 生成于 ${new Date().toISOString().slice(0, 10)}</p>
   <div class="top">
-    <a href="./index.html">→ Latest report (${latest})</a>
+    <a href="./index.html">→ 查看最新一期 (${latest})</a>
   </div>
   <ul>
 ${rows}

@@ -1,0 +1,26 @@
+[
+  { "id": "defillama-hacks", "name": "DeFiLlama Hacks", "type": "defillama-hacks", "url": "https://api.llama.fi/hacks", "group": "安全事件", "enabled": true },
+  { "id": "rekt-news", "name": "Rekt News", "type": "rss", "url": "https://rekt.news/rss/feed.xml", "group": "安全事件", "enabled": true },
+
+  { "id": "chainalysis", "name": "Chainalysis", "type": "rss", "url": "https://www.chainalysis.com/blog/feed/", "group": "安全机构", "enabled": true },
+  { "id": "trmlabs", "name": "TRM Labs", "type": "rss", "url": "https://www.trmlabs.com/blog/rss.xml", "group": "安全机构", "enabled": true },
+  { "id": "slowmist", "name": "SlowMist 慢雾", "type": "rss", "url": "https://slowmist.medium.com/feed", "group": "安全机构", "enabled": true },
+  { "id": "blocksec", "name": "BlockSec", "type": "rss", "url": "https://blocksecteam.medium.com/feed", "group": "安全机构", "enabled": true },
+  { "id": "peckshield", "name": "PeckShield 派盾", "type": "rss", "url": "https://peckshield.medium.com/feed", "group": "安全机构", "enabled": true },
+  { "id": "trailofbits", "name": "Trail of Bits", "type": "rss", "url": "https://blog.trailofbits.com/index.xml", "group": "安全机构", "enabled": true },
+  { "id": "immunefi", "name": "Immunefi", "type": "rss", "url": "https://medium.com/feed/immunefi", "group": "安全机构", "enabled": true },
+  { "id": "zellic", "name": "Zellic", "type": "rss", "url": "https://www.zellic.io/blog/rss.xml", "group": "安全机构", "enabled": true },
+  { "id": "sigmaprime", "name": "Sigma Prime", "type": "rss", "url": "https://blog.sigmaprime.io/feeds/all.atom.xml", "group": "安全机构", "enabled": true },
+
+  { "id": "ethresearch", "name": "ethresear.ch", "type": "rss", "url": "https://ethresear.ch/latest.rss", "group": "协议研究", "enabled": true },
+  { "id": "eth-magicians", "name": "Ethereum Magicians", "type": "rss", "url": "https://ethereum-magicians.org/latest.rss", "group": "协议研究", "enabled": true },
+  { "id": "flashbots", "name": "Flashbots Collective", "type": "rss", "url": "https://collective.flashbots.net/latest.rss", "group": "协议研究", "enabled": true },
+  { "id": "vitalik", "name": "Vitalik Buterin", "type": "rss", "url": "https://vitalik.eth.limo/feed.xml", "group": "协议研究", "enabled": true },
+  { "id": "a16zcrypto", "name": "a16z Crypto", "type": "rss", "url": "https://a16zcrypto.com/feed/", "group": "协议研究", "enabled": true },
+
+  { "id": "dlnews", "name": "DL News", "type": "rss", "url": "https://www.dlnews.com/arc/outboundfeeds/rss/", "group": "行业快讯", "enabled": true, "maxItems": 5 },
+  { "id": "theblock", "name": "The Block", "type": "rss", "url": "https://www.theblock.co/rss.xml", "group": "行业快讯", "enabled": true, "maxItems": 5 },
+  { "id": "blockworks", "name": "Blockworks", "type": "rss", "url": "https://blockworks.co/feed", "group": "行业快讯", "enabled": true, "maxItems": 5 },
+  { "id": "coindesk", "name": "CoinDesk", "type": "rss", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "group": "行业快讯", "enabled": true, "maxItems": 5 },
+  { "id": "thedefiant", "name": "The Defiant", "type": "rss", "url": "https://thedefiant.io/feed", "group": "行业快讯", "enabled": true, "maxItems": 5 }
+]

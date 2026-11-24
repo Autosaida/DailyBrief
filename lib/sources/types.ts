@@ -62,8 +62,29 @@ export interface RawArticle {
    */
   summary?: string;
   /**
-   * Structured one-line metadata to display above the excerpt — currently
-   * used by GitHub Trending for "Language · ★stars · forks · stars today".
+   * Structured one-line metadata to display above the excerpt.
    */
   meta?: string;
+  /** Optional academic paper metadata (used by arXiv sources). */
+  arxivId?: string;
+  pdfUrl?: string;
+  authors?: string[];
+  categories?: string[];
+  version?: string;
+  isUpdate?: boolean;
+  createdDate?: string;
+  updatedDate?: string;
+  comment?: string;
+  journalRef?: string;
+  /** Conference / journal metadata (used by OpenAlex venue tracker). */
+  venueAbbr?: string;
+  venueName?: string;
+  venueTier?: string;
+  doi?: string;
+  /** News source metadata (used by security-industry-news). */
+  newsSourceName?: string;
+  newsSourceGroup?: string;
+  /** Query metadata for date-scoped sources (e.g. previous-day arXiv lookup). */
+  queryDate?: string;
+  matchedDate?: string;
 }

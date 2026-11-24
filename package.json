@@ -7,13 +7,12 @@
     "dry-run": "node scripts/run-tsx.mjs scripts/dry-run.ts",
     "daily": "node scripts/run-tsx.mjs scripts/daily.ts",
     "render": "tsx scripts/render.ts",
-    "regen-trading": "node scripts/run-tsx.mjs scripts/regen-trading.ts",
-    "regen-enrich": "node scripts/run-tsx.mjs scripts/regen-enrich.ts",
     "quota-report": "tsx scripts/quota-report.ts",
     "sources": "tsx scripts/sources.ts",
     "sources:check": "tsx scripts/sources.ts check",
     "deploy": "node scripts/deploy.mjs",
     "build-site": "node scripts/build-site.mjs",
+    "send-email": "node scripts/run-tsx.mjs scripts/send-email.ts",
     "open": "node scripts/open-report.mjs"
   },
   "dependencies": {
