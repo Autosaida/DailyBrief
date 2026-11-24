@@ -1,716 +1,463 @@
 {
-  "hero_headline": "黄仁勋重返英伟达 CEO 职务，单日市值大涨近万亿美元",
-  "daily_overview": "今日全球市场焦点集中于黄仁勋重返英伟达 CEO 职务，推动英伟达市值单日大涨近万亿美元并带动科技股全面反弹，同时美方拟对涉嫌违规转运芯片的亚洲 AI 企业追加制裁。科技领域，OpenAI 与思科联合推出开源安全运行时 Shirudo，开源社区涌现多个增强 AI Agent 系统调用能力的开发框架。时政方面，中美俄三国在深圳举行峰会探索核风险管控，而俄乌战火则延伸至利比亚港口。",
-  "tech_briefs": [
-    {
-      "title": "OpenAI与思科联合推出开源Linux安全运行时Shirudo",
-      "url": "https://openai.com/index/introducing-shirudo",
-      "source": "OpenAI News",
-      "summary": "OpenAI 与思科合作发布开源 Linux 运行时 Shirudo，旨在协助运维团队在对生产环境应用补丁的同时，有效保护正在运行中的系统安全。",
-      "importance": 8
-    },
-    {
-      "title": "CLI-Anything：将传统软件转化为 Agent 架构的开源框架",
-      "url": "https://github.com/HKUDS/CLI-Anything",
-      "source": "GitHub Trending",
-      "summary": "香港大学团队开源的项目 CLI-Anything，可将各类应用软件自动转化为命令行接口，使 AI Agent 能够直接操控桌面及系统级软件，极大拓展了自治代理的操作边界。（GitHub Trending）",
-      "importance": 8
-    },
-    {
-      "title": "Claude-BugHunter：用于红队测试的漏洞挖掘技能包",
-      "url": "https://github.com/elementalsouls/Claude-BugHunter",
-      "source": "GitHub Trending",
-      "summary": "该项目为 Claude Code 打造，内置 82 项自动化技能、15 个斜杠指令以及涵盖 24 类核心漏洞的 681 种报告模式，大幅提升安全人员进行漏洞挖掘与红队渗透测试的效率。（GitHub Trending）",
-      "importance": 7
-    },
-    {
-      "title": "Anthropic 完成 1.5 万亿美元估值 IPO",
-      "url": "https://latent.space/p/ainews-anthropic-successfully-completes-largest-ipo-in-history-valued-at-1-5t/",
-      "source": "Latent Space",
-      "summary": "AI 巨头 Anthropic 成功完成史上最大规模 IPO，公司估值达到 1.5 万亿美元，上市首日股价表现强劲。（多家报道）",
-      "importance": 9
-    }
-  ],
-  "finance_briefs": [
-    {
-      "title": "黄仁勋复任英伟达CEO 推动市值单日暴增近万亿美元",
-      "url": "https://www.ft.com/content/08914b05-bbfa-478d-b38a-549acfc1aae6?syn-25a6b1a6=1",
-      "source": "Financial Times",
-      "summary": "英伟达董事会恢复黄仁勋 CEO 职务，股价应声暴涨逾 30%，单日市值增加近 1 万亿美元，并带动纳斯达克指数大幅走高。（多家报道）",
-      "importance": 10
-    },
-    {
-      "title": "美伊和谈预期上升 国际油价暴跌后趋于平稳",
-      "url": "https://www.bloomberg.com/news/articles/2026-11-23/latest-oil-market-news-and-analysis-for-nov-24",
-      "source": "Bloomberg Markets",
-      "summary": "因市场对结束美伊冲突的前景抱有谨慎乐观态度，国际油价在前一交易日大幅重挫近 4% 后逐渐企稳。",
-      "importance": 7
-    },
-    {
-      "title": "全球债基收益率普遍走高 中国国债独树一帜持续走低",
-      "url": "https://www.economist.com/finance-and-economics/2026/11/19/bond-yields-are-rising-everywhere-except-china",
-      "source": "The Economist Finance",
-      "summary": "在全球主要经济体国债收益率普遍上升背景下，中国央行坚持降息政策，使得中国国债收益率保持逆势走低态势。",
-      "importance": 7
-    }
-  ],
-  "politics_briefs": [
-    {
-      "title": "深圳举行中美俄三方峰会 聚焦核风险管控",
-      "url": "https://www.dw.com/zh/德语媒体：深圳全家福-习近平中心-特朗普普京分立两侧/a-80022446?maca=chi-rss-chi-all-1127-rdf",
-      "source": "DW 中文",
-      "summary": "中美俄三国领导人在深圳举行三方峰会，为三大核大国提供了政治接触契机，探讨降低核风险及地缘局势控制。（多家报道）",
-      "importance": 9
-    },
-    {
-      "title": "美国拟将亚洲AI企业Megaspeed列入制裁黑名单",
-      "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "summary": "美国政府计划将亚洲 AI 公司 Megaspeed 列入黑名单，指控该公司涉嫌将英伟达 AI 芯片违规转运至中国。",
-      "importance": 8
-    },
-    {
-      "title": "乌克兰突袭利比亚班加西港口击沉俄罗斯军舰",
-      "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo?at_medium=RSS&at_campaign=rss",
-      "source": "BBC World",
-      "summary": "乌克兰军方在利比亚班加西港口击沉一艘俄罗斯军舰，标志着俄乌冲突的地域延伸与升级。（多家报道）",
-      "importance": 8
-    }
-  ],
-  "editor_note": "资本市场因黄仁勋复职重现对 AI 链条的狂热，但科技大厂在系统安全与底层框架上的扎实推进，才是推动产业长期演进的真正基石。",
-  "keywords": [
-    "英伟达",
-    "黄仁勋",
-    "AI芯片",
-    "OpenAI",
-    "Shirudo",
-    "深圳峰会",
-    "Anthropic",
-    "国债收益率"
-  ],
-  "trading": {
-    "market_overview": "美股市场整体呈现强劲日内反弹但中轨承压，SPY 与 QQQ 单日分别上涨 4.71% 与 7.00%，但价格仍位于 SMA20 下方，VIX 指数单日暴跌 25.83% 至 26.62。加密市场处于极度恐慌状态（恐慌贪婪指数为 11），总市值为 2.12T USD（24小时微跌 1.22%），BTC 主导率 58.1%，ETH 9.8%，BTC 与 ETH 的 RSI14 分别降至 27.0 与 29.4，陷入超卖区。中概股分化明显，拼多多（PDD）5日大涨 11.56% 触发 MACD 金叉，而腾讯控股（0700.HK）与阿里巴巴（BABA）均呈空头排列。大宗与外汇方面，美元指数（DXY）突破至 104.32，RSI14 达 72.50 呈超买状态；黄金期货（GC=F）日内反弹 3.40% 但 5日仍跌 5.66%，维持空头排列。",
-    "watchlist": [
-      {
-        "symbol": "DX-Y.NYB",
-        "display_name": "美元指数 DXY",
-        "stance": "偏上行",
-        "rationale": "当前价格 104.32 接近 52 周高点，均线呈多头排列。RSI14 达到 72.50 处于超买区间，MACD（0.6266）持续高于信号线（0.4716）保持金叉，显示出较强的多头动量与偏上行技术走势。"
-      },
-      {
-        "symbol": "PDD",
-        "display_name": "拼多多 (PDD)",
-        "stance": "偏上行",
-        "rationale": "近 5 日累计上涨 11.56%，当前价格 87.14 向上突破 SMA20（80.50）与 SMA50（79.68）。RSI14 回升至 63.50，MACD 为 0.8447 并上穿信号线 0.1409 触发金叉信号，短期技术指标偏上行。"
-      },
-      {
-        "symbol": "0700.HK",
-        "display_name": "腾讯控股 (0700.HK)",
-        "stance": "偏下行",
-        "rationale": "近 5 日下跌 11.89%，价格 344.00 远低于 SMA200（461.82），均线系统呈现典型空头排列。MACD 柱体为 -15.2926 且维持死叉扩展状态，虽 RSI14 已降至 26.80 进入超卖区，技术面仍偏下行。"
-      },
-      {
-        "symbol": "BTC-USD",
-        "display_name": "Bitcoin",
-        "stance": "中性",
-        "rationale": "当前价格 61218.76 美元位于 SMA20（68513.61）下方，MACD 维持 -4808.12 绿柱状态。然而 RSI14 降至 27.00 触及超卖阈值，超卖反弹预期与均线下压形成相互牵制，技术形态呈现中性震荡。"
-      }
+  "date": "2026-11-24",
+  "model": "openai-gemini-3.6-flash",
+  "generated_at": "2026-11-24T06:07:01.690Z",
+  "arxiv": {
+    "date": "2026-11-24",
+    "query_date": "2026-11-23",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
     ],
-    "risk_caveat": "本报告基于公开行情数据及客观技术指标计算结果生成，过去走势不代表未来表现。相关解读不构成任何投资建议，仅供技术指标解读参考。",
-    "tickers": [
+    "total_fetched": 3,
+    "kept_count": 3,
+    "filtered_count": 0,
+    "papers": [
       {
-        "symbol": "SPY",
-        "displayName": "S&P 500 ETF",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "PCX",
-        "currentPrice": 722.29,
-        "pct1Day": 4.708543302700872,
-        "pct5Day": -2.3866493568068456,
-        "pct52WeekHigh": -7.5906450704946185,
-        "pct52WeekLow": 14.780383930841595,
-        "sma20": 745.6534912109375,
-        "sma50": 759.4079943847656,
-        "sma200": 732.9136492919922,
-        "rsi14": 41.512160971880576,
-        "macd": -12.739543148254256,
-        "macdSignal": -8.449550732570156,
-        "macdHistogram": -4.2899924156841,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": []
-      },
-      {
-        "symbol": "QQQ",
-        "displayName": "Nasdaq 100 ETF",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NGM",
-        "currentPrice": 651.03,
-        "pct1Day": 6.9981078048660565,
-        "pct5Day": -1.6199471099357803,
-        "pct52WeekHigh": -14.659308392103407,
-        "pct52WeekLow": 17.17602591792656,
-        "sma20": 675.4720031738282,
-        "sma50": 709.7942016601562,
-        "sma200": 683.2677499389648,
-        "rsi14": 42.184608226074054,
-        "macd": -19.5867026550967,
-        "macdSignal": -16.332586668253303,
-        "macdHistogram": -3.2541159868433986,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": []
-      },
-      {
-        "symbol": "AAPL",
-        "displayName": "Apple",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 349.08,
-        "pct1Day": 1.9033169336390507,
-        "pct5Day": -1.0488119485514404,
-        "pct52WeekHigh": -3.2563811213036615,
-        "pct52WeekLow": 43.40645797387232,
-        "sma20": 347.7355010986328,
-        "sma50": 342.12720153808596,
-        "sma200": 303.5954000854492,
-        "rsi14": 52.60533613550105,
-        "macd": 2.4786873208488487,
-        "macdSignal": 3.2414275662119714,
-        "macdHistogram": -0.7627402453631227,
-        "trend": "bullish",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bear-cross",
-            "label": "MACD 死叉",
-            "daysAgo": 2
-          },
-          {
-            "type": "above-sma50-sma200",
-            "label": "多头排列"
-          }
+        "url": "https://arxiv.org/abs/2611.26948",
+        "arxiv_id": "2611.26948",
+        "pdf_url": "https://arxiv.org/pdf/2611.26948",
+        "title_en": "Bottlenecked: The Capital Cost of Protected DeFi Lending",
+        "title_zh": "受保护DeFi借贷的资本成本与风险吸收结构优化",
+        "authors": [
+          "Tarun Chitra",
+          "Manvir Schneider",
+          "Nagu Thogiti"
+        ],
+        "categories": [
+          "cs.GT",
+          "q-fin.CP"
+        ],
+        "published_at": "2026-11-20T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-20",
+        "updated_date": "2026-11-20",
+        "keep": true,
+        "topic": "DeFi借贷资本效率与风险定价",
+        "summary": "针对DeFi借贷协议中跨市场攻击风险及劣后资本保全效率低下的问题，提出利用三部图建模用户资产、债务与劣后资本关系。研究定义了对抗性违约溢价（ADP）以定量评估可组合金融系统的保险成本。理论推导表明，相比Aave与Morpho的线性成本Θ(N)，优化后的三部图结构可将保险成本降低至Θ(√N)。基于真实攻击事件的实验表明，该设计可节省高达34.5%的资本成本。",
+        "highlights": [
+          "构建三部图模型定义DeFi可组合保险的对抗性违约溢价",
+          "将借贷保险成本复杂度从线性降低至平方根级别",
+          "相比传统Aave与Morpho设计降低高达34.5%的资本成本"
         ]
       },
       {
-        "symbol": "MSFT",
-        "displayName": "Microsoft",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 492.5,
-        "pct1Day": 1.6469931411029877,
-        "pct5Day": -4.920942627258404,
-        "pct52WeekHigh": -11.91987838683716,
-        "pct52WeekLow": 41.03665521191295,
-        "sma20": 520.9514953613282,
-        "sma50": 519.5783984375,
-        "sma200": 444.0892488098145,
-        "rsi14": 39.07201894185343,
-        "macd": -7.218355701713108,
-        "macdSignal": -2.0633335116634637,
-        "macdHistogram": -5.155022190049644,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": []
-      },
-      {
-        "symbol": "NVDA",
-        "displayName": "Nvidia",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 165.05,
-        "pct1Day": 31.482515418633938,
-        "pct5Day": 5.706417730998324,
-        "pct52WeekHigh": -32.181452109956034,
-        "pct52WeekLow": 32.570281124498,
-        "sma20": 178.9095016479492,
-        "sma50": 206.08220123291017,
-        "sma200": 203.2436001586914,
-        "rsi14": 42.87261662228065,
-        "macd": -18.076376358586288,
-        "macdSignal": -15.778862708554383,
-        "macdHistogram": -2.297513650031904,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": []
-      },
-      {
-        "symbol": "GOOGL",
-        "displayName": "Alphabet",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 282.1,
-        "pct1Day": 6.336458559927896,
-        "pct5Day": -0.5709859064334765,
-        "pct52WeekHigh": -30.961063116419073,
-        "pct52WeekLow": 6.767088032700021,
-        "sma20": 287.714501953125,
-        "sma50": 320.9548004150391,
-        "sma200": 336.76964950561523,
-        "rsi14": 41.035921079692294,
-        "macd": -12.74344431043221,
-        "macdSignal": -12.99715605355903,
-        "macdHistogram": 0.25371174312681966,
-        "trend": "bearish",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bull-cross",
-            "label": "MACD 金叉",
-            "daysAgo": 0
-          },
-          {
-            "type": "below-sma50-sma200",
-            "label": "空头排列"
-          }
+        "url": "https://arxiv.org/abs/2611.27250",
+        "arxiv_id": "2611.27250",
+        "pdf_url": "https://arxiv.org/pdf/2611.27250",
+        "title_en": "PCC: Proof-Carrying Credentials for Enhanced Anonymity and Post-Quantum Delegation",
+        "title_zh": "PCC：面向增强匿名性与后量子安全的证明携带凭证",
+        "authors": [
+          "Zixuan Wang",
+          "Zheng Tianyu",
+          "Yuan Lu",
+          "Bin Xiao"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-11-20T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-20",
+        "updated_date": "2026-11-20",
+        "keep": true,
+        "topic": "可委托匿名凭证与零知识证明",
+        "summary": "针对可委托匿名凭证（DAC）中证明尺寸随委托深度增长及拓扑泄露的痛点，提出证明携带凭证（PCC）框架。该框架利用非均匀增量可确认计算（NIVC）将显式委托链替换为递归更新的证明状态，实现与委托深度无关的常数级证明验证，并提出增强委托匿名性（EDA）形式化定义。基于FRI与哈希签名的实现具备后量子安全性，实验显示Halo2实现在任意深度下验证时间仅35-36ms。",
+        "highlights": [
+          "提出PCC框架实现证明尺寸与验证开销与委托深度解耦",
+          "基于NIVC与FRI构建具后量子安全性的拓扑无感凭证",
+          "Halo2实现具备7.344KB常数证明尺寸与35ms快速验证"
         ]
       },
       {
-        "symbol": "TSLA",
-        "displayName": "Tesla",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 385.46,
-        "pct1Day": 11.462608245976151,
-        "pct5Day": 1.5062963903524085,
-        "pct52WeekHigh": -22.7271816049556,
-        "pct52WeekLow": 29.6186697155155,
-        "sma20": 384.4904983520508,
-        "sma50": 376.16539794921874,
-        "sma200": 381.5346490478516,
-        "rsi14": 52.08947196536034,
-        "macd": -0.9677282726669318,
-        "macdSignal": 1.1427114158415663,
-        "macdHistogram": -2.110439688508498,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": []
-      },
-      {
-        "symbol": "META",
-        "displayName": "Meta",
-        "group": "us-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 597.6,
-        "pct1Day": 6.554448930943457,
-        "pct5Day": -4.5992200602917155,
-        "pct52WeekHigh": -23.366930830191585,
-        "pct52WeekLow": 14.865644101026415,
-        "sma20": 616.9165008544921,
-        "sma50": 675.2935986328125,
-        "sma200": 628.2726473999023,
-        "rsi14": 41.74886672306106,
-        "macd": -19.682010716051764,
-        "macdSignal": -17.45416505179667,
-        "macdHistogram": -2.227845664255092,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bear-cross",
-            "label": "MACD 死叉",
-            "daysAgo": 1
-          }
-        ]
-      },
-      {
-        "symbol": "BTC-USD",
-        "displayName": "Bitcoin",
-        "group": "crypto",
-        "currency": "USD",
-        "exchangeName": "CCC",
-        "currentPrice": 61218.76,
-        "pct1Day": 0.09294975190403316,
-        "pct5Day": -2.8077193182649736,
-        "pct52WeekHigh": -37.44289325836956,
-        "pct52WeekLow": 11.004971462513419,
-        "sma20": 68513.6138671875,
-        "sma50": 76158.690546875,
-        "sma200": 72232.12369140625,
-        "rsi14": 27.038138768118046,
-        "macd": -4808.117032832059,
-        "macdSignal": -4267.616150029331,
-        "macdHistogram": -540.5008828027276,
-        "trend": "neutral",
-        "rsiState": "oversold",
-        "signals": [
-          {
-            "type": "rsi-oversold",
-            "label": "RSI 超卖"
-          }
-        ]
-      },
-      {
-        "symbol": "ETH-USD",
-        "displayName": "Ethereum",
-        "group": "crypto",
-        "currency": "USD",
-        "exchangeName": "CCC",
-        "currentPrice": 1706.98,
-        "pct1Day": -0.8190042848270922,
-        "pct5Day": -3.8185196865341533,
-        "pct52WeekHigh": -50.473840626027275,
-        "pct52WeekLow": 13.307215503954179,
-        "sma20": 1946.8794677734375,
-        "sma50": 2225.6574609375,
-        "sma200": 2119.350823364258,
-        "rsi14": 29.371874111701146,
-        "macd": -165.1682995136082,
-        "macdSignal": -153.2824331828223,
-        "macdHistogram": -11.885866330785888,
-        "trend": "neutral",
-        "rsiState": "oversold",
-        "signals": [
-          {
-            "type": "rsi-oversold",
-            "label": "RSI 超卖"
-          }
-        ]
-      },
-      {
-        "symbol": "SOL-USD",
-        "displayName": "Solana",
-        "group": "crypto",
-        "currency": "USD",
-        "exchangeName": "CCC",
-        "currentPrice": 71.95,
-        "pct1Day": 1.9554284555336514,
-        "pct5Day": -2.272166362069126,
-        "pct52WeekHigh": -51.45598315971285,
-        "pct52WeekLow": 19.093492446873874,
-        "sma20": 79.05640144348145,
-        "sma50": 94.21236770629883,
-        "sma200": 88.23962493896484,
-        "rsi14": 31.595265152558895,
-        "macd": -7.107463695971646,
-        "macdSignal": -7.18958929318143,
-        "macdHistogram": 0.0821255972097843,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bull-cross",
-            "label": "MACD 金叉",
-            "daysAgo": 0
-          }
-        ]
-      },
-      {
-        "symbol": "BABA",
-        "displayName": "阿里巴巴 (BABA)",
-        "group": "china-equity",
-        "currency": "USD",
-        "exchangeName": "NYQ",
-        "currentPrice": 86.04,
-        "pct1Day": 6.117412502383017,
-        "pct5Day": -5.054074826492732,
-        "pct52WeekHigh": -52.49033683048039,
-        "pct52WeekLow": 6.27470355731227,
-        "sma20": 96.69399986267089,
-        "sma50": 103.86619964599609,
-        "sma200": 120.4488500213623,
-        "rsi14": 33.11198516276906,
-        "macd": -5.906630838570834,
-        "macdSignal": -4.295737341889121,
-        "macdHistogram": -1.6108934966817126,
-        "trend": "bearish",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "below-sma50-sma200",
-            "label": "空头排列"
-          }
-        ]
-      },
-      {
-        "symbol": "PDD",
-        "displayName": "拼多多 (PDD)",
-        "group": "china-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 87.14,
-        "pct1Day": 4.134798855408478,
-        "pct5Day": 11.560618767235976,
-        "pct52WeekHigh": -30.488194001276327,
-        "pct52WeekLow": 21.128718376424803,
-        "sma20": 80.49599990844726,
-        "sma50": 79.68059982299805,
-        "sma200": 89.17654987335204,
-        "rsi14": 63.49450814700095,
-        "macd": 0.8447211822105061,
-        "macdSignal": 0.14093965635268946,
-        "macdHistogram": 0.7037815258578166,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bull-cross",
-            "label": "MACD 金叉",
-            "daysAgo": 2
-          }
-        ]
-      },
-      {
-        "symbol": "JD",
-        "displayName": "京东 (JD)",
-        "group": "china-equity",
-        "currency": "USD",
-        "exchangeName": "NMS",
-        "currentPrice": 25.31,
-        "pct1Day": 1.6465879026142958,
-        "pct5Day": -8.097316054445178,
-        "pct52WeekHigh": -26.20991253644315,
-        "pct52WeekLow": 3.2724008487024627,
-        "sma20": 26.73499984741211,
-        "sma50": 26.661400032043456,
-        "sma200": 28.444050083160402,
-        "rsi14": 40.79200499692669,
-        "macd": -0.343686319647329,
-        "macdSignal": -0.050818306549390874,
-        "macdHistogram": -0.2928680130979381,
-        "trend": "bearish",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bear-cross",
-            "label": "MACD 死叉",
-            "daysAgo": 4
-          },
-          {
-            "type": "below-sma50-sma200",
-            "label": "空头排列"
-          }
-        ]
-      },
-      {
-        "symbol": "0700.HK",
-        "displayName": "腾讯控股 (0700.HK)",
-        "group": "china-equity",
-        "currency": "HKD",
-        "exchangeName": "HKG",
-        "currentPrice": 344,
-        "pct1Day": 0,
-        "pct5Day": -11.8852445240528,
-        "pct52WeekHigh": -46.165884194053206,
-        "pct52WeekLow": 3.303303303303303,
-        "sma20": 389.1,
-        "sma50": 409.13599853515626,
-        "sma200": 461.82050033569334,
-        "rsi14": 26.787278516263854,
-        "macd": -15.292601919188996,
-        "macdSignal": -9.439227539963074,
-        "macdHistogram": -5.853374379225922,
-        "trend": "bearish",
-        "rsiState": "oversold",
-        "signals": [
-          {
-            "type": "macd-bear-cross",
-            "label": "MACD 死叉",
-            "daysAgo": 4
-          },
-          {
-            "type": "rsi-oversold",
-            "label": "RSI 超卖"
-          },
-          {
-            "type": "below-sma50-sma200",
-            "label": "空头排列"
-          }
-        ]
-      },
-      {
-        "symbol": "GC=F",
-        "displayName": "黄金期货",
-        "group": "commodity-fx",
-        "currency": "USD",
-        "exchangeName": "CMX",
-        "currentPrice": 3634.8,
-        "pct1Day": 3.3964869139538014,
-        "pct5Day": -5.663119647028285,
-        "pct52WeekHigh": -34.93251226236081,
-        "pct52WeekLow": 3.765451483056898,
-        "sma20": 3921.974987792969,
-        "sma50": 4096.519985351562,
-        "sma200": 4437.955495605469,
-        "rsi14": 31.956729108764932,
-        "macd": -127.80577357107495,
-        "macdSignal": -91.5504445764555,
-        "macdHistogram": -36.25532899461945,
-        "trend": "bearish",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "below-sma50-sma200",
-            "label": "空头排列"
-          }
-        ]
-      },
-      {
-        "symbol": "CL=F",
-        "displayName": "WTI 原油期货",
-        "group": "commodity-fx",
-        "currency": "USD",
-        "exchangeName": "NYM",
-        "currentPrice": 80.44,
-        "pct1Day": -4.21529318341153,
-        "pct5Day": -6.15959069705181,
-        "pct52WeekHigh": -32.674924673585544,
-        "pct52WeekLow": 46.30774827209895,
-        "sma20": 90.50800018310547,
-        "sma50": 93.73000030517578,
-        "sma200": 88.37770009994507,
-        "rsi14": 32.2766167639806,
-        "macd": -3.5381569674612052,
-        "macdSignal": -2.5625669464377405,
-        "macdHistogram": -0.9755900210234647,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": []
-      },
-      {
-        "symbol": "USDCNY=X",
-        "displayName": "美元 / 人民币",
-        "group": "commodity-fx",
-        "currency": "CNY",
-        "exchangeName": "CCY",
-        "currentPrice": 6.6548,
-        "pct1Day": -0.3324853320977633,
-        "pct5Day": -0.14104962850175992,
-        "pct52WeekHigh": -6.3574705203613595,
-        "pct52WeekLow": 0.10228640192539318,
-        "sma20": 6.6680950164794925,
-        "sma50": 6.685584011077881,
-        "sma200": 6.77320698261261,
-        "rsi14": 36.86786723000842,
-        "macd": -0.0055739386140372105,
-        "macdSignal": -0.006110775744917208,
-        "macdHistogram": 0.0005368371308799979,
-        "trend": "bearish",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "near-52w-low",
-            "label": "接近 52 周低"
-          },
-          {
-            "type": "below-sma50-sma200",
-            "label": "空头排列"
-          }
-        ]
-      },
-      {
-        "symbol": "^VIX",
-        "displayName": "VIX 恐慌指数",
-        "group": "macro",
-        "currency": "USD",
-        "exchangeName": "CXI",
-        "currentPrice": 26.62,
-        "pct1Day": -25.828920443844122,
-        "pct5Day": 16.193802607148292,
-        "pct52WeekHigh": -33.49987509367974,
-        "pct52WeekLow": 98.95366218236174,
-        "sma20": 22.110499954223634,
-        "sma50": 18.625600032806396,
-        "sma200": 18.703200030326844,
-        "rsi14": 55.895387934925,
-        "macd": 2.817757154626264,
-        "macdSignal": 1.8888134665361098,
-        "macdHistogram": 0.9289436880901543,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bull-cross",
-            "label": "MACD 金叉",
-            "daysAgo": 4
-          }
-        ]
-      },
-      {
-        "symbol": "^TNX",
-        "displayName": "10Y 美债收益率 (%)",
-        "group": "macro",
-        "currency": "USD",
-        "exchangeName": "CGI",
-        "currentPrice": 4.918,
-        "pct1Day": 0.12214618261872622,
-        "pct5Day": -3.9640660122919864,
-        "pct52WeekHigh": -8.314690529455625,
-        "pct52WeekLow": 24.31749241658241,
-        "sma20": 4.983300018310547,
-        "sma50": 5.075960006713867,
-        "sma200": 4.60649498462677,
-        "rsi14": 41.887150431343265,
-        "macd": -0.010954753235468573,
-        "macdSignal": -0.00920944573768194,
-        "macdHistogram": -0.0017453074977866329,
-        "trend": "neutral",
-        "rsiState": "normal",
-        "signals": [
-          {
-            "type": "macd-bear-cross",
-            "label": "MACD 死叉",
-            "daysAgo": 0
-          }
-        ]
-      },
-      {
-        "symbol": "DX-Y.NYB",
-        "displayName": "美元指数 DXY",
-        "group": "macro",
-        "currency": "USD",
-        "exchangeName": "NYB",
-        "currentPrice": 104.317,
-        "pct1Day": 0.4883946183700413,
-        "pct5Day": 0.7407020044787536,
-        "pct52WeekHigh": -0.2037692528460806,
-        "pct52WeekLow": 9.1753008895866,
-        "sma20": 102.68535118103027,
-        "sma50": 101.98314041137695,
-        "sma200": 100.04203525543213,
-        "rsi14": 72.54131098025692,
-        "macd": 0.6266186700791962,
-        "macdSignal": 0.4716079718646068,
-        "macdHistogram": 0.15501069821458946,
-        "trend": "bullish",
-        "rsiState": "overbought",
-        "signals": [
-          {
-            "type": "rsi-overbought",
-            "label": "RSI 超买"
-          },
-          {
-            "type": "near-52w-high",
-            "label": "接近 52 周高"
-          },
-          {
-            "type": "above-sma50-sma200",
-            "label": "多头排列"
-          }
+        "url": "https://arxiv.org/abs/2611.17184",
+        "arxiv_id": "2611.17184",
+        "pdf_url": "https://arxiv.org/pdf/2611.17184",
+        "title_en": "Omakase: Execution Congestion Control through Conflict-Graph Integration in Multi-Proposer Blockchain",
+        "title_zh": "Omakase：多提议者区块链中基于冲突图集成的执行拥塞控制",
+        "authors": [
+          "Dakai Kang",
+          "Ray Neiheiser",
+          "Alberto Sonnino",
+          "Eleftherios Kokoris Kogias",
+          "Mohammad Sadoghi"
+        ],
+        "categories": [
+          "cs.DB",
+          "cs.DC"
+        ],
+        "published_at": "2026-11-20T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2026-11-12",
+        "updated_date": "2026-11-20",
+        "comment": "15 pages, 7 figures, 8 tables, 6 algorithms",
+        "keep": true,
+        "topic": "多提议者区块链并行执行引擎",
+        "summary": "针对多提议者区块链中跨区块并行性未被充分利用及高竞争下乐观并发控制（OCC）级联中断的问题，提出并行执行框架Omakase。该框架结合区块预执行、跨区块冲突图集成与图感知OCC机制，在空闲核心上分布预执行提议区块，并通过贪心调度器在有并行收益时集成冲突图，实现执行拥塞控制。在1.5万个以太坊主网区块上的测试显示，其较顺序执行实现2.47倍加速。",
+        "highlights": [
+          "提出跨区块冲突图集成机制以挖掘多提议者架构下的并行度",
+          "设计图感知OCC执行器，彻底消除精确预测下的交易中断",
+          "在以太坊主网数据集上实现2.47倍加速与高竞争下的吞吐稳定性"
         ]
       }
     ],
-    "crypto_fear_greed": {
-      "value": 11,
-      "classification": "Extreme Fear",
-      "classificationCn": "极度恐慌",
-      "timestamp": "2026-11-24T00:00:00.000Z"
-    },
-    "crypto_global": {
-      "totalMarketCapUsd": 2120795811957.7615,
-      "total24hVolumeUsd": 93167992345.88243,
-      "marketCapChangePct24h": -1.215574928072452,
-      "btcDominance": 58.06926137582521,
-      "ethDominance": 9.845150822500637,
-      "activeCryptocurrencies": 21295
-    },
-    "generated_at": "2026-11-24T00:27:46.401Z"
+    "filtered_papers": [],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-24T06:03:48.027Z"
+  },
+  "venues": {
+    "date": "2026-11-24",
+    "query_date": "2026-11-23",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "venue_count": 68,
+    "total_fetched": 1,
+    "kept_count": 0,
+    "filtered_count": 1,
+    "papers": [],
+    "filtered_papers": [
+      {
+        "url": "https://proceedings.mlr.press/v267/qi25a.html",
+        "title_en": "Rethinking the Temperature for Federated Heterogeneous Distillation",
+        "authors": [
+          "Fan Qi",
+          "Daxu Shi",
+          "Chuokun Xu",
+          "Shuai Li",
+          "Changsheng Xu"
+        ],
+        "venue_abbr": "ICML",
+        "venue_name": "International Conference on Machine Learning",
+        "venue_tier": "CCF-A",
+        "pub_date": "2025-10-06",
+        "created_date": "2026-11-23",
+        "title_zh": "重新思考异构联邦蒸馏中的温度机制",
+        "keep": false,
+        "topic": "联邦学习蒸馏",
+        "summary": "Federated Distillation (FedKD) relies on lightweight knowledge carriers like logits for efficient client-server communication. Although logit-based methods have demonstrated promise in addressing statistical and architectural heterogeneity in federated learnin",
+        "highlights": [],
+        "discard_reason": "主打联邦蒸馏优化，仅将区块链作为验证挂名背景，缺乏区块链核心技术贡献。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-24T06:03:57.179Z"
+  },
+  "news": {
+    "date": "2026-11-24",
+    "query_date": "2026-11-23",
+    "source_count": 21,
+    "total_fetched": 20,
+    "kept_count": 9,
+    "filtered_count": 11,
+    "items": [
+      {
+        "url": "https://www.coindesk.com/business/2026/11/23/binance-hackers-push-usd247-million-through-transactions-designed-to-cloud-the-source",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:29:01.000Z",
+        "title_en": "Binance hackers push $247 million through transactions designed to cloud the source",
+        "title_zh": "币安黑客通过 Kruw 混币洗钱 2.47 亿美元",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "链上洗钱追踪",
+        "summary": "Elliptic 监测显示，币安黑客正将 2.47 亿美元被盗资金通过混币工具转移。分析表明，绝大部分 CoinJoin 混币交易由名为 Kruw 的实体在每日固定时间段内协调进行，企图掩盖资金来源，可能涉及地下洗钱团伙协作。",
+        "highlights": [
+          "涉案资金达 2.47 亿美元",
+          "黑客通过固定时间段混币掩盖来源"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/ecosystems/2026-11-23-pump-fun-draws-criticism-over-private-key-imports-as-it-retires-external-wallet-sign-in-on-web-444926",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T13:54:54.000Z",
+        "title_en": "Pump.fun draws criticism over private key imports as it retires external wallet sign-in on web",
+        "title_zh": "Pump.fun 停用网页端外部钱包登录并要求导入私钥引发质疑",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "私钥安全",
+        "summary": "Pump.fun 宣布停用 Web 端的外部钱包登录方式，并要求用户直接导入私钥以继续使用原钱包关联账户。此举引发社区对其私钥暴露与资金安全风险的强烈质疑与批评。",
+        "highlights": [
+          "Pump.fun 强制要求导入私钥引发风险隐患"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/erc-8516-sovereign-erc-20-receive-protection/30485",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-23T15:55:17.000Z",
+        "title_en": "ERC-8516: Sovereign ERC-20 Receive Protection",
+        "title_zh": "ERC-8516 提案：为 ERC-20 引入自主接收保护",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "EIP 提案",
+        "summary": "ERC-8516 提出针对 ERC-20 的可选扩展标准，允许账户在不引入可变状态重入漏洞的前提下自主拒绝未经许可的代币转移。该提案旨在帮助用户与 DAO 财库防范地址毒化、粉尘攻击及恶意资金污染等安全与合规风险。",
+        "highlights": [
+          "自主拦截未经许可的代币流入",
+          "防范地址毒化与重入漏洞风险"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/add-eip-bounded-storage-credit-and-debit/30477",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-23T12:15:21.000Z",
+        "title_en": "Add EIP: Bounded Storage Credit and Debit",
+        "title_zh": "以太坊新提案拟引入有界存储加减指令以优化状态操作",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "EIP提案",
+        "summary": "研究人员提出 EIP 新提案，引入有界存储加法 SCREDIT 与减法 SDEBIT 指令。该提案作为 EIP-7519 的后续方案，仅在存储槽数值符合上下界条件时执行变更，可提高区块验证效率并提升代币合约安全性。",
+        "highlights": [
+          "引入 SCREDIT 与 SDEBIT 有界存储指令",
+          "支持上限与下限条件检查以优化验证效率"
+        ]
+      },
+      {
+        "url": "https://ethresear.ch/t/ethcllib-a-lean-4-framework-for-the-ethereum-consensus-specs/26283",
+        "source_name": "ethresear.ch",
+        "source_group": "协议研究",
+        "published_at": "2026-11-23T11:17:01.000Z",
+        "title_en": "EthCLLib: a Lean 4 framework for the Ethereum consensus specs",
+        "title_zh": "EthCLLib：基于 Lean 4 的以太坊共识规范形式化验证框架",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "形式化验证",
+        "summary": "研究人员推出基于 Lean 4 的以太坊共识规范框架 EthCLLib。该框架支持跨硬分叉（如 Fulu、Gloas、Heze）的代码继承与差异化声明，已成功通过 pyspec 测试向量，为共识层形式化验证提供高效工具。",
+        "highlights": [
+          "支持跨分叉代码继承与 diff 差异声明",
+          "通过 pyspec 测试向量验证共识规范"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/erc-8512-gpu-collateral-evidence/30476",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-23T10:12:12.000Z",
+        "title_en": "ERC-8512: GPU Collateral Evidence",
+        "title_zh": "ERC-8512 提案：针对 RWA 算力质押的物理 GPU 身份认证机制",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "ERC 提案",
+        "summary": "ERC-8512 提出一种机器可读的 GPU 质押凭证标准。该方案利用数据中心 GPU 出厂自带的身份密钥生成设备密钥，并通过远程证明解答链上出质状态、物理真实存在性以及当月算力服务情况，以解决 RWA 链上 GPU 借贷中的信任与欺诈风险。",
+        "highlights": [
+          "利用 GPU 出厂身份密钥生成物理证明",
+          "降低 RWA 链上算力借贷的核验成本与欺诈风险"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/eip-8513-pre-seeded-encrypted-execution-payloads/30475",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-23T08:37:44.000Z",
+        "title_en": "EIP-8513: Pre-seeded Encrypted Execution Payloads",
+        "title_zh": "EIP-8513 提案：提早预播加密执行负载以优化区块传输效能",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "EIP 提案",
+        "summary": "EIP-8513 针对 EIP-7732 机制进行了补充，允许构建者（Builder）在出价被有效区块包含后立即预先传输加密的执行负载，揭示阶段仅需传输 32 字节密钥。该机制能大幅利用等待证明的空闲时间，减轻传输时延压力。",
+        "highlights": [
+          "预传输加密负载，揭示阶段仅需 32 字节密钥",
+          "优化 EIP-7732 下的区块负载传输时延"
+        ]
+      },
+      {
+        "url": "https://thedefiant.io/converge/tradfi-and-fintech/grayscale-launches-zecx-a-leveraged-zcash-focused-etf",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:23:09.000Z",
+        "title_en": "Grayscale Launches ZECX, a Leveraged Zcash-Focused ETF",
+        "title_zh": "Grayscale 推出首只针对 Zcash 的 2 倍杠杆 ETF ZECX",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "ETF 动态",
+        "summary": "灰度（Grayscale）推出针对 Zcash 的杠杆 ETF 产品 ZECX，旨在实现 ZCSH 日收益率的 2 倍目标。该基金净管理费率为 0.95%，预估包含融资及其他费用的年度嵌入式互换成本约占平均每日净资产的 7.5%。",
+        "highlights": [
+          "目标实现 ZCSH 日收益率的 2 倍",
+          "净管理费率 0.95%，预估年度互换成本约 7.5%"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/business/2026-11-23-okxice-launches-tokenized-securities-venue-444898",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T14:01:02.000Z",
+        "title_en": "OKXICE launches tokenized securities venue with 113 assets confirmed for 24/7 trading",
+        "title_zh": "OKX 与 ICE 联合推出代币化证券平台首批确认 113 项资产",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "资产证券化",
+        "summary": "OKX 与洲际交易所（ICE）联合推出代币化证券交易平台 OKXICE，确认首批 113 项资产上线并支持 24/7 全天候交易。发行方及资产管理方涵盖 Fidelity、Circle、Coinbase 等知名机构。",
+        "highlights": [
+          "确认 113 项代币化证券资产支持全天候交易",
+          "吸引 Fidelity 与 Circle 等机构参与"
+        ]
+      }
+    ],
+    "filtered_items": [
+      {
+        "url": "https://thedefiant.io/frontier/markets/s-p-500-rebounds-5-4-after-seven-session-selloff",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:49:46.000Z",
+        "title_en": "S&P 500 Rebounds 5.4% After Seven-Session Selloff",
+        "title_zh": "S&P 500 Rebounds 5.4% After Seven-Session Selloff",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Nvidia shares rose 34.5% by 10:40 a.m. ET, while the broader index recovered part of last week's steep losses.",
+        "highlights": [],
+        "discard_reason": "纯标普 500 指数与美股个股涨跌播报，缺乏区块链及安全相关信息。"
+      },
+      {
+        "url": "https://thedefiant.io/converge/cefi/strategy-moves-1-billion-out-of-its-dividend-reserve",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:48:04.000Z",
+        "title_en": "Strategy Moves $1 Billion Out of Its Dividend Reserve",
+        "title_zh": "Strategy Moves $1 Billion Out of Its Dividend Reserve",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The bitcoin treasury company expanded its preferred-stock buyback authorization to $4 billion while leaving a smaller cash cushion dedicated to interest and dividends.",
+        "highlights": [],
+        "discard_reason": "企业内部股息储备与股票回购资金调度，无区块链底层或安全价值。"
+      },
+      {
+        "url": "https://www.theblock.co/news/markets/2026-11-23-defi-development-dfdv-solana-treasury-11-consecutive-weeks-444950",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:34:51.000Z",
+        "title_en": "DeFi Development extends Solana buying streak to 11 straight weeks, SOL treasury hits 2.62 million",
+        "title_zh": "DeFi Development extends Solana buying streak to 11 straight weeks, SOL treasury hits 2.62 million",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "DeFi Development added about 5,180 SOL, lifting its Solana treasury to 2.62 million SOL in its 11th straight week of buying since Sept. 14.",
+        "highlights": [],
+        "discard_reason": "属于机构定期增持代币的例行财务播报，缺乏实质技术与安全内容。"
+      },
+      {
+        "url": "https://thedefiant.io/converge/markets/nasdaq-futures-hit-price-cap-after-nearly-7-jump",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:29:54.000Z",
+        "title_en": "Nasdaq Futures Hit Price Cap After Nearly 7% Jump",
+        "title_zh": "Nasdaq Futures Hit Price Cap After Nearly 7% Jump",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "December E-mini contracts traded at CME’s overnight ceiling before the US stock-market open and retained a 6.7% gain at 10:11 a.m. ET.",
+        "highlights": [],
+        "discard_reason": "纳斯达克股指期货传统金融行情播报，与区块链安全或技术无关。"
+      },
+      {
+        "url": "https://thedefiant.io/news/markets/ether-s-15-rebound-loses-steam-after-us-markets-open",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:19:52.000Z",
+        "title_en": "Ether's 15% Rebound Loses Steam After US Markets Open",
+        "title_zh": "Ether's 15% Rebound Loses Steam After US Markets Open",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "ETH was still 11.2% above Friday's US close by 10 a.m. ET, but the bounce had recovered only about 22% of its preceding 28-day dollar-price decline.",
+        "highlights": [],
+        "discard_reason": "属于纯 ETH 短期行情播报与价格反弹分析，缺乏技术或安全信息量。"
+      },
+      {
+        "url": "https://www.theblock.co/news/business/2026-11-23-bitmine-adds-7819-eth-tom-lee-makes-hard-money-case-444948",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:02:41.000Z",
+        "title_en": "Bitmine adds 7,819 ETH as Tom Lee makes the ‘hard money’ case",
+        "title_zh": "Bitmine adds 7,819 ETH as Tom Lee makes the ‘hard money’ case",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Bitmine added 7,819 ETH over the past week, lifting its total holdings to 6,085,564 ETH, or 4.98% of the circulating supply.",
+        "highlights": [],
+        "discard_reason": "属于常规机构买入代币与行情观点宣传，缺乏底层技术与安全信息。"
+      },
+      {
+        "url": "https://www.coindesk.com/business/2026/11/23/eric-trump-backed-american-bitcoin-secures-usd150-million-loan-against-its-bitcoin",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:02:32.000Z",
+        "title_en": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin",
+        "title_zh": "Eric Trump-backed American Bitcoin secures $150 million loan against its bitcoin",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The Nasdaq-listed crypto miner can borrow without selling its reserves or issuing new shares, but falling BTC prices could force it to pledge more collateral.",
+        "highlights": [],
+        "discard_reason": "属于常规矿企抵押贷款与企业融资软文，缺乏底层技术与安全信息量。"
+      },
+      {
+        "url": "https://www.theblock.co/news/markets/2026-11-23-bitcoin-crypto-tech-stocks-rally-nvidia-reinstates-jensen-huang-ceo-nvda-jumps-444952",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T15:02:21.000Z",
+        "title_en": "Bitcoin, crypto and tech stocks rally as Nvidia reinstates Jensen Huang as CEO; NVDA jumps 30%",
+        "title_zh": "Bitcoin, crypto and tech stocks rally as Nvidia reinstates Jensen Huang as CEO; NVDA jumps 30%",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Ahead of the announcement, Polymarket put the odds of Huang rejoining Nvidia by the end of the year at just 10.5%.",
+        "highlights": [],
+        "discard_reason": "属于美股科技股联动与宏观行情播报，缺乏区块链技术或安全信息量。"
+      },
+      {
+        "url": "https://www.coindesk.com/opinion/2026/11/23/bitcoin-s-5-year-return-is-nearly-zero-great-narratives-are-fading-and-what-s-left-is-the-fed",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T14:43:18.000Z",
+        "title_en": "Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed",
+        "title_zh": "Bitcoin's 5-year return is nearly zero, great narratives are fading and what's left is the Fed",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "",
+        "highlights": [],
+        "discard_reason": "属于纯市场情绪与历史收益率论述观点，缺乏实质技术或安全信息量。"
+      },
+      {
+        "url": "https://www.coindesk.com/markets/2026/11/23/jensen-huang-returns-as-nvidia-ceo-as-shares-jump-27",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T14:13:44.000Z",
+        "title_en": "Nvidia soars as Jensen Huang returns to lead company",
+        "title_zh": "Nvidia soars as Jensen Huang returns to lead company",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The Nasdaq gained more than 6% as Nvidia rose as much as 35%. After a brief surge, crypto returned to a more muted advance.",
+        "highlights": [],
+        "discard_reason": "属于传统美股企业人事变动与行情播报，缺乏 Web3 核心技术与安全价值。"
+      },
+      {
+        "url": "https://www.coindesk.com/business/2026/11/23/fidelity-investments-strive-etoro-join-okx-ice-tokenized-securities-venue",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-23T13:49:44.000Z",
+        "title_en": "Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue",
+        "title_zh": "Fidelity Investments, Strive, Etoro join OKX-ICE tokenized securities venue",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The Intercontinental Exchange-backed venture said it has confirmed 113 assets for listing as trading begins, following a wave of objections from companies initially picked for inclusion.",
+        "highlights": [],
+        "discard_reason": "与 OKXICE 推出代币化证券交易平台新闻高度重复，无新增独立信息。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-24T06:07:01.690Z"
   }
 }
