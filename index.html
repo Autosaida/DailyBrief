@@ -410,19 +410,39 @@
   <div class="paper-list">
     <article class="paper-card">
   <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">DeFi交易执行实证</span>
+    <span class="tag tag-cat">q-fin.TR</span><span class="tag tag-cat">cs.LG</span><span class="tag tag-cat">math.OC</span>
+    <span class="paper-id">arXiv:2611.27987</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2611.27987" target="_blank" rel="noopener noreferrer">确定性DeFi执行中抗风险强化学习与Gas感知路由的实证局限</a>
+  </h3>
+  <div class="paper-title-en">Empirical Limits of Risk-Averse Reinforcement Learning versus Gas-Aware Routing in Deterministic DeFi Execution</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Sri Sairam Gautam B</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>6 pages, 6 figures, 4 tables. Code and deterministic test suite available on GitHub</div>
+  <p class="paper-summary">评估自动化做市商（AMM）中考虑MEV夹心攻击与Gas费调度的交易执行策略。构建基于Uniswap V2预备金与EIP-1559 Gas过程的端到端环境，对引入CVaR惩罚的PPO强化学习代理与贪婪Gas感知Oracle进行对比。修复策略漏洞后，最佳PPO变体仅捕获Oracle收益的79%（46,542对比58,786 USDC），且引入Gas历史观察未缩小差距，表明模型自由MLP策略难以超越计算复杂度仅为O(log ε⁻¹)的近视Gas感知启发式方法。</p>
+  <ul class="highlights"><li>修复环境漏洞后PPO仅达到Gas感知Oracle收益的79%</li><li>增加3个区块Gas历史观察无法弥补强化学习策略劣势</li><li>证明低复杂度启发式算法在确定性DeFi路由中更具优势</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2611.27987" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.27987" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2026-10-13">v2 更新</span>
-    <span class="tag tag-topic">AI智能体安全与追责</span>
+    <span class="tag tag-topic">AI Agent链上保险与追责</span>
     <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.AI</span>
     <span class="paper-id">arXiv:2610.18230</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2610.18230" target="_blank" rel="noopener noreferrer">可验证智能体保险：基于以太坊 Layer-2 的 AI 智能体合约审计与追责框架</a>
+    <a href="https://arxiv.org/abs/2610.18230" target="_blank" rel="noopener noreferrer">通过可验证 Agent 保障机制对 AI Agent 实施链上经济追责</a>
   </h3>
   <div class="paper-title-en">Holding Agents Accountable with Verifiable Agent Insurance</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Cheng Hua, Taro Tsuchiya, Nicolas Christin, Giulia Fanti</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>22 pages, 1 figure, 9 tables; v2: measured results on updated harnesses replace the projected coverage, adds a human baseline for the labels, signed checkpoints, and claims funded in filing order</div>
-  <p class="paper-summary">针对 AI 智能体在执行任务时可能发生的破坏性误行为，提出基于区块链的可验证智能体保险（VAI）框架。通过将提供者做出的策略承诺与托管资金嵌入以太坊 Layer-2 智能合约，并在用户检测到违规时触发验证器检查工具执行日志路径。测试表明，该框架在三个主流智能体基准测试中实现了 63.6% 的违规检测率；若智能体显式输出结构化安全记录，检测率可提高至 79.8%。</p>
-  <ul class="highlights"><li>首次提出基于 L2 智能合约托管与验证路径的 AI 保险框架</li><li>无须单独改造工具即可实现智能体违规行为的确定性审计与赔付</li><li>显式结构化数据输出可将智能体违规检测成功率提升至 79.8%</li></ul>
+  <p class="paper-summary">针对AI Agent在执行任务时的破坏性违规行为，提出可验证Agent保险（VAI）框架。该框架将Agent服务商的经济承诺与押金锁定于以太坊Layer-2智能合约，通过共享工具执行路径记录运行日志。用户检测到违规后可触发验证者审查轨迹，验证属实即可获得押金赔付。在三大基准测试中，VAI对违规行为的检测率达到63.6%，若Agent显式输出结构化授权与安全记录，检测率可提升至79.8%。</p>
+  <ul class="highlights"><li>将Agent服务商经济承诺与押金锁定于L2智能合约实现追责</li><li>基于共享工具路径日志验证违规，无需单独改造工具</li><li>Agent输出结构化安全记录后违规检测率达79.8%</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2610.18230" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2610.18230" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -431,38 +451,18 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">DeFi交易执行与MEV优化</span>
-    <span class="tag tag-cat">q-fin.TR</span><span class="tag tag-cat">cs.LG</span><span class="tag tag-cat">math.OC</span>
-    <span class="paper-id">arXiv:2611.27987</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.27987" target="_blank" rel="noopener noreferrer">确定性 DeFi 执行中抗风险强化学习与 Gas 意识路由的实证局限性研究</a>
-  </h3>
-  <div class="paper-title-en">Empirical Limits of Risk-Averse Reinforcement Learning versus Gas-Aware Routing in Deterministic DeFi Execution</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Sri Sairam Gautam B</div>
-  <div class="paper-comment"><span class="comment-label">备注：</span>6 pages, 6 figures, 4 tables. Code and deterministic test suite available on GitHub</div>
-  <p class="paper-summary">针对自动做市商（AMM）中恒定乘积滑点与受 Gas 成本调控的 MEV 夹心攻击，评估抗风险强化学习（PPO-CVaR）在 Uniswap V2 实时环境下的订单执行表现。研究发现先前文献因代码路径缺陷导致收益虚高 3 倍；修正漏洞后，最强 PPO 模型收益仅达到贪心 Gas 意识预言机（单区块计算复杂度仅 O(log ε⁻¹)）的 79%（46,542 对比 58,786 USDC），证明无模型 MLP 策略在确定性 DeFi 执行中难以超越低复杂度的贪心启发式算法。</p>
-  <ul class="highlights"><li>揭示 DeFi 强化学习交易执行中因代码漏洞导致的收益虚高规范博弈问题</li><li>证实无模型 RL 策略收益仅达低复杂度 Gas 意识预言机的 79%</li><li>为 AMM 环境下的确定性订单路由与 MEV 避险提供实证基准</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2611.27987" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.27987" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
-    <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">Web3生态与NFT软件工程</span>
+    <span class="tag tag-topic">NFT生成艺术源码保存</span>
     <span class="tag tag-cat">cs.SE</span>
     <span class="paper-id">arXiv:2611.29604</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.29604" target="_blank" rel="noopener noreferrer">拯救 2.8 万个生成艺术源码：生成式 NFT 链下代码脆弱性与归档实证研究</a>
+    <a href="https://arxiv.org/abs/2611.29604" target="_blank" rel="noopener noreferrer">fx(hash)：抢救2.8万个生成艺术NFT源代码的软件工程实践</a>
   </h3>
   <div class="paper-title-en">fx(hash): Salvaging The Source Code of 28k Generative Artworks</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Benoit Baudry, Valeriia Bezklynska, Martin Monperrus</div>
   
-  <p class="paper-summary">针对生成式 NFT 平台 fx(hash) 破产倒闭导致链下源码面临永久遗失风险的问题，揭示了区块链上数字所有权不可篡改与链下生成代码高度脆弱之间的矛盾。研究团队成功挽救并归档了由 5,532 名国际艺术家贡献的全部 28,193 个生成式艺术程序至 Software Heritage 永久代码库。论文分析了生成式 NFT 的代码依赖脆弱性，并提出了针对 Web3 文化数字遗产的确定性归档与保存方法。</p>
-  <ul class="highlights"><li>实证揭示 NFT 数字所有权链上永存与生成代码链下易失的严重冲突</li><li>成功抢救并永久归档 5,532 位艺术家的 28,193 个生成艺术程序</li><li>提出针对区块链生成式数字文化遗产的代码安全归档标准</li></ul>
+  <p class="paper-summary">针对去中心化生成艺术NFT平台fx(hash)倒闭引发的链下源码丢失风险，进行大规模代码抢救与归档工程。虽然NFT所有权在Tezos和Ethereum链上不可篡改，但生成艺术的核心计算代码大多寄存于链下存储系统，面临服务失效威胁。研究团队成功提取并归档了来自5,532位艺术家贡献的全部28,193个生成程序，将其永久保存至Software Heritage，并总结了生成艺术NFT的代码脆弱性特征与抢救路径。</p>
+  <ul class="highlights"><li>抢救并永久归档了来自5,532位艺术家的28,193个生成代码</li><li>揭示了链上所有权与链下计算代码解耦导致的NFT易失性</li><li>构建了数字文化遗产及生成艺术软件的标准化抢救流程</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2611.29604" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.29604" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -471,18 +471,18 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">拍卖机制设计与Gas补偿</span>
+    <span class="tag tag-topic">链上拍卖机制设计</span>
     <span class="tag tag-cat">cs.GT</span>
     <span class="paper-id">arXiv:2611.28447</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.28447" target="_blank" rel="noopener noreferrer">包含交易成本的时钟拍卖中基于报销的卖方收益最大化机制</a>
+    <a href="https://arxiv.org/abs/2611.28447" target="_blank" rel="noopener noreferrer">交易成本上升式拍卖中的报销补贴作为收益优化机制</a>
   </h3>
   <div class="paper-title-en">Reimbursement as a Revenue Instrument in Costly Clock Auctions</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Miriam Nelson (Independent Researcher), Jack Stanick (Boston College), Edwin Lock (King&#39;s College London), Francisco Marmolejo-Coss\&#39;{\i}o (Boston College and IOG)</div>
   
-  <p class="paper-summary">在基于区块链的递升时钟拍卖中，竞价者每次确认参与均需支付区块链交易手续费（Gas）。针对这一摩擦，研究提出卖方在拍卖前承诺交易成本报销费率的收益优化机制。通过线性规划求解维持竞价策略不变的最优补偿方案，并发现仅报销最后一个计划决策轮次能在特定环境下超越全额报销或不报销策略。实验表明该报销时间选择能有效防止竞价者中途流失，在扣除补偿开支后仍能显著提升卖方的净交易收益。</p>
-  <ul class="highlights"><li>首次将区块链交易手续费摩擦引入递升时钟拍卖的博弈论模型</li><li>证明仅报销特定轮次的动态补偿策略优于全额报销或不报销</li><li>给出在区块链智能合约上实现防遗失消息链上拍卖的具体要求</li></ul>
+  <p class="paper-summary">针对链上拍卖中买方每次出价均需支付区块链交易手续费（Gas）的成本痛点，研究拍卖方通过补贴出价成本来提升净收益的机制设计。通过线性规划求解维持最佳策略所需的最小补贴方案，并分析不同轮次的报销时机。在双出价者模式下，仅报销最后一次确定决定的策略净收益最高；在四出价者环境中，早期轮次给予部分补贴可实现更高收益，为区块链上高昂交易成本下的拍卖设计提供了优化路径。</p>
+  <ul class="highlights"><li>针对区块链出价Gas成本研究卖方报销补贴的收益最大化策略</li><li>证明仅补贴最终轮次比不补贴或全额补贴能带来更高净收益</li><li>揭示买方确认参与机制在消息缺失时对拍卖定价的约束限制</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2611.28447" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.28447" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -490,79 +490,19 @@
 </article>
 <article class="paper-card">
   <div class="paper-meta-row">
-    <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">密码学与隐私保护</span>
-    <span class="tag tag-cat">cs.CR</span>
-    <span class="paper-id">arXiv:2611.30453</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.30453" target="_blank" rel="noopener noreferrer">PLATRS：面向许可链的抗量子格基可追溯可关联环签名方案</a>
-  </h3>
-  <div class="paper-title-en">PLATRS: A Lattice-Based Linkable Accountable Ring Signature for Permissioned Blockchains</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Jie Zhang, Xiaohong Li, Honglin Mao, Ruitao Feng, Lingyun Yuan, Guangdong Bai</div>
-  <div class="paper-comment"><span class="comment-label">备注：</span>19 pages, 2 figures, 7 tables</div>
-  <p class="paper-summary">针对联盟链跨域数据共享中匿名性与监管可追溯性的矛盾，提出基于模块格的可关联可追溯环签名方案 PLATRS。该方案允许签名者自主选择环成员，通过每事件标签实现无索引比对；在发生事件重复授权时触发监管开方解密并公布公钥组件。在 Hyperledger Fabric 上测试表明，签名耗时仅 9.886 ms，验证 3.919 ms，在 16 MiB 区块下吞吐量达到 60.5 签名/秒，签名速度较现有方案提升 3188 倍，为联盟链提供了高效率的抗量子安全保障。</p>
-  <ul class="highlights"><li>首个兼具抗量子安全、自主选环、事件可关联与单机构追溯的格签名方案</li><li>签名与验证速度比现有方案 FLLL+21 快达 3188 倍</li><li>在 Hyperledger Fabric 系统中实现 60.5 TPS 的实用吞吐性能</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2611.30453" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.30453" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
-    <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">共识协议与容错机制</span>
-    <span class="tag tag-cat">cs.CR</span>
-    <span class="paper-id">arXiv:2607.08666</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2607.08666" target="_blank" rel="noopener noreferrer">TRM-Raft：集成信任与声誉模型的抗拜占庭 Raft 共识机制</a>
-  </h3>
-  <div class="paper-title-en">TRM-Raft: A Byzantine-Resistant Raft Consensus via Integrated Trust and Reputation Model</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Jie Zhang, Xubo Fan, Xiaohong Li, Zhiyong Feng</div>
-  <div class="paper-comment"><span class="comment-label">备注：</span>11 pages, 7 figures, 2 tables</div>
-  <p class="paper-summary">针对传统 Raft 共识协议无法抵抗拜占庭攻击（如选票伪造和日志篡改）且传统 BFT 开销过高的问题，提出非侵入式集成链上信任与声誉模型（B-TRM）的 TRM-Raft 协议。该方案通过多维行为量化与自适应惩罚机制区分无意故障与恶意行为，并将声誉值嵌入 Leader 选举与 Schnorr 签名日志复制中。在 Hyperledger Fabric 上评估显示，即使存在 40% 拜占庭节点，恶意 Leader 比例仍保持在 5% 以下，且吞吐量损失低于 10%，延迟增加小于 5%。</p>
-  <ul class="highlights"><li>非侵入式将链上信任与声誉模型嵌入 Raft 共识核心</li><li>在 40% 拜占庭节点下将恶意 Leader 比例压制在 5% 以下</li><li>相比原生 Raft 仅有低于 10% 的吞吐量损失与低于 5% 的延迟增加</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2607.08666" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2607.08666" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
-    <span class="tag tag-update" title="初版日期：2026-07-23">v7 更新</span>
-    <span class="tag tag-topic">共识协议与交易排序</span>
-    <span class="tag tag-cat">cs.DC</span>
-    <span class="paper-id">arXiv:2607.21021</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2607.21021" target="_blank" rel="noopener noreferrer">Multimmit：基于单轮投票的高鲁棒低延迟区块链交易排序协议</a>
-  </h3>
-  <div class="paper-title-en">Multimmit: Low-Latency and Robust Transaction Ordering</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Andrew Lewis-Pye, Patrick O&#39;Grady, Ben Clabby</div>
-  
-  <p class="paper-summary">针对状态机复制（SMR）中交易排序延迟过高的问题，提出在 n ≥ 5f+1 网络假设下的交易排序协议 Multimmit。该协议引入扩展投票机制，使 Leader 区块仅需单轮投票即可终结，并将未被 Leader 包含的合规交易区块由下一终结区块自动接纳排序，消除了 Leader 对排序的绝对控制。在跨 13 个区域部署 50 个验证节点的测试中，10 万 TPS 下的中位数排序延迟仅 383 ms，且在 0.1% 丢包率下性能保持稳定。</p>
-  <ul class="highlights"><li>消除经典 SMR 的第二轮投票，实现 Leader 区块单轮投票终结</li><li>扩展投票机制防止 Leader 恶意操纵交易排序顺序</li><li>50 个分布式节点下 10 万 TPS 时排序延迟低至 383 ms</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2607.21021" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2607.21021" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2025-05-20">v4 更新</span>
-    <span class="tag tag-topic">Layer1基础设施架构</span>
+    <span class="tag tag-topic">高性能 Layer 1 架构</span>
     <span class="tag tag-cat">cs.DC</span><span class="tag tag-cat">cs.CR</span>
     <span class="paper-id">arXiv:2505.14914</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2505.14914" target="_blank" rel="noopener noreferrer">Sei Giga：基于多并发生产者与解耦执行的高吞吐 EVM Layer 1 架构</a>
+    <a href="https://arxiv.org/abs/2505.14914" target="_blank" rel="noopener noreferrer">Sei Giga：多并发块生产与并行执行的 EVM Layer 1 架构</a>
   </h3>
   <div class="paper-title-en">Sei Giga</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Benjamin Marsh, Steven Landers, Jayendra Jog, Alejandro Ranchal-Pedrosa</div>
   
-  <p class="paper-summary">介绍 Sei Giga，一种基于多并发生产者并行执行的 EVM Layer 1 区块链架构。系统通过将数据可用性（DA）层与共识层解耦，在 DA 层获得 f+1 票 PoA 确认后即提交 Autobahn 共识机制，并采用异步区块执行与状态共识机制，彻底将合约执行从共识瓶颈中解耦。内部测试网实验结果显示，Sei Giga 实现了超过 5 gigagas/秒的执行吞吐量，并将最终确定性（Finality）延迟降至 250ms 以内。</p>
-  <ul class="highlights"><li>架构上解耦 DA 层与共识层，配合异步区块执行突破 SMR 瓶颈</li><li>内部测试网突破 5 gigagas/秒吞吐量</li><li>交易确定性延迟缩短至 250 ms 以内</li></ul>
+  <p class="paper-summary">提出Sei Giga，一种具备多并发块生产者与并行化执行能力的EVM Layer 1区块链架构。该架构将数据可用性（DA）层与共识层解耦，采用Autobahn共识协议，要求在DA层获得f+1投票后方可进入共识。通过对交易顺序达成共识并结合异步区块执行与状态共识机制，成功消除了执行环节对共识性能的瓶颈约束。内部测试网实验显示，Sei Giga实现了超过5 Gigagas/秒的吞吐量以及低于250毫秒的最终性确立。</p>
+  <ul class="highlights"><li>达成超过5 Gigagas/秒的吞吐量与低于250ms的最终确立延时</li><li>采用DA层与共识层解耦架构以及Autobahn共识机制</li><li>利用异步区块执行与状态共识彻底消除执行阶段的性能瓶颈</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2505.14914" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2505.14914" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -570,19 +510,79 @@
 </article>
 <article class="paper-card">
   <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-07-23">v7 更新</span>
+    <span class="tag tag-topic">低延迟交易排序共识</span>
+    <span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2607.21021</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2607.21021" target="_blank" rel="noopener noreferrer">Multimmit：满足低延迟与强鲁棒性的状态机复制交易排序协议</a>
+  </h3>
+  <div class="paper-title-en">Multimmit: Low-Latency and Robust Transaction Ordering</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Andrew Lewis-Pye, Patrick O&#39;Grady, Ben Clabby</div>
+  
+  <p class="paper-summary">针对高性能区块链在多节点并行分发交易块时存在的数据拉取延迟问题，提出Multimmit协议（假设n≥5f+1）。该协议通过扩展投票机制（Extension votes），允许验证者赞同未包含在主节点提案中的新鲜交易块，实现主节点区块仅需一轮投票即可确定。在50个跨地区验证者测试中，交易排序中位数延迟在10万至100万 TPS负载下维持在383至411毫秒，且在0.1%丢包率下仍保持极高鲁棒性。</p>
+  <ul class="highlights"><li>主节点区块仅需一轮投票即可确定，减少一轮消息传递延迟</li><li>引入扩展投票机制确保诚实链的交易块无缝并入全局排序</li><li>50节点跨区测试下100万 TPS负载中位数延迟仅411ms</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2607.21021" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2607.21021" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">抗拜占庭共识协议</span>
+    <span class="tag tag-cat">cs.CR</span>
+    <span class="paper-id">arXiv:2607.08666</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2607.08666" target="_blank" rel="noopener noreferrer">TRM-Raft：集成信任与声誉模型的抗拜占庭 Raft 共识协议</a>
+  </h3>
+  <div class="paper-title-en">TRM-Raft: A Byzantine-Resistant Raft Consensus via Integrated Trust and Reputation Model</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jie Zhang, Xubo Fan, Xiaohong Li, Zhiyong Feng</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>11 pages, 7 figures, 2 tables</div>
+  <p class="paper-summary">针对传统Raft共识协议仅能应对崩溃故障而易受选举伪造和日志篡改等拜占庭攻击的问题，提出TRM-Raft协议。该协议非侵入式地将基于区块链的信任与声誉模型（B-TRM）植入Raft核心，多维量化节点行为并实施自适应惩罚，同时将声誉整合至主节点选举与日志复制流程。基于Hyperledger Fabric的测试表明，在40%拜占庭节点下，恶劣主节点比例控制在5%以下，且吞吐量损失小于10%，延迟增加低于5%。</p>
+  <ul class="highlights"><li>将链上信任与声誉模型非侵入地融入Raft选举与日志复制</li><li>在40%拜占庭节点威胁下将恶意主节点比例控制在5%以内</li><li>相比原生Raft吞吐量损失小于10%且延迟增加低于5%</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2607.08666" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2607.08666" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">抗量子可环签名密码原语</span>
+    <span class="tag tag-cat">cs.CR</span>
+    <span class="paper-id">arXiv:2611.30453</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2611.30453" target="_blank" rel="noopener noreferrer">PLATRS：许可区块链中基于格的可关联可追责环签名方案</a>
+  </h3>
+  <div class="paper-title-en">PLATRS: A Lattice-Based Linkable Accountable Ring Signature for Permissioned Blockchains</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jie Zhang, Xiaohong Li, Honglin Mao, Ruitao Feng, Lingyun Yuan, Guangdong Bai</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>19 pages, 2 figures, 7 tables</div>
+  <p class="paper-summary">针对许可链跨域数据共享中匿名性与违规追责的双重需求，提出基于模块格（Module-Lattice）的可关联可追责环签名方案PLATRS。签名者可自主选择环并生成事件专用对比标识（Tag），两级检测机制允许任何验证者对比标识，并在发生二次授权违规时由监管机构解密真实身份。在M-LWE和M-SIS假设下证明了其抗量子安全性。开源实现显示，N=1024时签名仅需9.886ms，验证3.919ms，在Hyperledger Fabric上实现了60.5次签名提交/秒。</p>
+  <ul class="highlights"><li>首个同时实现抗量子安全、自主选环、事件标识与单机构追责的格签名</li><li>基于模块格假设在随机预言机模型下证明了CPA匿名性与可关联性</li><li>在1024环规模下签名速度达9.886ms，显著优于现有方案</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2611.30453" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.30453" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2025-10-22">v2 更新</span>
-    <span class="tag tag-topic">可计算法律合约与隐私</span>
+    <span class="tag tag-topic">隐私智能合约</span>
     <span class="tag tag-cat">cs.CR</span>
     <span class="paper-id">arXiv:2510.20007</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2510.20007" target="_blank" rel="noopener noreferrer">zk-Agreements：隐私保护的高确定性机密协议构建机制</a>
+    <a href="https://arxiv.org/abs/2510.20007" target="_blank" rel="noopener noreferrer">zk-Agreements：建立保密协议确定性信任的隐私保护方案</a>
   </h3>
   <div class="paper-title-en">zk-Agreements: A Privacy-Preserving Way to Establish Deterministic Trust in Confidential Agreements</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>To-Wen Liu, Matthew Green</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>The manuscript requires substantial revision in both its presentation and technical content. We believe that the current version does not make a sufficiently significant scientific contribution to warrant its continued availability in its present form</div>
-  <p class="paper-summary">针对传统自然语言法律文本缺乏计算可验证性，以及区块链智能合约公开敏感条款导致商业隐私泄露的问题，提出 zk-Agreements 协议。该框架结合零知识证明隐藏私密协议条款，利用安全两方计算进行私密合规性评估，并借助智能合约保障链上自动化强制执行。系统有效解决了区块链协议中透明性与保密性的内在矛盾，构建了兼顾隐私保护与计算可强制性的数字合约体系。</p>
-  <ul class="highlights"><li>融合 ZKP 与 2PC 实现机密法律文本的私密合规评估</li><li>利用智能合约自动执行，解决链上透明与商业隐私的矛盾</li></ul>
+  <p class="paper-summary">传统纸质合约存在歧义性且难以自动化，而现有公链智能合约面临暴露敏感协议条款的隐私风险。为此提出 zk-agreements 协议，融合零知识证明（ZKP）、安全两方计算（2PC）与智能合约技术。该机制在严格保护隐私条款的前提下实现合规性私密评估与自动强制执行，成功解决了区块链保密协议中透明度与隐私保障之间的根本冲突。</p>
+  <ul class="highlights"><li>融合 ZKP 与 2PC 实现协议条款的隐私保护与私密评估</li><li>基于智能合约保障保密协议的链上自动化强制执行</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2510.20007" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2510.20007" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -608,17 +608,17 @@
     <article class="paper-card venue-card" data-venue="TDSC">
   <div class="paper-meta-row">
     <span class="tag tag-venue-ccfa">TDSC · CCF-A</span>
-    <span class="tag tag-topic">智能合约字节码漏洞检测</span>
+    <span class="tag tag-topic">字节码漏洞检测</span>
     <span class="paper-id">2026-01-01</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://doi.org/10.1109/tdsc.2026.3756528" target="_blank" rel="noopener noreferrer">已部署智能合约字节码的多模态与多尺度漏洞检测</a>
+    <a href="https://doi.org/10.1109/tdsc.2026.3756528" target="_blank" rel="noopener noreferrer">针对已部署智能合约字节码的多模态多尺度漏洞检测</a>
   </h3>
   <div class="paper-title-en">Multi-Modal and Multi-Scale Vulnerability Detection for Deployed Smart Contract Bytecode</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Chi Jiang (University of Electronic Science and Technology of China), Hongbo Yin (University of Electronic Science and Technology of China), Shuai Wang (University of Electronic Science and Technology of China), Tianqing Zhu (City University of Macau), Ming Tao (Dongguan University of Technology), Yin Zhang⋆ (University of Electronic Science and Technology of China), Yan Zhang (University of Electronic Science and Technology of China)</div>
   <div class="paper-comment"><span class="comment-label">出处：</span>IEEE Transactions on Dependable and Secure Computing · 发表 2026-01-01 · 入库 2026-11-24</div>
-  <p class="paper-summary">针对已部署智能合约字节码缺乏高层语义、传统分析工具难以准确捕获多粒度特征的问题，提出结合多模态与多尺度分析的字节码漏洞检测框架。通过融合字节码控制流、数据流以及不同尺度特征表示，有效提升对复杂逻辑缺陷与隐匿漏洞的识别能力，为链上合约安全审计提供高精准度检测支持。</p>
-  <ul class="highlights"><li>融合多模态与多尺度特征分析已部署字节码</li><li>解决底层字节码语义缺失引发的检测难题</li><li>提升链上已部署智能合约漏洞识别精准度</li></ul>
+  <p class="paper-summary">针对已部署智能合约缺乏源代码、反编译分析难度大导致漏洞隐蔽性高的痛点，提出了多模态与多尺度融合的字节码漏洞检测框架。该方法抽取字节码的图结构、指令序列与控制流等多尺度特征，构建联合表征模型，实现无源码场景下的精准分析。实验表明该框架在部署态合约漏洞检测中展现出高准确率与强泛化能力。</p>
+  <ul class="highlights"><li>结合控制流图与指令序列实现字节码多模态表征</li><li>克服无源码部署场景下的合约漏洞检测难题</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://doi.org/10.1109/tdsc.2026.3756528" target="_blank" rel="noopener noreferrer">DOI 论文页 ↗</a>
     
@@ -627,17 +627,17 @@
 <article class="paper-card venue-card" data-venue="TDSC">
   <div class="paper-meta-row">
     <span class="tag tag-venue-ccfa">TDSC · CCF-A</span>
-    <span class="tag tag-topic">重入漏洞检测鲁棒性评估</span>
+    <span class="tag tag-topic">漏洞检测鲁棒性评估</span>
     <span class="paper-id">2026-01-01</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://doi.org/10.1109/tdsc.2026.3756849" target="_blank" rel="noopener noreferrer">智能合约重入漏洞检测鲁棒性评估的多维干扰样本生成框架</a>
+    <a href="https://doi.org/10.1109/tdsc.2026.3756849" target="_blank" rel="noopener noreferrer">面向智能合约重入漏洞检测鲁棒性评估的多维干扰样本生成框架</a>
   </h3>
   <div class="paper-title-en">A Multidimensional Interference Sample Generation Framework for Robustness Evaluation of Reentrancy Vulnerability Detection in Smart Contracts</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Fei Tong (Southeast University), Yifan Qi (Southeast University), Yujian Zhang (Southeast University), Guang Cheng (Southeast University), Yuyang Peng (Tsinghua University)</div>
   <div class="paper-comment"><span class="comment-label">出处：</span>IEEE Transactions on Dependable and Secure Computing · 发表 2026-01-01 · 入库 2026-11-24</div>
-  <p class="paper-summary">针对现有智能合约重入漏洞检测模型在面对代码扰动与对抗攻击时鲁棒性不足的问题，提出多维干扰样本生成框架。通过构建涵盖代码结构变换、语义等效替换等多维干扰策略，自动生成高质量测试样本，系统评估检测模型在复杂对抗环境下的鲁棒性边界与脆弱点。</p>
-  <ul class="highlights"><li>提出多维干扰样本生成框架评估检测模型鲁棒性</li><li>涵盖代码结构变换与语义等效替换等多维策略</li><li>揭示重入漏洞检测模型在代码扰动下的性能边界</li></ul>
+  <p class="paper-summary">针对智能合约重入漏洞检测模型面对代码扰动时鲁棒性不足的问题，提出了多维干扰样本生成框架。该框架从语法结构、控制流分布和数据流逻辑等多维度引入保真对抗扰动，自动化构造高混淆度的测试样本，全面评估检测工具的稳健性。实验结果有效揭示了现有主流重入漏洞检测方法的防御脆弱点。</p>
+  <ul class="highlights"><li>提出多维度语法与控制流对抗扰动生成机制</li><li>系统化评估并揭示主流重入漏洞检测工具的鲁棒盲区</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://doi.org/10.1109/tdsc.2026.3756849" target="_blank" rel="noopener noreferrer">DOI 论文页 ↗</a>
     
@@ -650,11 +650,11 @@
 <li class="filtered-item">
   <div class="filtered-head">
     <span class="tag tag-cat" style="margin-right:0.4rem">TDSC</span>
-    <a href="https://doi.org/10.1109/tdsc.2026.3756473" target="_blank" rel="noopener noreferrer">Policy-Hidden Attribute-Based Searchable Encryption With Edge Computing Using Smart Contract for Internet of Vehicles</a>
+    <a href="https://doi.org/10.1109/tdsc.2026.3756473" target="_blank" rel="noopener noreferrer">面向车联网的使用智能合约与边缘计算的策略隐藏属性可搜索加密</a>
   </div>
   <div class="filtered-en">Policy-Hidden Attribute-Based Searchable Encryption With Edge Computing Using Smart Contract for Internet of Vehicles</div>
   <div class="filtered-authors">Libin Chen (Huai&#39;an University), Yu Liu (Huai&#39;an University), Zhiquan Liu (Jinan University)</div>
-  <div class="filtered-reason">去噪原因：属于车联网应用，仅将智能合约作为辅助组件，缺乏对区块链核心技术的贡献。</div>
+  <div class="filtered-reason">去噪原因：将智能合约仅作为车联网与边缘计算的辅助工具，缺乏区块链核心技术创新。</div>
 </li>
   </ul>
 </details>
@@ -663,16 +663,16 @@
   <section class="tab-panel" id="panel-news" role="tabpanel">
     <div class="stats-row">
     <span class="stat-pill">监控信源 <strong>21</strong> 个</span>
-    <span class="stat-pill">前日候选 <strong>24</strong> 条</span>
+    <span class="stat-pill">前日候选 <strong>23</strong> 条</span>
     <span class="stat-pill">保留 <strong>14</strong> 条</span>
-    <span class="stat-pill">去噪过滤 <strong>10</strong> 条</span>
+    <span class="stat-pill">去噪过滤 <strong>9</strong> 条</span>
   </div>
   <div class="date-notice">查询发布日期：<code>2026-11-24</code>（覆盖链上攻击事件、安全情报机构、核心协议研究论坛与主流行业媒体）</div>
   <div class="subtab-bar" id="newsSubtabBar">
   <button class="subtab-btn active" data-news-filter="ALL">全部 (14)</button>
-  <button class="subtab-btn" data-news-filter="安全事件与情报">安全事件与情报 (5)</button>
-  <button class="subtab-btn" data-news-filter="安全与协议研究">安全与协议研究 (5)</button>
-  <button class="subtab-btn" data-news-filter="行业与监管动态">行业与监管动态 (4)</button>
+  <button class="subtab-btn" data-news-filter="安全事件与情报">安全事件与情报 (6)</button>
+  <button class="subtab-btn" data-news-filter="安全与协议研究">安全与协议研究 (3)</button>
+  <button class="subtab-btn" data-news-filter="行业与监管动态">行业与监管动态 (5)</button>
 </div>
   <div class="paper-list" id="newsItemList">
     <article class="paper-card news-card" data-news-section="安全事件与情报">
@@ -683,11 +683,11 @@
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/security/coinkite-explains-why-coldcard-flaw-escaped-checks" target="_blank" rel="noopener noreferrer">Coinkite 披露 Coldcard 固件漏洞原因，说明审核遗漏细节</a>
+    <a href="https://thedefiant.io/news/security/coinkite-explains-why-coldcard-flaw-escaped-checks" target="_blank" rel="noopener noreferrer">Coinkite 解释 Coldcard 硬件钱包漏洞未被查出的原因</a>
   </h3>
   <div class="paper-title-en">Coinkite Explains Why Coldcard Flaw Escaped Checks</div>
-  <p class="paper-summary">硬件钱包制造商 Coinkite 发布漏洞复盘报告，解释了其 Coldcard 钱包中遗漏的固件路由错误。虽然新版固件已修复该漏洞，但无法修复此前已生成的旧助记词风险，目前官方尚未明确具体的赔偿方案。</p>
-  <ul class="highlights"><li>Coinkite 复盘 Coldcard 固件路由漏洞</li><li>新固件无法修复旧助记词安全隐患</li></ul>
+  <p class="paper-summary">硬件钱包制造商 Coinkite 针对 Coldcard 漏洞发布事后复盘报告，指出该漏洞源于固件路由检查遗漏。修复后的固件无法修复先前生成的私钥（旧 Seed），目前针对受影响用户的补偿方案尚未确定。</p>
+  <ul class="highlights"><li>固件路由检查遗漏导致漏洞漏检</li><li>已修复固件无法自动修复旧 Seed 风险</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://thedefiant.io/news/security/coinkite-explains-why-coldcard-flaw-escaped-checks" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -695,16 +695,16 @@
 <article class="paper-card news-card" data-news-section="安全事件与情报">
   <div class="paper-meta-row">
     <span class="tag tag-sec-alert">安全事件与情报</span>
-    <span class="tag tag-topic">漏洞预警</span>
+    <span class="tag tag-topic">漏洞修复</span>
     <span class="tag tag-cat">The Defiant</span>
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/security/bisq-2-urges-security-update-ahead-of-network-cutoff" target="_blank" rel="noopener noreferrer">Bisq 2 敦促用户完成安全升级，修复可导致代码执行的 Java 漏洞</a>
+    <a href="https://thedefiant.io/news/security/bisq-2-urges-security-update-ahead-of-network-cutoff" target="_blank" rel="noopener noreferrer">去中心化交易所 Bisq 2 紧急发布安全更新修复 Java 代码执行漏洞</a>
   </h3>
   <div class="paper-title-en">Bisq 2 Urges Security Update Ahead of Network Cutoff</div>
-  <p class="paper-summary">去中心化交易所 Bisq 2 发布紧急升级提醒，新的签名规则即将生效。最新桌面版本修复了一个可能允许攻击者执行任意代码的 Java 漏洞，官方要求用户在网络断连限制前完成升级以确保资产安全。</p>
-  <ul class="highlights"><li>Bisq 2 修复可导致代码执行的 Java 漏洞</li><li>新签名规则生效前须完成客户端升级</li></ul>
+  <p class="paper-summary">去中心化交易所 Bisq 2 督促用户尽快升级至最新桌面客户端。本次更新修复了一个可能导致攻击者执行代码的 Java 漏洞，并引入了全新的签名规则，未升级旧节点将被网络切断。</p>
+  <ul class="highlights"><li>修复可导致任意代码执行的 Java 漏洞</li><li>引入新签名规则并切断未升级节点</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://thedefiant.io/news/security/bisq-2-urges-security-update-ahead-of-network-cutoff" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -717,11 +717,11 @@
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/markets/2026/11/24/a-wallet-linked-to-popular-crypto-trader-ansem-sold-usd2-million-in-memecoins-as-his-namesake-token-cratered" target="_blank" rel="noopener noreferrer">加密交易员 Ansem 钱包疑遭黑客攻击，200 万美元代币被恶意抛售</a>
+    <a href="https://www.coindesk.com/markets/2026/11/24/a-wallet-linked-to-popular-crypto-trader-ansem-sold-usd2-million-in-memecoins-as-his-namesake-token-cratered" target="_blank" rel="noopener noreferrer">知名交易员 Ansem 疑因交易终端私钥泄露损失 200 万美元代币</a>
   </h3>
   <div class="paper-title-en">Crypto trader Ansem says his wallet was hacked as $2 million in memecoins were sold</div>
-  <p class="paper-summary">知名加密交易员 Ansem 表示其钱包疑遭黑客攻击，导致价值约 200 万美元的 Meme 币被恶意抛售。据其透露，攻击者可能入侵了交易终端 Bullpen 的账户，从而获取了导入该平台的钱包私钥。目前事件仍在进一步追踪中。</p>
-  <ul class="highlights"><li>损失金额达 200 万美元</li><li>疑因交易终端导入私钥被盗</li></ul>
+  <p class="paper-summary">知名加密交易员 Ansem 称其关联钱包遭黑客攻击，价值 200 万美元的 Meme 币被恶意抛售。Ansem 怀疑黑客侵入了他参与创办的交易终端 Bullpen 账户，由于其私钥曾导入该平台，导致私钥被非法获取并触发抛售。</p>
+  <ul class="highlights"><li>疑因 Bullpen 账户被侵入导致私钥泄露</li><li>涉及 200 万美元 Meme 币被集中抛售</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.coindesk.com/markets/2026/11/24/a-wallet-linked-to-popular-crypto-trader-ansem-sold-usd2-million-in-memecoins-as-his-namesake-token-cratered" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -734,11 +734,11 @@
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://defillama.com/hacks" target="_blank" rel="noopener noreferrer">Solana 生态 DeFi 协议 Bullpen 因逻辑漏洞遭攻击，损失约 257 万美元</a>
+    <a href="https://defillama.com/hacks" target="_blank" rel="noopener noreferrer">Solana 生态 DeFi 协议 Bullpen 遭遇逻辑漏洞攻击损失 257 万美元</a>
   </h3>
   <div class="paper-title-en">[Hack] Bullpen ($2.57M · Solana)</div>
-  <p class="paper-summary">Solana 生态 DeFi 协议 Bullpen 遭遇黑客攻击，因协议逻辑漏洞导致资金被盗，涉案损失金额约 257 万美元。目前攻击的具体技术细节尚在进一步排查与分析中。</p>
-  <ul class="highlights"><li>Solana 链上 DeFi 协议遭遇逻辑漏洞攻击</li><li>导致约 257 万美元加密资产损失</li></ul>
+  <p class="paper-summary">Solana 链上 DeFi 协议 Bullpen 遭遇黑客攻击，损失约 257 万美元。据 DeFiLlama 数据显示，本次攻击分类归为协议逻辑缺陷（Protocol Logic），具体漏洞利用细节与具体手法目前尚在调查中。</p>
+  <ul class="highlights"><li>Solana 链上协议损失 257 万美元</li><li>漏洞分类为协议逻辑缺陷</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://defillama.com/hacks" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -746,18 +746,35 @@
 <article class="paper-card news-card" data-news-section="安全事件与情报">
   <div class="paper-meta-row">
     <span class="tag tag-sec-alert">安全事件与情报</span>
-    <span class="tag tag-topic">链上追踪</span>
+    <span class="tag tag-topic">资产追回</span>
     <span class="tag tag-cat">DL News</span>
     <span class="paper-id">2026-11-23</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.dlnews.com/articles/regulation/binance-obtains-usd65-billion-freezing-order-for-stolen-crypto/" target="_blank" rel="noopener noreferrer">Binance 获阿布扎比法院 65 亿美元全球冻结令以追回被盗加密资产</a>
+    <a href="https://www.dlnews.com/articles/regulation/binance-obtains-usd65-billion-freezing-order-for-stolen-crypto/" target="_blank" rel="noopener noreferrer">币安针对 10 月黑客攻击事件获得阿布扎比法院 65 亿美元全球冻结令</a>
   </h3>
   <div class="paper-title-en">Binance obtains $6.5 billion freezing order for stolen crypto</div>
-  <p class="paper-summary">Binance 宣布已获得阿布扎比法院签发的 65 亿美元全球冻结令，旨在追回于 10 月 29 日黑客攻击事件中被盗的加密资产，这是针对链上犯罪资金采取的重大司法追偿行动。</p>
-  <ul class="highlights"><li>Binance 获得 65 亿美元全球冻结令</li><li>旨在追回 10 月 29 日黑客攻击中被盗加密资产</li></ul>
+  <p class="paper-summary">币安（Binance）宣布已获得阿布扎比法院颁发的 65 亿美元全球资产冻结令，旨在追回在 10 月 29 日发生的黑客攻击事件中被盗的加密资产。这是加密领域规模最大的法院冻结令之一。</p>
+  <ul class="highlights"><li>涉及 10 月 29 日黑客攻击事件</li><li>阿布扎比法院颁发全球冻结令</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.dlnews.com/articles/regulation/binance-obtains-usd65-billion-freezing-order-for-stolen-crypto/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全事件与情报">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-alert">安全事件与情报</span>
+    <span class="tag tag-topic">反洗钱制裁</span>
+    <span class="tag tag-cat">TRM Labs</span>
+    <span class="paper-id">2026-11-23</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.trmlabs.com/resources/blog/ofac-designates-companies-in-the-iran-linked-rahbar-network" target="_blank" rel="noopener noreferrer">美国 OFAC 制裁与伊朗 Rahbar 网络相关的多家交易所及实体</a>
+  </h3>
+  <div class="paper-title-en">OFAC Designates Exchange Houses and Companies in Iran-Linked Rahbar Network | TRM Labs</div>
+  <p class="paper-summary">美国财政部外国资产控制办公室（OFAC）宣布制裁与伊朗 Rahbar 网络相关的多家加密货币交易所与实体。TRM Labs 追踪显示，泄漏记录中包含 9 家相关公司，其中 7 家发起了超过 5,300 笔支付指令。</p>
+  <ul class="highlights"><li>OFAC 指定制裁 Rahbar 关联实体</li><li>泄漏数据暴露逾 5300 笔支付指令</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.trmlabs.com/resources/blog/ofac-designates-companies-in-the-iran-linked-rahbar-network" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="安全与协议研究">
@@ -771,44 +788,10 @@
     <a href="https://collective.flashbots.net/t/chainlink-svr-hint-matching-and-simulation-in-mev-share/6144" target="_blank" rel="noopener noreferrer">Flashbots 社区探讨 MEV-Share 中 Chainlink SVR 提示匹配与模拟机制</a>
   </h3>
   <div class="paper-title-en">Chainlink SVR hint matching and simulation in MEV-Share</div>
-  <p class="paper-summary">在 Flashbots Collective 论坛上，开发者针对 mev-share-node 开源代码及 BuilderNet 生产路径提出技术问询，深入探讨了 MEV-Share 机制下 Chainlink SVR 提示信息的匹配规则、区块未入选时的模拟逻辑以及待挂单的模拟入块流程。</p>
-  <ul class="highlights"><li>关注 MEV-Share 模拟逻辑与 BuilderNet 生产路径对接</li></ul>
+  <p class="paper-summary">开发者在 Flashbots 论坛针对 MEV-Share 节点代码及 BuilderNet 生产路径发起技术讨论，研讨待处理有效 Bundle 的匹配规则、区块模拟中的 Pending 订单处理以及在有效包含窗口内的重新模拟机制。</p>
+  <ul class="highlights"><li>探讨 Flashbots MEV-Share 节点模拟机制</li><li>关注 BuilderNet 生产路径与 Bundle 匹配逻辑</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://collective.flashbots.net/t/chainlink-svr-hint-matching-and-simulation-in-mev-share/6144" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议治理</span>
-    <span class="tag tag-cat">The Defiant</span>
-    <span class="paper-id">2026-11-24</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/defi/euler-technologies-replaces-labs-in-commercial-push" target="_blank" rel="noopener noreferrer">DeFi 借贷协议 Euler 将研发及管理权限移交至新实体 Euler Technologies</a>
-  </h3>
-  <div class="paper-title-en">Euler Technologies Replaces Labs in Commercial Push</div>
-  <p class="paper-summary">DeFi 借贷协议 Euler 宣布由新实体 Euler Technologies 全面接管协议研发与应用运营，并任命 Christopher Cameron 出任战略主管。协议的行政与管理权限计划于 11 月底前完成交接，以全力推进其商业化进程。</p>
-  <ul class="highlights"><li>Euler 协议管理权限将于 11 月底前移交至新实体</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://thedefiant.io/news/defi/euler-technologies-replaces-labs-in-commercial-push" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">EIP 提案</span>
-    <span class="tag tag-cat">Ethereum Magicians</span>
-    <span class="paper-id">2026-11-24</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/erc-discussion-erc-20-transferable-timelock/30493" target="_blank" rel="noopener noreferrer">Ethereum Magicians 社区讨论 ERC-20 可转让时间锁扩展提案</a>
-  </h3>
-  <div class="paper-title-en">ERC Discussion: ERC-20 Transferable Timelock</div>
-  <p class="paper-summary">Ethereum Magicians 社区开发者提出一种 ERC-20 拓展提案，旨在阻止新铸造代币在同一区块内被恶意销毁。该方案通过追踪账户的时间锁余额，限制销毁操作仅能使用已解锁代币，同时保持代币在 DeFi 协议中的可转让性与兼容性。</p>
-  <ul class="highlights"><li>限制同区块铸造即销毁攻击手法</li><li>保持与常规 DeFi 协议的兼容性</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://ethereum-magicians.org/t/erc-discussion-erc-20-transferable-timelock/30493" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="安全与协议研究">
@@ -819,11 +802,11 @@
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethresear.ch/t/do-bid-cancellations-matter/26287" target="_blank" rel="noopener noreferrer">ePBS 架构下的区块构建出价取消机制及其对提议者收益影响研究</a>
+    <a href="https://ethresear.ch/t/do-bid-cancellations-matter/26287" target="_blank" rel="noopener noreferrer">ethresear.ch 探讨 ePBS 机制下提议者遵守竞价取消的经济博弈</a>
   </h3>
   <div class="paper-title-en">Do bid cancellations matter?</div>
-  <p class="paper-summary">研究探讨了 ePBS 架构下提议者是否会尊重构建者的出价取消。模型分析表明，提议者若承诺尊重取消则预期收益不变；若缺乏承诺，忽略取消直接签署最高出价可获额外收益（日均约 0.9 ETH，市场波动期尤显著）。</p>
-  <ul class="highlights"><li>忽略出价取消每日可为提议者增加约 0.9 ETH 额外收益</li><li>缺乏承诺机制下尊重出价取消并非纳什均衡</li></ul>
+  <p class="paper-summary">研究探讨了以太坊 ePBS 机制下提议者是否会遵守构建者的竞价取消请求。博弈模型表明，在缺乏事先承诺时，提议者为最大化收益倾向于签署最高竞价而非最新竞价。中继日志显示提议者由此获得的日均额外收益约 0.9 ETH，主要集中于市场剧烈波动期。</p>
+  <ul class="highlights"><li>分析 ePBS 下提议者与构建者竞价取消的博弈关系</li><li>忽视取消请求可为提议者带来日均约 0.9 ETH 的收益</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://ethresear.ch/t/do-bid-cancellations-matter/26287" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -831,16 +814,16 @@
 <article class="paper-card news-card" data-news-section="安全与协议研究">
   <div class="paper-meta-row">
     <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">密码学研究</span>
+    <span class="tag tag-topic">抗量子密码</span>
     <span class="tag tag-cat">ethresear.ch</span>
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethresear.ch/t/post-quantum-das-with-improved-provable-security/26285" target="_blank" rel="noopener noreferrer">具有更严密可证明安全性的抗量子数据可用性抽样（PQ-DAS）改进方案</a>
+    <a href="https://ethresear.ch/t/post-quantum-das-with-improved-provable-security/26285" target="_blank" rel="noopener noreferrer">研究员提出具有更紧密可证明安全界限的抗量子数据可用性采样方案</a>
   </h3>
   <div class="paper-title-en">Post-quantum DAS with improved provable security</div>
-  <p class="paper-summary">研究人员提出了抗量子数据可用性抽样（PQ-DAS）方案的改进版本，并在 Lean 证明助手完成形式化验证。该方案通过优化 Merkle 树与 SNARKs 机制提供了更高的可证明安全级别，但牺牲了部分计算效率。</p>
-  <ul class="highlights"><li>基于 Lean 助手完成了抗量子 DAS 方案的形式化验证</li><li>以部分计算效率为代价换取更高的可证明安全级别</li></ul>
+  <p class="paper-summary">研究员 Benedikt Wagner 在 ethresear.ch 提出了一种改进的抗量子数据可用性采样（PQ-DAS）方案，并在 Lean 中完成了形式化安全证明。该方案通过获得更紧密的安全界限提升了安全级别，但付出了部分计算效率代价。</p>
+  <ul class="highlights"><li>使用 Lean 工具完成形式化证明</li><li>提升安全级别但降低了计算效率</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://ethresear.ch/t/post-quantum-das-with-improved-provable-security/26285" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -848,16 +831,50 @@
 <article class="paper-card news-card" data-news-section="行业与监管动态">
   <div class="paper-meta-row">
     <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">链上清算</span>
+    <span class="tag tag-topic">协议动态</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/news/defi/euler-technologies-replaces-labs-in-commercial-push" target="_blank" rel="noopener noreferrer">Euler 调整商业运营主体并转移协议管理权限</a>
+  </h3>
+  <div class="paper-title-en">Euler Technologies Replaces Labs in Commercial Push</div>
+  <p class="paper-summary">DeFi 借贷协议 Euler 将开发与应用运营主体由 Euler Labs 更换为新成立的 Euler Technologies，旨在推动商业化拓展。同时，战略主管 Christopher Cameron 加入团队，协议行政管理权限计划于 11 月底前完成移交。</p>
+  <ul class="highlights"><li>Euler 更换运营主体为 Euler Technologies</li><li>协议行政管理权限计划于 11 月底前移交</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/news/defi/euler-technologies-replaces-labs-in-commercial-push" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">机构动态</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/converge/tradfi-and-fintech/fidelity-crypto-adds-aave-link-and-uni-to-its-lineup" target="_blank" rel="noopener noreferrer">富达加密平台上线 AAVE、LINK 与 UNI 交易服务</a>
+  </h3>
+  <div class="paper-title-en">Fidelity Crypto Adds AAVE, LINK and UNI to Its Lineup</div>
+  <p class="paper-summary">富达旗下 Fidelity Crypto 正式面向合规用户开放 AAVE、LINK 及 UNI 交易服务，支持个人账户、共同账户及加密 IRA 账户交易，买卖服务收取 1% 手续费（俄勒冈州用户除外）。</p>
+  <ul class="highlights"><li>富达为个人及 IRA 账户新增 AAVE、LINK 和 UNI 交易</li><li>买卖服务收取 1% 手续费</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/converge/tradfi-and-fintech/fidelity-crypto-adds-aave-link-and-uni-to-its-lineup" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">DeFi 动态</span>
     <span class="tag tag-cat">The Block</span>
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/business/2026-11-24-ethereum-treasury-firm-btcs-sells-43-8-million-eth-cut-aave-debt-ceo-says-we-do-not-take-this-lightly-445562" target="_blank" rel="noopener noreferrer">纳斯达克上市公司 BTCS 出售 4380 万美元 ETH 偿还 Aave 债务防范清算</a>
+    <a href="https://www.theblock.co/news/business/2026-11-24-ethereum-treasury-firm-btcs-sells-43-8-million-eth-cut-aave-debt-ceo-says-we-do-not-take-this-lightly-445562" target="_blank" rel="noopener noreferrer">纳斯达克上市公司 BTCS 出售 4380 万美元 ETH 以偿还 Aave 债务</a>
   </h3>
   <div class="paper-title-en">Ethereum treasury firm BTCS sells $43.8 million in ETH to cut Aave debt, CEO says ‘we do not take this lightly’</div>
-  <p class="paper-summary">纳斯达克上市公司 BTCS 在加密市场剧烈波动期间抛售 2.73 万枚 ETH（约 4380 万美元），用于偿还其在 DeFi 借贷协议 Aave 上的去中心化债务。公司 CEO 表示此举旨在大幅降低抵押物强平风险并保障资产负债表安全。</p>
-  <ul class="highlights"><li>BTCS 抛售 2.73 万枚 ETH 用于降低 Aave 协议清算风险</li></ul>
+  <p class="paper-summary">纳斯达克上市公司 BTCS 在加密市场下行期间出售了 27,300 枚 ETH（约 4380 万美元），用于偿还 DeFi 借贷协议 Aave 上的去中心化债务，以降低抵押品清算风险。CEO 表示团队对此决策极其审慎。</p>
+  <ul class="highlights"><li>BTCS 抛售 27,300 枚 ETH 偿还 Aave 债务</li><li>旨在规避极端行情下的抵押品清算风险</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.theblock.co/news/business/2026-11-24-ethereum-treasury-firm-btcs-sells-43-8-million-eth-cut-aave-debt-ceo-says-we-do-not-take-this-lightly-445562" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -870,30 +887,13 @@
     <span class="paper-id">2026-11-24</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment" target="_blank" rel="noopener noreferrer">韩国拟取消自 2017 年实施的 ICO 禁令以吸引加密投资回流</a>
+    <a href="https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment" target="_blank" rel="noopener noreferrer">韩国提议解除自 2017 年起实施的 ICO 禁令以促进就业与投资</a>
   </h3>
   <div class="paper-title-en">South Korea proposes ending 2017 ICO ban to boost jobs and onshore crypto investment</div>
-  <p class="paper-summary">韩国提出取消自 2017 年起实施的 ICO 禁令，旨在促进本土就业并吸引加密投资回流。新提案要求代币发行方必须详细披露资金使用计划；若存在误导投资者的行为，相关责任人将面临刑事指控。</p>
-  <ul class="highlights"><li>韩国拟解禁封禁多年的 ICO 融资</li><li>代币发行方误导投资者或面临刑事指控</li></ul>
+  <p class="paper-summary">韩国提出解禁自 2017 年设立的 ICO（首次代币发行）禁令，旨在拉动就业并引导加密投资留存本土。根据新提议，代币发行方必须强制披露资金使用计划，误导投资者的行为将面临刑事处罚。</p>
+  <ul class="highlights"><li>拟解禁实施近十年的 ICO 禁令</li><li>强制披露资金使用计划并设立刑事追责机制</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.coindesk.com/policy/2026/11/24/south-korea-proposes-ending-2017-ico-ban-to-boost-jobs-and-onshore-crypto-investment" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">监管动态</span>
-    <span class="tag tag-cat">TRM Labs</span>
-    <span class="paper-id">2026-11-23</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.trmlabs.com/resources/blog/ofac-designates-companies-in-the-iran-linked-rahbar-network" target="_blank" rel="noopener noreferrer">美国 OFAC 制裁与伊朗 Rahbar 网络相关的多家加密交易所及实体</a>
-  </h3>
-  <div class="paper-title-en">OFAC Designates Exchange Houses and Companies in Iran-Linked Rahbar Network | TRM Labs</div>
-  <p class="paper-summary">美国财政部外国资产控制办公室（OFAC）正式将与伊朗 Rahbar 网络相关的多家交易所与公司列入制裁名单。泄露记录显示，其中 9 家实体参与了相关交易，涉及超过 5300 笔支付订单。</p>
-  <ul class="highlights"><li>OFAC 将伊朗 Rahbar 网络相关交易所列入制裁名单</li><li>泄露记录显示相关实体涉及超过 5300 笔支付订单</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.trmlabs.com/resources/blog/ofac-designates-companies-in-the-iran-linked-rahbar-network" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="行业与监管动态">
@@ -904,18 +904,18 @@
     <span class="paper-id">2026-11-23</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.dlnews.com/articles/regulation/cftc-orders-kalshi-to-pause-certain-trump-speech-contracts/" target="_blank" rel="noopener noreferrer">美国 CFTC 出于操纵担忧指令预测市场 Kalshi 暂停特朗普演讲相关合约</a>
+    <a href="https://www.dlnews.com/articles/regulation/cftc-orders-kalshi-to-pause-certain-trump-speech-contracts/" target="_blank" rel="noopener noreferrer">美国 CFTC 要求预测市场 Kalshi 暂停特朗普演讲用词相关合约</a>
   </h3>
   <div class="paper-title-en">CFTC orders Kalshi to pause certain Trump speech contracts</div>
-  <p class="paper-summary">美国商品期货交易委员会（CFTC）因担忧市场操纵风险，要求预测市场平台 Kalshi 暂停涉及特朗普演讲用词的相关预测合约。Kalshi 已暂停交易，并须在 12 月 11 日前作出回应。</p>
-  <ul class="highlights"><li>CFTC 因操纵疑虑暂停 Kalshi 的特朗普发言预测合约</li><li>Kalshi 须在 12 月 11 日前就监管关注作出回应</li></ul>
+  <p class="paper-summary">因担忧市场操纵风险，美国商品期货交易委员会（CFTC）要求预测市场 Kalshi 暂停针对特朗普演讲用词的相关预测合约。Kalshi 已暂停交易，并需在 12 月 11 日前向监管机构提交正式回应。</p>
+  <ul class="highlights"><li>CFTC 因操纵担忧干预预测市场</li><li>Kalshi 须在 12 月 11 日前回应</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.dlnews.com/articles/regulation/cftc-orders-kalshi-to-pause-certain-trump-speech-contracts/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
   </div>
   <details class="filtered-box">
-  <summary>已去噪过滤论文（10 篇）— 点击展开复查</summary>
+  <summary>已去噪过滤论文（9 篇）— 点击展开复查</summary>
   <ul class="filtered-list">
 <li class="filtered-item">
   <div class="filtered-head">
@@ -924,16 +924,7 @@
   </div>
   <div class="filtered-en">US Blacklists Megaspeed, Tightening Access to AI Chips</div>
   
-  <div class="filtered-reason">去噪原因：属于传统 AI 芯片硬件出口限制，不涉及区块链技术、加密安全或 Web3 动态。</div>
-</li>
-<li class="filtered-item">
-  <div class="filtered-head">
-    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
-    <a href="https://thedefiant.io/converge/tradfi-and-fintech/fidelity-crypto-adds-aave-link-and-uni-to-its-lineup" target="_blank" rel="noopener noreferrer">Fidelity Crypto Adds AAVE, LINK and UNI to Its Lineup</a>
-  </div>
-  <div class="filtered-en">Fidelity Crypto Adds AAVE, LINK and UNI to Its Lineup</div>
-  
-  <div class="filtered-reason">去噪原因：属于券商平台常规上币与交易对新增，缺少核心技术创新或安全深度。</div>
+  <div class="filtered-reason">去噪原因：该内容属于通用 AI 芯片出口管制与监管，缺乏区块链与 Web3 生态的相关性。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -942,34 +933,34 @@
   </div>
   <div class="filtered-en">Anchorage Digital to unveil new asset-management subsidiary</div>
   
-  <div class="filtered-reason">去噪原因：属于托管机构常规商业拓展与子公司设立公关新闻，无实质技术或行业影响。</div>
+  <div class="filtered-reason">去噪原因：该内容为加密托管机构设立新子公司的商业软文，缺乏实质技术或安全信息量。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
     <span class="tag tag-cat" style="margin-right:0.4rem">a16z Crypto</span>
-    <a href="https://a16zfrontier.com/posts/article/300-books-to-read-gift-guide/" target="_blank" rel="noopener noreferrer">300+ books to read: A gift guide for curious readers</a>
+    <a href="https://a16zfrontier.com/posts/article/300-books-to-read-gift-guide/" target="_blank" rel="noopener noreferrer">a16z 发布包含 300 多本书籍的推荐书单</a>
   </div>
   <div class="filtered-en">300+ books to read: A gift guide for curious readers</div>
   
-  <div class="filtered-reason">去噪原因：属于日常图书推荐与礼物指南，无实质区块链技术、安全或行业信息量。</div>
+  <div class="filtered-reason">去噪原因：属于非技术类的通用图书推荐书单，缺乏区块链技术或安全相关实质内容。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
     <span class="tag tag-cat" style="margin-right:0.4rem">The Block</span>
-    <a href="https://www.theblock.co/learn/campus/crypto-market-structure-basics-442986" target="_blank" rel="noopener noreferrer">Crypto Market Structure Basics</a>
+    <a href="https://www.theblock.co/learn/campus/crypto-market-structure-basics-442986" target="_blank" rel="noopener noreferrer">加密市场结构基础入门知识解析</a>
   </div>
   <div class="filtered-en">Crypto Market Structure Basics</div>
   
-  <div class="filtered-reason">去噪原因：属于基础普及教程，缺乏突发安全性或深度技术研究价值。</div>
+  <div class="filtered-reason">去噪原因：属于初学者基础概念科普文章，无最新技术突破或安全研究信息。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
     <span class="tag tag-cat" style="margin-right:0.4rem">The Block</span>
-    <a href="https://www.theblock.co/news/markets/2026-11-24-bitcoin-etfs-another-570-million-net-outflows-november-total-nears-5-billion-btc-dips-below-60k-445548" target="_blank" rel="noopener noreferrer">Bitcoin ETFs see another $570 million in net outflows as November total nears $5 billion and BTC dips below $60K</a>
+    <a href="https://www.theblock.co/news/markets/2026-11-24-bitcoin-etfs-another-570-million-net-outflows-november-total-nears-5-billion-btc-dips-below-60k-445548" target="_blank" rel="noopener noreferrer">比特币 ETF 单日净流出 5.7 亿美元且 BTC 跌破 6 万美元</a>
   </div>
   <div class="filtered-en">Bitcoin ETFs see another $570 million in net outflows as November total nears $5 billion and BTC dips below $60K</div>
   
-  <div class="filtered-reason">去噪原因：属于纯粹的行情涨跌与 ETF 每日资金流向播报，缺乏技术或安全价值。</div>
+  <div class="filtered-reason">去噪原因：属于常规币价波动与 ETF 资金流向行情播报，缺乏底层技术或安全深度。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -978,7 +969,7 @@
   </div>
   <div class="filtered-en">XRP Ledger DEX volume hits 4.51 million XRP a day in Q3 as big traders take over: Evernorth</div>
   
-  <div class="filtered-reason">去噪原因：属于常规 DEX 交易量统计与分析，缺乏链上安全或底层技术信息。</div>
+  <div class="filtered-reason">去噪原因：纯 DEX 交易量与行情数据统计分析，缺乏实质技术与安全信息量。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -987,7 +978,7 @@
   </div>
   <div class="filtered-en">Ledn brings US business onshore with account to hold, swap and borrow against bitcoin</div>
   
-  <div class="filtered-reason">去噪原因：属于商业托管与借贷产品宣传公告，缺乏区块链安全或技术研究价值。</div>
+  <div class="filtered-reason">去噪原因：借贷与托管业务上线商业公告，属于常规机构公关营销活动。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -996,7 +987,7 @@
   </div>
   <div class="filtered-en">Live updates: Bitcoin pulls back below $60,000, stock rally fades, as tariffs re-enter the picture</div>
   
-  <div class="filtered-reason">去噪原因：属于纯代币价格涨跌与宏观关税行情播报，缺乏区块链安全或技术价值。</div>
+  <div class="filtered-reason">去噪原因：比特币大盘走势与宏观关税政策播报，属于币价行情分析。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -1005,7 +996,7 @@
   </div>
   <div class="filtered-en">Bitcoin drops as November spot ETF outflows increase to record $4.71 billion</div>
   
-  <div class="filtered-reason">去噪原因：属于纯现货 ETF 资金流出与币价下跌新闻，无链上安全或技术沉淀。</div>
+  <div class="filtered-reason">去噪原因：比特币现货 ETF 资金流出及大盘跌幅统计，属于日常行情播报。</div>
 </li>
   </ul>
 </details>

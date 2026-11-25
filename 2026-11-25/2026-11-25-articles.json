@@ -560,20 +560,6 @@
     },
     {
       "sourceId": "security-industry-news",
-      "title": "ERC Discussion: ERC-20 Transferable Timelock",
-      "url": "https://ethereum-magicians.org/t/erc-discussion-erc-20-transferable-timelock/30493",
-      "excerpt": "I propose an ERC-20 extension that prevents fresh tokens from being burned in the block in which they were minted. The tokens stay transferable and remain compatible with normal DeFi operations. I think the pattern is worth sharing, but I am not sure this deserves its own ERC, so I am posting it here for feedback on the concept, the implementation, and whether it belongs in a standard. The extension tracks a timelocked balance for each account. A mint increases the timelocked balance, a transfer can move part or all of it to another account, and a burn can use only the unlocked balance: unlockedBalance = balanceOf(account) - timelockedBalanceOf(account) Motivation Consider ERC-20 tokens with permissionless minting and burning, such as LP tokens, vault shares, and liquid staking tokens. For",
-      "publishedAt": "2026-11-24T12:14:55.000Z",
-      "category": "tech",
-      "newsSourceName": "Ethereum Magicians",
-      "newsSourceGroup": "协议研究",
-      "queryDate": "2026-11-24",
-      "matchedDate": "2026-11-24",
-      "meta": "Ethereum Magicians · 协议研究",
-      "source": "安全与行业快讯"
-    },
-    {
-      "sourceId": "security-industry-news",
       "title": "Do bid cancellations matter?",
       "url": "https://ethresear.ch/t/do-bid-cancellations-matter/26287",
       "excerpt": "TL;DR. We ask whether proposers under ePBS will keep respecting bid cancellations, that is, signing each builder’s latest bid rather than the highest. We propose a common-value auction model and show that, if proposers can commit in advance to respecting or ignoring cancellations, this choice leaves expected proposer revenue unchanged and only shifts risk onto builders. Without commitment, however, respecting cancellations is not equilibrium behavior in the repeated game, since proposers gain from signing the highest bid. Using relay header logs, we find that this gain is small on average (0.9 ETH per day) but concentrated in volatile periods, and that some proposer setups already ignore cancellations, although we can detect this only in aggregate. Authors: BrunoMazorra and boz1 We thank j",
