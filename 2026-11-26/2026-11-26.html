@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>区块链每日论文追踪 · 2026-11-26</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #111827;
+    --title-en: #374151;
+    --authors: #0f766e;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-soft: #eff6ff;
+    --tag-bg: #f3f4f6;
+    --notice-bg: #f0f9ff;
+    --notice-border: #bae6fd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1117;
+      --card: #171b24;
+      --border: #262c3a;
+      --text: #f3f4f6;
+      --title-en: #d1d5db;
+      --authors: #5eead4;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-soft: #1e293b;
+      --tag-bg: #232938;
+      --notice-bg: #112236;
+      --notice-border: #1e3a5f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.65rem;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .model-subtle {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    opacity: 0.78;
+    margin-left: 0.45rem;
+  }
+  .archive-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .archive-link:hover { text-decoration: underline; }
+
+  /* Primary Tabs */
+  .primary-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1.4rem;
+  }
+  .primary-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .primary-tab:hover { border-color: var(--accent); color: var(--accent); }
+  .primary-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+  .tab-badge {
+    display: inline-block;
+    min-width: 1.4rem;
+    text-align: center;
+    padding: 0.05rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: var(--tag-bg);
+    color: var(--text);
+  }
+  .primary-tab.active .tab-badge {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* Secondary Venue Sub-tabs */
+  .subtab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .subtab-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .subtab-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .subtab-btn.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+  .stat-pill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.84rem;
+    color: var(--muted);
+  }
+  .stat-pill strong { color: var(--text); }
+  .date-notice {
+    background: var(--notice-bg);
+    border: 1px solid var(--notice-border);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+    margin-bottom: 1.35rem;
+  }
+  .date-notice code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85em;
+  }
+  .paper-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+  .paper-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.35rem;
+  }
+  .paper-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.65rem;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  .tag-topic {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .tag-new {
+    background: #dcfce7;
+    color: #166534;
+  }
+  .tag-update {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  .tag-venue-ccfa {
+    background: #ede9fe;
+    color: #5b21b6;
+    font-weight: 600;
+  }
+  .tag-venue-custom {
+    background: #fce7f3;
+    color: #9d174d;
+    font-weight: 600;
+  }
+  .tag-sec-alert {
+    background: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+  }
+  .tag-sec-research {
+    background: #e0f2fe;
+    color: #075985;
+    font-weight: 600;
+  }
+  .tag-sec-industry {
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+  }
+  @media (prefers-color-scheme: dark) {
+    .tag-new { background: #14532d; color: #86efac; }
+    .tag-update { background: #451a03; color: #fcd34d; }
+    .tag-venue-ccfa { background: #3b0764; color: #ddd6fe; }
+    .tag-venue-custom { background: #500724; color: #fbcfe8; }
+    .tag-sec-alert { background: #7f1d1d; color: #fecaca; }
+    .tag-sec-research { background: #0c4a6e; color: #bae6fd; }
+    .tag-sec-industry { background: #374151; color: #e5e7eb; }
+  }
+  .tag-cat {
+    background: var(--tag-bg);
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .paper-id {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .paper-title-zh {
+    margin: 0 0 0.3rem;
+    font-size: 1.12rem;
+    line-height: 1.45;
+  }
+  .paper-title-zh a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .paper-title-zh a:hover { color: var(--accent); text-decoration: underline; }
+  .paper-title-en {
+    font-size: 0.9rem;
+    color: var(--title-en);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+  }
+  .paper-authors {
+    font-size: 0.84rem;
+    color: var(--authors);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+  .authors-label, .comment-label { font-weight: 600; }
+  .paper-comment {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  .paper-summary {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+  }
+  .highlights {
+    margin: 0 0 0.85rem;
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .highlights li { margin-bottom: 0.25rem; }
+  .paper-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--border);
+  }
+  .btn-link {
+    font-size: 0.84rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .btn-link:hover { text-decoration: underline; }
+  .empty-state {
+    background: var(--card);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .filtered-box {
+    margin-top: 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+  }
+  .filtered-box summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .filtered-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .filtered-item {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+  .filtered-head {
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .filtered-head a { color: var(--text); text-decoration: none; }
+  .filtered-head a:hover { color: var(--accent); text-decoration: underline; }
+  .filtered-en { font-size: 0.84rem; color: var(--title-en); margin-top: 0.15rem; }
+  .filtered-authors { font-size: 0.8rem; color: var(--authors); margin-top: 0.15rem; }
+  .filtered-reason { font-size: 0.84rem; color: var(--muted); margin-top: 0.3rem; }
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>区块链每日论文追踪</h1>
+      <p class="subtitle">2026年11月26日周四 <span class="model-subtle" title="当日生成所用大模型">· openai-gemini-3.6-flash</span></p>
+    </div>
+    <a class="archive-link" href="../archive.html">← 历史归档</a>
+  </header>
+
+  <nav class="primary-tabs" id="primaryTabs" role="tablist">
+    <button class="primary-tab active" data-tab="arxiv" role="tab" aria-selected="true">
+      arXiv 今日论文（区块链）
+      <span class="tab-badge">4</span>
+    </button>
+    <button class="primary-tab" data-tab="venues" role="tab" aria-selected="false">
+      会议 / 期刊正式发表论文
+      <span class="tab-badge">0</span>
+    </button>
+    <button class="primary-tab" data-tab="news" role="tab" aria-selected="false">
+      安全与行业快讯
+      <span class="tab-badge">25</span>
+    </button>
+  </nav>
+
+  <section class="tab-panel active" id="panel-arxiv" role="tabpanel">
+    <div class="stats-row">
+    <span class="stat-pill">检索候选 <strong>4</strong> 篇</span>
+    <span class="stat-pill">保留 <strong>4</strong> 篇</span>
+    <span class="stat-pill">去噪过滤 <strong>0</strong> 篇</span>
+    <span class="stat-pill">关键词 <strong>blockchain / smart contract / defi</strong></span>
+  </div>
+  <div class="date-notice">查询日期：<code>2026-11-25</code>（arXiv OAI-PMH <code>set=cs</code> 全量增量检索，含新投稿与版本更新）</div>
+  <div class="paper-list">
+    <article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">待分类</span>
+    <span class="tag tag-cat">cs.DC</span><span class="tag tag-cat">cs.CR</span>
+    <span class="paper-id">arXiv:2611.31468</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2611.31468" target="_blank" rel="noopener noreferrer">Pearl: TEE-Enabled Fair Ordering with Minimal Replication</a>
+  </h3>
+  <div class="paper-title-en">Pearl: TEE-Enabled Fair Ordering with Minimal Replication</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Vian Robotin, J\&#39;er\&#39;emie Decouchant, Shaokang Xie, Dakai Kang, Mohammad Sadoghi</div>
+  
+  <p class="paper-summary">Recent research has investigated fair transaction ordering in blockchain consensus. An orthogonal line of work has demonstrated that equipping replicas with trusted execution environments (TEEs) enables more efficient consensus protocols with only $2f{+}1$ replicas. In this work, we bridge these two</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2611.31468" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.31468" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">待分类</span>
+    <span class="tag tag-cat">cs.SE</span>
+    <span class="paper-id">arXiv:2611.31929</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2611.31929" target="_blank" rel="noopener noreferrer">Shuttle: Dependency-Attributed Workflow Evolution for Smart Contract Auditing</a>
+  </h3>
+  <div class="paper-title-en">Shuttle: Dependency-Attributed Workflow Evolution for Smart Contract Auditing</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Yue Xue, Yi Rong, Ziqiao Kong, Ronghui Gu, Dan She, Yuannan Yang, Zhiju Yang, Yuqiang Sun</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>15 pages, 9 figures, 11 tables</div>
+  <p class="paper-summary">In LLM-based smart contract auditing, detection quality depends on both model capability and workflow design. While coding agents can revise workflows from execution feedback, unconstrained rewrites rarely yield stable gains. Cross-function vulnerabilities require multi-step state tracking and bound</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2611.31929" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.31929" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">待分类</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">q-fin.GN</span>
+    <span class="paper-id">arXiv:2611.32389</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2611.32389" target="_blank" rel="noopener noreferrer">AgentBank: Banking on Blockchain Agentic Payments</a>
+  </h3>
+  <div class="paper-title-en">AgentBank: Banking on Blockchain Agentic Payments</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Yuexin Xiang, Martin Pere\v{s}\&#39;ini, Yuchen Lei, Yuquan Li, Yuanzhe Zhang, Andreas Deppeler, Tsz Hon Yuen, Shiping Chen, Qin Wang, Burkhard Stiller</div>
+  
+  <p class="paper-summary">AI agents increasingly pay for data and computation through protocols such as x402 and AP2, but individually funded wallets idle and require asset transfers for every payment. We present AgentBank, a smart-contract banking layer that lets agents spend bank liabilities under owner-issued mandates and</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2611.32389" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.32389" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-new">v1 新投稿</span>
+    <span class="tag tag-topic">待分类</span>
+    <span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2611.33019</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2611.33019" target="_blank" rel="noopener noreferrer">Blockchain-IoT Convergence for Spatiotemporal Data Systems: Challenges, Solutions, and Research Gaps</a>
+  </h3>
+  <div class="paper-title-en">Blockchain-IoT Convergence for Spatiotemporal Data Systems: Challenges, Solutions, and Research Gaps</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Natalia Chaudhry, Muhammad Murtaza Yousaf</div>
+  
+  <p class="paper-summary">Blockchain in conjunction with the Internet of Things (IoT) is changing the management of spatiotemporal data in a way that has never been possible before now. In the process of gathering geospatial and time-stamped data from a large network of IoT devices, data authenticity, accuracy, and timely pr</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2611.33019" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.33019" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+  </div>
+  
+  </section>
+
+  <section class="tab-panel" id="panel-venues" role="tabpanel">
+    <div class="stats-row">
+    <span class="stat-pill">追踪会议 / 期刊 <strong>68</strong> 个</span>
+    <span class="stat-pill">新入库候选 <strong>0</strong> 篇</span>
+    <span class="stat-pill">保留 <strong>0</strong> 篇</span>
+    <span class="stat-pill">去噪过滤 <strong>0</strong> 篇</span>
+  </div>
+  <div class="date-notice">查询 OpenAlex 入库日期：<code>2026-11-25</code></div>
+  
+  <div class="paper-list" id="venuePaperList">
+    <div class="empty-state">前一天（2026-11-25）在追踪的 68 个会议与期刊中无新入库论文（数量：0）。</div>
+  </div>
+  
+  </section>
+
+  <section class="tab-panel" id="panel-news" role="tabpanel">
+    <div class="stats-row">
+    <span class="stat-pill">监控信源 <strong>21</strong> 个</span>
+    <span class="stat-pill">前日候选 <strong>25</strong> 条</span>
+    <span class="stat-pill">保留 <strong>25</strong> 条</span>
+    <span class="stat-pill">去噪过滤 <strong>0</strong> 条</span>
+  </div>
+  <div class="date-notice">查询发布日期：<code>2026-11-25</code>（覆盖链上攻击事件、安全情报机构、核心协议研究论坛与主流行业媒体）</div>
+  <div class="subtab-bar" id="newsSubtabBar">
+  <button class="subtab-btn active" data-news-filter="ALL">全部 (25)</button>
+  <button class="subtab-btn" data-news-filter="安全事件与情报">安全事件与情报 (1)</button>
+  <button class="subtab-btn" data-news-filter="安全与协议研究">安全与协议研究 (7)</button>
+  <button class="subtab-btn" data-news-filter="行业与监管动态">行业与监管动态 (17)</button>
+</div>
+  <div class="paper-list" id="newsItemList">
+    <article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan" target="_blank" rel="noopener noreferrer">Crypto Long &amp; Short: Bitcoin investors can’t keep ignoring Japan</a>
+  </h3>
+  
+  <p class="paper-summary">Yen-funded carry trades ran an estimated $250 billion before the August 2024 selloff, and the Bank of Japan&#39;s policy rate is now around 1.25%. Phillip Lord of Bitcoin Japan explains how yen funding conditions reach bitcoin, and the shareholder test Japanese co</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/converge/tradfi-and-fintech/coinbase-wallet-adds-usdc-paycheck-deposits-on-base" target="_blank" rel="noopener noreferrer">Coinbase Wallet Adds USDC Paycheck Deposits on Base</a>
+  </h3>
+  
+  <p class="paper-summary">The US rollout converts incoming dollars one-for-one into USDC. Users must pass identity checks, and the resulting crypto balance is not an insured bank deposit.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/converge/tradfi-and-fintech/coinbase-wallet-adds-usdc-paycheck-deposits-on-base" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/frontier/markets/nasdaq-100-tests-bear-market-line-as-chip-shares-slide" target="_blank" rel="noopener noreferrer">Nasdaq 100 Tests Bear-Market Line as Chip Shares Slide</a>
+  </h3>
+  
+  <p class="paper-summary">The index was back above the 20% drawdown line by 10:01 a.m. ET, while earlier readings showed sharp daily losses in Nvidia and semiconductor shares.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/frontier/markets/nasdaq-100-tests-bear-market-line-as-chip-shares-slide" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/regulation/2026-11-25-novatech-founders-ordered-pay-1-3-million-crypto-ponzi-scheme-haitian-investors-446643" target="_blank" rel="noopener noreferrer">NovaTech founders ordered to pay $1.3 billion over crypto Ponzi scheme targeting Haitian investors</a>
+  </h3>
+  
+  <p class="paper-summary">NovaTech founders Cynthia and Eddy Petion have been ordered to pay over $1.3 billion for their role in defrauding thousands.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-25-novatech-founders-ordered-pay-1-3-million-crypto-ponzi-scheme-haitian-investors-446643" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/news/markets/us-growth-revised-to-4-3-ahead-of-fed-rate-decision" target="_blank" rel="noopener noreferrer">US Growth Revised to 4.3% Ahead of Fed Rate Decision</a>
+  </h3>
+  
+  <p class="paper-summary">Stronger investment and consumer spending drove the GDP upgrade as core PCE inflation topped forecasts ahead of the Fed’s Dec. 8–9 meeting.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/news/markets/us-growth-revised-to-4-3-ahead-of-fed-rate-decision" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe" target="_blank" rel="noopener noreferrer">South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe</a>
+  </h3>
+  
+  <p class="paper-summary">South Korea&#39;s second-largest crypto exchange said its trading systems were not breached, but stolen customer records could already be being used in future scams.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/regulation/2026-11-25-ukraine-passes-crypto-market-law-with-332-million-revenue-target-446182" target="_blank" rel="noopener noreferrer">Ukraine passes crypto market law, with $332 million revenue target</a>
+  </h3>
+  
+  <p class="paper-summary">Ukraine’s parliament passed a bill establishing a regulatory and tax framework projected to generate $332 million in state budget revenue.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-25-ukraine-passes-crypto-market-law-with-332-million-revenue-target-446182" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/business/2026-11-25-bit-digital-repays-50-million-to-galaxy-after-selling-29825-eth-446164" target="_blank" rel="noopener noreferrer">Bit Digital repays $50 million to Galaxy after selling 29,825 ETH</a>
+  </h3>
+  
+  <p class="paper-summary">Bit Digital sold 29,825 ETH and used the proceeds to reduce its secured borrowing with Galaxy to $50 million.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/business/2026-11-25-bit-digital-repays-50-million-to-galaxy-after-selling-29825-eth-446164" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/news/markets/us-pce-inflation-hits-3-8-core-exceeds-forecast" target="_blank" rel="noopener noreferrer">US PCE Inflation Hits 3.8%; Core Exceeds Forecast</a>
+  </h3>
+  
+  <p class="paper-summary">Core inflation reached 3.3%, above the 3.2% consensus, ahead of a December Fed meeting for which markets already favored a rate increase.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/news/markets/us-pce-inflation-hits-3-8-core-exceeds-forecast" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">ethresear.ch</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethresear.ch/t/optimal-dynamic-fees-for-l2s-a-vault-approach/26293" target="_blank" rel="noopener noreferrer">Optimal Dynamic Fees for L2s: A Vault Approach</a>
+  </h3>
+  
+  <p class="paper-summary">By Ulysse Pavloff (University of Bern) and Lin Oshitani @linoscope (Nethermind Research) TL;DR We recently published a paper exploring the optimal design of L2 fee-setting rules. Here are the main findings. The optimal fee rule depends on what we want to minim</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethresear.ch/t/optimal-dynamic-fees-for-l2s-a-vault-approach/26293" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/news/markets/layerzero-s-zro-falls-27-more-than-wormhole-or-axelar" target="_blank" rel="noopener noreferrer">LayerZero&#39;s ZRO Falls 27%, More Than Wormhole or Axelar</a>
+  </h3>
+  
+  <p class="paper-summary">W and AXL fell less over the same week, while BTC and ETH lost about 8%. Newly opened Zero staking offers holders no early exit.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/news/markets/layerzero-s-zro-falls-27-more-than-wormhole-or-axelar" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">ethresear.ch</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethresear.ch/t/focil-and-ethereums-pq-transition/26292" target="_blank" rel="noopener noreferrer">FOCIL and Ethereum&#39;s PQ transition</a>
+  </h3>
+  
+  <p class="paper-summary">by Jihoon Song Introduction This article explores how FOCIL could evolve as Ethereum adopts post-quantum cryptography. It examines how the PQ transition could affect the roles of includers, builders and attesters. IL Committee Selection IL committee are the fi</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethresear.ch/t/focil-and-ethereums-pq-transition/26292" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/business/2026-11-25-unicredit-offers-bitcoin-exposure-to-italian-retail-clients-with-capital-protection-at-maturity-446150" target="_blank" rel="noopener noreferrer">UniCredit offers bitcoin exposure to Italian retail clients with capital protection at maturity</a>
+  </h3>
+  
+  <p class="paper-summary">UniCredit is giving retail clients access to bitcoin performance through a six-year investment with protected principal and capped gains.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/business/2026-11-25-unicredit-offers-bitcoin-exposure-to-italian-retail-clients-with-capital-protection-at-maturity-446150" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in" target="_blank" rel="noopener noreferrer">Fed’s preferred inflation gauge lands with a December rate increase already priced in</a>
+  </h3>
+  
+  <p class="paper-summary">Your day-ahead look for Nov. 25, 2026</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/regulation/2026-11-25-dont-mess-with-x-elon-musk-says-after-platform-secures-default-judgment-in-alleged-bitcoin-content-farm-case-446151" target="_blank" rel="noopener noreferrer">‘Don’t mess with X,’ Elon Musk says after platform secures default judgment in alleged bitcoin content-farm case</a>
+  </h3>
+  
+  <p class="paper-summary">X secured a default judgment against two defendants in its lawsuit over an alleged $271,000 creator-payout scheme.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-25-dont-mess-with-x-elon-musk-says-after-platform-secures-default-judgment-in-alleged-bitcoin-content-farm-case-446151" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes" target="_blank" rel="noopener noreferrer">Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes</a>
+  </h3>
+  
+  <p class="paper-summary">Bitcoin (BTC) is down 1.2% since midnight UTC as the stock selloff resumes, with ether (ETH) and DeFi tokens falling about twice as far.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap" target="_blank" rel="noopener noreferrer">Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%</a>
+  </h3>
+  
+  <p class="paper-summary">UniCredit brings bitcoin investing to its roughly 8 million retail customers in Italy, offering them a six-year product that caps the redemption value but promises to return their capital.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/erc-8517-post-quantum-validator-seed-derivation/30516" target="_blank" rel="noopener noreferrer">ERC-8517: Post-Quantum Validator Seed Derivation</a>
+  </h3>
+  
+  <p class="paper-summary">This ERC defines how an Ethereum validator or builder derives its post-quantum seeds from a BIP-39 mnemonic. 2 posts - 2 participants Read full topic</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/erc-8517-post-quantum-validator-seed-derivation/30516" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全事件与情报">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-alert">安全事件与情报</span>
+    <span class="tag tag-topic">安全机构</span>
+    <span class="tag tag-cat">SlowMist 慢雾</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://slowmist.medium.com/alerts-are-not-suspicion-how-crypto-aml-turns-risk-signals-into-actionable-intelligence-bc88082449d5?source=rss-4ceeedda40e8------2" target="_blank" rel="noopener noreferrer">Alerts Are Not Suspicion: How Crypto AML Turns Risk Signals into Actionable Intelligence</a>
+  </h3>
+  
+  <p class="paper-summary"></p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://slowmist.medium.com/alerts-are-not-suspicion-how-crypto-aml-turns-risk-signals-into-actionable-intelligence-bc88082449d5?source=rss-4ceeedda40e8------2" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">Flashbots Collective</span>
+    <span class="paper-id">2026-11-25</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://collective.flashbots.net/t/do-bid-cancellations-matter/6145" target="_blank" rel="noopener noreferrer">Do bid cancellations matter?</a>
+  </h3>
+  
+  <p class="paper-summary">TL;DR. We ask whether proposers under ePBS will keep respecting bid cancellations, that is, signing each builder’s latest bid rather than the highest. We propose a common-value auction model and show that, if proposers can commit in advance to respecting or ig</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://collective.flashbots.net/t/do-bid-cancellations-matter/6145" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/eip-eth-76-aggregated-proof-propagation/30502" target="_blank" rel="noopener noreferrer">EIP: eth/76 - Aggregated Proof Propagation</a>
+  </h3>
+  
+  <p class="paper-summary">Discussion thread for Add EIP: eth/76 - Aggregated Proof Propagation by Marchhill · Pull Request #12713 · ethereum/EIPs · GitHub 1 post - 1 participant Read full topic</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/eip-eth-76-aggregated-proof-propagation/30502" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">DL News</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.dlnews.com/articles/regulation/fed-governor-waller-warns-of-zombie-chains-as-tokenization-grows/" target="_blank" rel="noopener noreferrer">Fed Governor Waller warns of &quot;zombie chains&quot; as tokenization grows</a>
+  </h3>
+  
+  <p class="paper-summary">Fed Governor Christopher Waller warned that tokenized assets could be stranded on failed blockchains and called for clearer governance.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.dlnews.com/articles/regulation/fed-governor-waller-warns-of-zombie-chains-as-tokenization-grows/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业快讯</span>
+    <span class="tag tag-cat">DL News</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.dlnews.com/articles/regulation/cftc-approves-backpack-to-run-derivatives-exchange-and-clearinghouse/" target="_blank" rel="noopener noreferrer">CFTC approves Backpack to run derivatives exchange and clearinghouse</a>
+  </h3>
+  
+  <p class="paper-summary">The CFTC approved Backpack’s US exchange and clearinghouse, paving the way for leveraged crypto perpetual futures and global liquidity.</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.dlnews.com/articles/regulation/cftc-approves-backpack-to-run-derivatives-exchange-and-clearinghouse/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/all-core-devs-testing-acdt-105-november-30-2026/30500" target="_blank" rel="noopener noreferrer">All Core Devs - Testing (ACDT) #105, November 30, 2026</a>
+  </h3>
+  
+  <p class="paper-summary">Agenda UTC Date &amp; Time November 23, 2026, 14:00 UTC Agenda Glamsterdam EIP-8037/EIP-8038 status … Hegota Hegota Devnet Status: Bogota Devnet-2, Heze Devnet-2 … Bogota Devnet 3 … EL Breakout Led by @danceratopz ethereum/execution-api Engine API spec questions @</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/all-core-devs-testing-acdt-105-november-30-2026/30500" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-24</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/pq-cl-breakout-5-november-27-2026/30499" target="_blank" rel="noopener noreferrer">PQ-CL Breakout #5, November 27, 2026</a>
+  </h3>
+  
+  <p class="paper-summary">Agenda PQ Consensus Layer working session Meeting Time: Friday, November 27, 2026 at 14:00 UTC (120 minutes) GitHub Issue 1 post - 1 participant Read full topic</p>
+  
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/pq-cl-breakout-5-november-27-2026/30499" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+  </div>
+  
+  </section>
+
+  <footer>
+    <span>数据来源：arXiv OAI-PMH · OpenAlex · 安全机构与行业 RSS · 仅作研究摘要与去噪参考</span>
+    <span>模型：openai-gemini-3.6-flash</span>
+  </footer>
+</div>
+
+<script>
+(function() {
+  const primaryBar = document.getElementById("primaryTabs");
+  if (primaryBar) {
+    const tabs = primaryBar.querySelectorAll(".primary-tab");
+    const panels = document.querySelectorAll(".tab-panel");
+    primaryBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".primary-tab");
+      if (!btn) return;
+      const target = btn.getAttribute("data-tab");
+      tabs.forEach((t) => {
+        const active = t === btn;
+        t.classList.toggle("active", active);
+        t.setAttribute("aria-selected", String(active));
+      });
+      panels.forEach((p) => {
+        p.classList.toggle("active", p.id === "panel-" + target);
+      });
+    });
+  }
+
+  const subBar = document.getElementById("venueSubtabBar");
+  if (subBar) {
+    const btns = subBar.querySelectorAll(".subtab-btn");
+    const cards = document.querySelectorAll(".venue-card");
+    subBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".subtab-btn");
+      if (!btn) return;
+      const filter = btn.getAttribute("data-venue-filter");
+      btns.forEach((b) => b.classList.toggle("active", b === btn));
+      cards.forEach((c) => {
+        const show = filter === "ALL" || c.getAttribute("data-venue") === filter;
+        c.style.display = show ? "" : "none";
+      });
+    });
+  }
+  const newsSubBar = document.getElementById("newsSubtabBar");
+  if (newsSubBar) {
+    const btns = newsSubBar.querySelectorAll(".subtab-btn");
+    const cards = document.querySelectorAll(".news-card");
+    newsSubBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".subtab-btn");
+      if (!btn) return;
+      const filter = btn.getAttribute("data-news-filter");
+      btns.forEach((b) => b.classList.toggle("active", b === btn));
+      cards.forEach((c) => {
+        const show = filter === "ALL" || c.getAttribute("data-news-section") === filter;
+        c.style.display = show ? "" : "none";
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
