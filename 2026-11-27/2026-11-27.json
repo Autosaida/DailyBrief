@@ -1,0 +1,706 @@
+{
+  "date": "2026-11-27",
+  "model": "openai-gemini-3.6-flash",
+  "generated_at": "2026-11-26T23:39:22.531Z",
+  "arxiv": {
+    "date": "2026-11-27",
+    "query_date": "2026-11-26",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "total_fetched": 10,
+    "kept_count": 9,
+    "filtered_count": 1,
+    "papers": [
+      {
+        "url": "https://arxiv.org/abs/2611.34229",
+        "arxiv_id": "2611.34229",
+        "pdf_url": "https://arxiv.org/pdf/2611.34229",
+        "title_en": "Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth",
+        "title_zh": "区块链后量子与混合签名评估：性能、存储与账本膨胀度量",
+        "authors": [
+          "Anthony Mikhaiel",
+          "Essam Ghadafi"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-25",
+        "updated_date": "2026-11-25",
+        "keep": true,
+        "topic": "后量子加密实证度量",
+        "summary": "评估区块链系统迁移至后量子密码学（PQC）的实际开销。研究在仿真框架下评估了ECDSA、Falcon、ML-DSA等13种签名配置，并投影至Bitcoin、Ethereum等5条主流公链。实验表明Falcon-512验证耗时仅30.1μs，但账本体积将膨胀79%~229%，表明存储开销相比验证计算开销是PQC迁移过程中更为严峻的挑战。",
+        "highlights": [
+          "针对5条主流公链评估13种PQC及混合签名的实证性能",
+          "发现Falcon-512验证速度比肩ECDSA但账本膨胀79%~229%",
+          "揭示存储开销而非验证计算是区块链PQC迁移的主要障碍"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2603.26970",
+        "arxiv_id": "2603.26970",
+        "pdf_url": "https://arxiv.org/pdf/2603.26970",
+        "title_en": "HFIPay: Privacy-Preserving, Cross-Chain Cryptocurrency Payments to Human-Friendly Identifiers",
+        "title_zh": "HFIPay：面向人类可读标识符的隐身跨链加密货币支付协议",
+        "authors": [
+          "Jian Sheng Wang"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.DC"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v3",
+        "is_update": true,
+        "created_date": "2026-03-27",
+        "updated_date": "2026-11-25",
+        "comment": "34 pages, 1 figures",
+        "keep": true,
+        "topic": "隐私支付与可读标识",
+        "summary": "针对直接将邮箱与手机号等可读标识符映射至区块链地址会导致资金历史与余额泄露的问题，提出中继辅助的隐私支付协议HFIPay。中继在链下解析标识符且仅在链上注册随机意图标识符与盲化绑定，实现提取前无标识符公开。结合ZK-ACE零知识证明验证资金提取权限，并提供可验证报价机制防止中继替换接收方，构建了防枚举性与提取前不可关联性。",
+        "highlights": [
+          "链上仅注册盲化意图，实现提取前标识符与地址彻底解耦",
+          "引入可验证报价机制，有效防止中继恶意篡改或替换收款人",
+          "基于零知识证明授权提取，兼顾易用性与跨链隐私安全"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2604.07568",
+        "arxiv_id": "2604.07568",
+        "pdf_url": "https://arxiv.org/pdf/2604.07568",
+        "title_en": "MEV-ACE: Identity-Authenticated Fair Ordering for Proposer-Controlled MEV Mitigation",
+        "title_zh": "MEV-ACE：基于身份认证公平排序的提议者可控 MEV 缓解协议",
+        "authors": [
+          "Jian Sheng Wang"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.DC"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2026-04-08",
+        "updated_date": "2026-11-25",
+        "comment": "20 Pages",
+        "keep": true,
+        "topic": "MEV缓解与公平排序",
+        "summary": "针对区块提议者可任意观测未确认交易并单方面决定排序所带来的MEV安全威胁，提出MEV-ACE公平排序协议。协议融合基于ACE-GF链上质押的经济身份认证、带门限回执的提交-打开消息机制以及可验证延迟随机数。理论证明在惩罚金大于单区块不正当收益时，能彻底消除提议者单方面进行抢跑、夹心攻击及选择性审查的权力，且无需门限解密委员会。",
+        "highlights": [
+          "结合质押身份与门限回执，保证交易打包义务可独立审计",
+          "利用可验证延迟随机数在锁死集后随机排序，消除提议者操控权",
+          "保持单Slot架构且无需门限解密委员会，显著降低系统复杂度"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2509.09868",
+        "arxiv_id": "2509.09868",
+        "pdf_url": "https://arxiv.org/pdf/2509.09868",
+        "title_en": "Equal Opportunity: A Correctness Condition for Ordered Consensus",
+        "title_zh": "机会均等：有序共识的正确性条件及抢跑攻击缓解",
+        "authors": [
+          "Yunhao Zhang",
+          "Haobin Ni",
+          "Soumya Basu",
+          "Shir Cohen",
+          "Maofan Yin",
+          "Lorenzo Alvisi",
+          "Robbert van Renesse",
+          "Qi Chen",
+          "Lidong Zhou"
+        ],
+        "categories": [
+          "cs.DC",
+          "cs.CR",
+          "cs.MA"
+        ],
+        "published_at": "2026-11-24T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2025-09-11",
+        "updated_date": "2026-11-24",
+        "comment": "Extended version of the OSDI 2026 paper, with an appendix of proofs",
+        "journal_ref": "Proceedings of the 20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 26), 2026",
+        "keep": true,
+        "topic": "有序共识与MEV防范",
+        "summary": "针对基于SMR的PoS区块链中即便满足现有有序共识条件仍易遭受网络延迟优势引发的MEV与抢跑攻击问题，提出基于“机会均等”概念的新型正确性条件与系统模型。通过定义 Secret Random Oracle (SRO) 容错抽象并基于可信硬件与门限VRF给出两种构建方案，设计出 Pompë-SRO 有序共识协议。实验评估表明该协议能以适度的延迟开销有效遏制抢跑与夹心攻击。",
+        "highlights": [
+          "引入法律界「机会均等」原则，形式化建模交易排序公平性",
+          "提出 Secret Random Oracle 抽象并给出硬件及tVRF实现",
+          "构建 Pompë-SRO 协议，在适度延迟下有效抵御抢跑与夹心攻击"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2603.07933",
+        "arxiv_id": "2603.07933",
+        "pdf_url": "https://arxiv.org/pdf/2603.07933",
+        "title_en": "Condition-Triggered Cryptographic Asset Control via Dormant Authorization Paths",
+        "title_zh": "基于休眠授权路径的条件触发型加密资产控制机制",
+        "authors": [
+          "Jian Sheng Wang"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2026-03-09",
+        "updated_date": "2026-11-25",
+        "comment": "27 pages, 1 figure",
+        "keep": true,
+        "topic": "加密资产控制与托管",
+        "summary": "针对传统加密资产私钥永久持有模式无法支持合规监管、条件委托及无缝继承的问题，提出条件触发型休眠授权路径（CT-DAP）控制方法。该方法将控制权构建为由用户凭证与托管方因子共同组成的休眠路径，仅在满足预定义条件（如继承事件、时间触发）时释放因子激活路径，并通过销毁因子实现状态无关的永久撤销。原型评估显示激活延迟达亚秒级。",
+        "highlights": [
+          "提出休眠授权路径模型，无需持久暴露私钥或进行链上状态变更",
+          "支持继承与时间戳等条件触发因子释放及状态无关的确定性撤销",
+          "原型实现具备亚秒级激活延迟，满足高合规性加密资产托管需求"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2603.10242",
+        "arxiv_id": "2603.10242",
+        "pdf_url": "https://arxiv.org/pdf/2603.10242",
+        "title_en": "ACE Runtime - A ZKP-Native Blockchain Runtime with Sub-Second Cryptographic Finality",
+        "title_zh": "ACE Runtime：具备亚秒级密码学终局性的 ZKP 原生区块链执行层",
+        "authors": [
+          "Jian Sheng Wang"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.DC"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2026-03-10",
+        "updated_date": "2026-11-25",
+        "comment": "26 pages, 3 figures, 14 tables",
+        "keep": true,
+        "topic": "零知识执行层架构",
+        "summary": "针对高性能区块链在关键路径上逐笔验证签名导致的高计算压力与O(N)验证开销问题，提出身份与授权分离的ZKP原生执行层ACE Runtime。热路径采用轻量级HMAC认证替代逐笔签名检查，并在异步证明阶段为每个区块生成单个聚合零知识终局证书。分析与原型表明该系统在提供亚秒级终局性的同时，可维持常数级区块验证开销并显著降低验证节点硬件需求。",
+        "highlights": [
+          "提出身份授权分离架构，热路径以 HMAC 替换逐笔签名验证",
+          "异步生成区块级零知识终局证书，实现亚秒级软/硬双层终局性",
+          "验证开销降低至常数级，大幅减轻非构建者验证节点的硬件压力"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2603.07974",
+        "arxiv_id": "2603.07974",
+        "pdf_url": "https://arxiv.org/pdf/2603.07974",
+        "title_en": "ZK-ACE: Identity-Centric Zero-Knowledge Authorization for Post-Quantum Blockchain Systems",
+        "title_zh": "ZK-ACE：后量子区块链系统中基于身份的零知识授权机制",
+        "authors": [
+          "Jian Sheng Wang"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.DC"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v4",
+        "is_update": true,
+        "created_date": "2026-03-09",
+        "updated_date": "2026-11-25",
+        "comment": "18 pages",
+        "keep": true,
+        "topic": "后量子零知识授权",
+        "summary": "针对后量子签名方案在链上引入KB级高昂存储与证明电路内网格算术开销大的问题，提出ZK-ACE零知识授权机制。该机制以身份绑定零知识断言替代交易签名对象，证明者仅需向电路证明交易由符合链上承诺的确定性身份授权。实现Circle STARK与Groth16双后端，比电路内PQC签名验证体积缩减500~2300倍，在区块STARK聚合下单笔交易仅占用约160字节。",
+        "highlights": [
+          "以身份绑定 ZK 断言替代传统 PQC 签名，避免电路内高昂网格运算",
+          "包含 Circle STARK 与 Groth16 双后端，比电路内 PQC 验证缩小百倍",
+          "在区块级 STARK 聚合下将单笔交易共识数据降至约 160 字节"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2603.07982",
+        "arxiv_id": "2603.07982",
+        "pdf_url": "https://arxiv.org/pdf/2603.07982",
+        "title_en": "ACE-GF-based Attestation Relay for PQC - Lightweight Mempool Propagation Without On-Path Proofs",
+        "title_zh": "基于 ACE-GF 的 PQC 证明中继：无需路径证明的轻量级 Mempool 传播",
+        "authors": [
+          "Jian Sheng Wang"
+        ],
+        "categories": [
+          "cs.CR",
+          "cs.DC"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v2",
+        "is_update": true,
+        "created_date": "2026-03-09",
+        "updated_date": "2026-11-25",
+        "comment": "12 pages",
+        "keep": true,
+        "topic": "后量子 Mempool 传播",
+        "summary": "针对后量子区块链中递归STARK方案在Mempool传播路径上产生高昂证明带宽开销的瓶颈，提出无路径证明中继协议AR-ACE。协议提出网络传播过程无需携带全量有效性证明，仅需轻量级保证；中继节点仅转发交易对象与紧凑认证，仅由区块构建者在最终环节执行单次聚合有效性证明。分析表明该设计使中继网络的证明带宽开销降低一个数量级。",
+        "highlights": [
+          "提出「证明剥离传播路径」设计，中继节点仅转发紧凑认证而非全量证明",
+          "仅在构建者节点进行一次性聚合证明，证明带宽降低一个数量级",
+          "原生支持 ACE-GF 统一身份模型，具备良好的后量子兼容性"
+        ]
+      },
+      {
+        "url": "https://arxiv.org/abs/2611.34417",
+        "arxiv_id": "2611.34417",
+        "pdf_url": "https://arxiv.org/pdf/2611.34417",
+        "title_en": "Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE",
+        "title_zh": "Northstar：高效可验证负循环多项式算术及其在加密 ERC-20 中的应用",
+        "authors": [
+          "Yeoh Wei Zhu",
+          "Shaltiel Eloul",
+          "Yash Satsangi",
+          "Rob Otter"
+        ],
+        "categories": [
+          "cs.CR"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-25",
+        "updated_date": "2026-11-25",
+        "comment": "Extended version of a paper accepted to Financial Cryptography and Data Security 2027 (FC 2027)",
+        "keep": true,
+        "topic": "可验证FHE与隐私代币",
+        "summary": "针对基于格的全同态加密（FHE）链上验证计算成本昂贵的问题，提出了 Northstar 负循环多项式算术原生证明技术。该技术与 STARK 证明框架集成，在证明者与验证者时间及证明尺寸上均显著优于现有可验证 FHE 方案。研究团队利用该技术构建了首个支持智能合约高效验证的加密多资产（涵盖约 1000 种资产）ERC-20 协议变体，具备实际部署可行性。",
+        "highlights": [
+          "提出原生证明负循环算术的 Northstar 框架，优化 FHE 验证",
+          "实现首个链上可高效验证的加密多资产 ERC-20 变体协议"
+        ]
+      }
+    ],
+    "filtered_papers": [
+      {
+        "url": "https://arxiv.org/abs/2611.34662",
+        "arxiv_id": "2611.34662",
+        "pdf_url": "https://arxiv.org/pdf/2611.34662",
+        "title_en": "Multi-Party Authorization of Maintenance Prescriptions on a Permissioned Blockchain",
+        "title_zh": "Multi-Party Authorization of Maintenance Prescriptions on a Permissioned Blockchain",
+        "authors": [
+          "Siyuan Chen",
+          "Ebru Turanoglu Bekar",
+          "Anders Skoogh"
+        ],
+        "categories": [
+          "cs.SE",
+          "cs.AI"
+        ],
+        "published_at": "2026-11-25T00:00:00.000Z",
+        "version": "v1",
+        "is_update": false,
+        "created_date": "2026-11-25",
+        "updated_date": "2026-11-25",
+        "comment": "6 pages, 2 figures, 2 tables. Submitted to IFAC AMEST / IMS 2027",
+        "keep": false,
+        "topic": "其他",
+        "summary": "In industrial prescriptive maintenance, an equipment supplier's model may recommend an intervention that a plant schedules, a contractor executes, and a quality or safety function approves. A shared ledger records who submitted the prescription, yet cannot che",
+        "highlights": [],
+        "discard_reason": "该文属于工业维护业务与许可链拼接应用，缺乏区块链核心技术创新。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-26T23:31:07.653Z"
+  },
+  "venues": {
+    "date": "2026-11-27",
+    "query_date": "2026-11-26",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "venue_count": 68,
+    "total_fetched": 1,
+    "kept_count": 1,
+    "filtered_count": 0,
+    "papers": [
+      {
+        "url": "https://doi.org/10.1109/tifs.2026.3757536",
+        "doi": "https://doi.org/10.1109/tifs.2026.3757536",
+        "title_en": "Robust and Redactable Blockchain From Pre-Constrained Threshold Chameleon Hash",
+        "authors": [
+          "Chenhao Wang (Chang'an University)",
+          "Yang Ming (Chang'an University)",
+          "Hang Liu (Chang'an University)",
+          "Yutong Deng (Chang'an University)",
+          "Yi Zhao (Chang'an University)",
+          "Jianting Ning (Wuhan University)"
+        ],
+        "venue_abbr": "TIFS",
+        "venue_name": "IEEE Transactions on Information Forensics and Security",
+        "venue_tier": "CCF-A",
+        "pub_date": "2026-01-01",
+        "created_date": "2026-11-26",
+        "title_zh": "基于预约束门限变色龙哈希的鲁棒可篡改区块链",
+        "keep": true,
+        "topic": "可篡改区块链",
+        "summary": "针对传统可篡改区块链在密钥管理与特权实体滥用防范上的局限，提出基于预约束门限变色龙哈希的鲁棒可篡改区块链方案。该方案通过在门限变色龙哈希中引入预约束机制，实现了修改权限的分布式协同治理与细粒度控制。在保障区块链整体安全性与鲁棒性的同时，为合规数据修正与违规信息擦除提供了高效且严密的技术支撑。",
+        "highlights": [
+          "结合预约束与门限变色龙哈希实现可控链上修改",
+          "提供分布式协同治理与细粒度权限控制机制"
+        ]
+      }
+    ],
+    "filtered_papers": [],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-26T23:31:33.076Z"
+  },
+  "news": {
+    "date": "2026-11-27",
+    "query_date": "2026-11-26",
+    "source_count": 21,
+    "total_fetched": 23,
+    "kept_count": 12,
+    "filtered_count": 11,
+    "items": [
+      {
+        "url": "https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T12:38:51.000Z",
+        "title_en": "Standard Chartered's Zodia Custody suffers data breach, exposing client information",
+        "title_zh": "渣打银行旗下加密托管机构 Zodia Custody 遭遇数据泄露",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "安全事件",
+        "summary": "渣打银行旗下的加密资产托管机构 Zodia Custody 发生数据泄露事件，部分客户和员工的联系方式信息被曝光。官方声明指出，目前未发生任何未经授权的资产交易或资金损失。",
+        "highlights": [
+          "Zodia Custody 泄露客户与员工联系方式，暂无资金损失"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/ecosystems/2026-11-26-the-time-to-prepare-for-a-cryptographic-breakthrough-is-before-it-happens-zcash-team-urges-faster-deprecation-of-legacy-shielded-pool-447000",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T13:22:47.000Z",
+        "title_en": "‘The time to prepare for a cryptographic breakthrough is before it happens’: Zcash team urges faster deprecation of legacy shielded pool",
+        "title_zh": "Zcash 团队呼吁加速废弃旧版 Sapling 隐蔽池以防范密码学突破",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "密码学安全",
+        "summary": "出于对 AI 辅助密码学破解等潜在数学突破的防范，Zcash 开发团队呼吁加快废弃早期的 Sapling 隐蔽池并禁用相关存款，提早应对未来密码学技术对隐私协议带来的潜在安全威胁。",
+        "highlights": [
+          "Zcash 团队建议提早关闭 Sapling 存款以抵御未来破解风险"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-26T12:47:29.000Z",
+        "title_en": "A better pipeline toward PQ and censorship resistant Ethereum",
+        "title_zh": "以太坊社区探讨后量子路线图及解耦共识架构设计",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "以太坊研究",
+        "summary": "Ethereum Magicians 社区探讨如何加速以太坊后量子（PQ）转型与抗审查路线图。提案建议通过解耦共识（Decoupled Consensus）将签名聚合移出关键路径，降低后量子签名对共识层的性能影响。",
+        "highlights": [
+          "探讨后量子以太坊路线图及解耦共识架构设计"
+        ]
+      },
+      {
+        "url": "https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147",
+        "source_name": "Flashbots Collective",
+        "source_group": "协议研究",
+        "published_at": "2026-11-26T07:50:15.000Z",
+        "title_en": "How much price do routers leave on large swaps? A same-block benchmark (3,429 orders)",
+        "title_zh": "Flashbots 研讨 DEX 大额交易路由优化与价格滑点基准测试",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "协议研究",
+        "summary": "Flashbots 社区对 3,429 笔大额 DEX 卖单进行同区块基准测试，研究发现拆分优化器（Split Optimizer）在扣除 Gas 费后产出比常规聚合器高出 0.2 至 4.8 bps，在 300 ETH 以上订单中增益扩至 5.4 bps。优化收益主要源自跨平行池拆分与路径合并。",
+        "highlights": [
+          "测试 3,429 笔大额订单路由性能",
+          "拆分优化器在大额交易中最多提升 5.4 bps 收益"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/erc-xxxx-serial-numbered-fungible-tokens/30519",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-26T03:00:53.000Z",
+        "title_en": "ERC-XXXX: Serial-Numbered Fungible Tokens",
+        "title_zh": "Ethereum Magicians 讨论带序列号的同质化代币标准 ERC-XXXX",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "EIP 提案",
+        "summary": "针对加密资产盗用事件中稳定币冻结追踪的局限性，以太坊社区提出带序列号的同质化代币标准 ERC-XXXX。由于传统 ERC-20 仅记录账户总额度，资金在混币或拆分后难以定向追踪；该提案通过为代币引入序列号机制，支持对被盗单元的精确追踪与定向冻结。",
+        "highlights": [
+          "提出具序列号机制的 ERC-XXXX 标准",
+          "解决传统 ERC-20 被盗资金难以精细追查痛点"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-25T20:26:50.000Z",
+        "title_en": "Ethlabs’ position on Glamsterdam",
+        "title_zh": "Ethlabs 发布 Glamsterdam 升级立场声明：建议按原计划推进 EIP-8037",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "以太坊升级",
+        "summary": "Ethlabs 发布关于以太坊 Glamsterdam 升级的影响分析报告，建议维持现有方案推进。报告指出，重新定价状态创建虽带来短期影响，但作为以太坊实现 1000 倍扩容的必要步骤，保留 EIP-8037 可获得约 3 倍的 Gas 上限增长。",
+        "highlights": [
+          "建议按原计划推进 Glamsterdam，获得 3 倍 Gas 上限增长"
+        ]
+      },
+      {
+        "url": "https://collective.flashbots.net/t/the-mev-letter-163/6146",
+        "source_name": "Flashbots Collective",
+        "source_group": "协议研究",
+        "published_at": "2026-11-25T16:58:42.000Z",
+        "title_en": "The MEV Letter #163",
+        "title_zh": "Flashbots 发布 MEV Letter #163：涵盖 ePBS 撤单模型与 Glamsterdam 区块限制研究",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "MEV 研究",
+        "summary": "Flashbots 发布 MEV 通讯第 163 期，重点汇总了 ePBS 机制中竞标撤销对出块者收益与构建者风险影响的拍卖模型研究，以及 Glamsterdam 升级下 8 MiB 执行区块限制与 FOCIL 交易打包机制的相关深入探讨。",
+        "highlights": [
+          "涵盖 ePBS 竞标撤销模型与 Glamsterdam 区块限制研究"
+        ]
+      },
+      {
+        "url": "https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html",
+        "source_name": "Vitalik Buterin",
+        "source_group": "协议研究",
+        "published_at": "2026-11-26T00:00:00.000Z",
+        "title_en": "A shallow dive into open-source chip design",
+        "title_zh": "Vitalik 撰文探讨开源芯片设计及其对去中心化硬件生态的意义",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "开源芯片研究",
+        "summary": "Vitalik 发文《开源芯片设计浅析》，探讨开源硬件在芯片领域的应用前景与挑战。文章分析了开源指令集与定制化芯片设计如何为去中心化基础设施、硬件加速及密码学计算提供更自主可控的技术底层支撑。",
+        "highlights": [
+          "开源芯片设计可为去中心化硬件与密码学加速提供支撑"
+        ]
+      },
+      {
+        "url": "https://thedefiant.io/news/regulation/spain-issues-decree-to-allow-temporary-crypto-account-freezes",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T14:31:28.000Z",
+        "title_en": "Spain Issues Decree to Allow Temporary Crypto Account Freezes",
+        "title_zh": "西班牙拟允许反洗钱机构未经法院批准冻结加密账户 5 天",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "西班牙发布法令草案，若经国会表决通过，将于 1 月 25 日起生效。该法令授权反洗钱机构 Sepblac 在无需法院事先批准的情况下，可直接临时冻结加密资产账户最长 5 个工作日，旨在加强对涉嫌违法加密交易的预防性审查与资金拦截。",
+        "highlights": [
+          "Sepblac 可未经法院批准临时冻结加密账户最长 5 个工作日",
+          "该法令拟于 1 月 25 日生效，目前尚待国会表决通过"
+        ]
+      },
+      {
+        "url": "https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T14:05:58.000Z",
+        "title_en": "Spain gives anti-laundering unit power to freeze crypto accounts without a judge",
+        "title_zh": "西班牙反洗钱机构获权可未经法官批准直接冻结加密账户",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "西班牙赋予其反洗钱机构 Sepblac 新的行政权力，允许其在无需法官事先批准的情况下直接冻结涉嫌洗钱的加密货币账户。此前 Sepblac 仅能在收到外国金融情报机构请求时暂停账户。",
+        "highlights": [
+          "西班牙 Sepblac 获权无需法院命令即可冻结加密账户"
+        ]
+      },
+      {
+        "url": "https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T11:27:50.000Z",
+        "title_en": "Hong Kong-based crypto trading firm Auros is winding down operations",
+        "title_zh": "香港加密做市商 Auros 宣布逐步清算并关停业务",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "行业动态",
+        "summary": "曾经占全球加密交易所交易量约 4%、并在 FTX 倒闭后融资 1700 万美元的香港加密做市与交易机构 Auros 正在逐步清算关停其运营业务。",
+        "highlights": [
+          "曾占全球交易量 4% 的做市商 Auros 宣布关停业务"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/regulation/2026-11-26-switzerland-approves-57-jurisdictions-for-crypto-data-exchange-from-2028-446821",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T09:40:41.000Z",
+        "title_en": "Switzerland approves 57 jurisdictions for crypto data exchange from 2028",
+        "title_zh": "瑞士批准自2028年起与57个辖区共享加密资产税务数据",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "瑞士联邦委员会批准了 57 个潜在合作辖区，计划自 2028 年起实施加密资产税务信息自动交换机制。该举措旨在遵循国际自动情报交换标准（CARF），全面加强跨国加密资产税收透明度、打击避税及强化反洗钱合规监管。",
+        "highlights": [
+          "自2028年起实施57个辖区加密税务数据交换"
+        ]
+      }
+    ],
+    "filtered_items": [
+      {
+        "url": "https://thedefiant.io/news/nfts-and-web3/telegram-cuts-fee-to-2-on-gift-resales-paid-in-gram",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T15:49:31.000Z",
+        "title_en": "Telegram Cuts Fee to 2% on Gift Resales Paid in Gram",
+        "title_zh": "Telegram Cuts Fee to 2% on Gift Resales Paid in Gram",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "CEO Pavel Durov said sellers trading inside Telegram now get paid directly in Gram when a sale settles on TON.",
+        "highlights": [],
+        "discard_reason": "属于应用内功能更新与费率调整，缺乏技术与重大监管价值。"
+      },
+      {
+        "url": "https://www.coindesk.com/coindesk-indices/2026/11/26/crypto-for-advisors-four-questions-to-ask-before-trusting-a-crypto-exchange",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T15:42:43.000Z",
+        "title_en": "Crypto for Advisors: Four questions to ask before trusting a crypto exchange",
+        "title_zh": "Crypto for Advisors: Four questions to ask before trusting a crypto exchange",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "",
+        "highlights": [],
+        "discard_reason": "属于泛化投顾科普与交易所选择建议，无实质技术或安全信息量。"
+      },
+      {
+        "url": "https://thedefiant.io/news/markets/ether-drops-28-in-four-weeks-lagging-bitcoin",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T15:39:36.000Z",
+        "title_en": "Ether Drops 28% in Four Weeks, Lagging Bitcoin",
+        "title_zh": "Ether Drops 28% in Four Weeks, Lagging Bitcoin",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "US spot ether ETFs recorded $523.3 million in net withdrawals over eight trading sessions through Nov. 25, according to Farside Investors’ data.",
+        "highlights": [],
+        "discard_reason": "属于纯粹的币价行情走势与 ETF 资金流出播报，无安全或技术信息。"
+      },
+      {
+        "url": "https://thedefiant.io/frontier/ai/huawei-to-detail-new-ai-memory-design-in-february",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T15:14:13.000Z",
+        "title_en": "Huawei to Detail New AI Memory Design in February",
+        "title_zh": "Huawei to Detail New AI Memory Design in February",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "The conference program describes a custom chip but gives no production timetable. US export controls limit China’s access to imported high-bandwidth memory.",
+        "highlights": [],
+        "discard_reason": "属于传统 AI 芯片硬件设计新闻，与 Web3 及区块链生态无直接关联。"
+      },
+      {
+        "url": "https://thedefiant.io/news/cefi/kucoin-to-delist-monero-ending-spot-trading-nov-30",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T14:21:17.000Z",
+        "title_en": "KuCoin to Delist Monero, Ending Spot Trading Nov. 30",
+        "title_zh": "KuCoin to Delist Monero, Ending Spot Trading Nov. 30",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "XMR deposits are already closed. Withdrawals are scheduled to end Dec. 31, and KuCoin urged borrowers who pledged Monero to add other collateral.",
+        "highlights": [],
+        "discard_reason": "属于交易所常规下币公告，缺乏智能合约安全或重大监管情报价值。"
+      },
+      {
+        "url": "https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T12:14:46.000Z",
+        "title_en": "Bitcoin ETFs are bleeding cash and the Fed is unlikely to help",
+        "title_zh": "Bitcoin ETFs are bleeding cash and the Fed is unlikely to help",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Your day-ahead look for Nov. 26, 2026",
+        "highlights": [],
+        "discard_reason": "属于常规宏观市场行情与 ETF 资金流向分析，无技术或安全信息量。"
+      },
+      {
+        "url": "https://www.theblock.co/news/markets/2026-11-26-spot-bitcoin-etfs-worst-month-november-446814",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T08:50:46.000Z",
+        "title_en": "Spot bitcoin ETFs on track for worst month on record as bear market drags on",
+        "title_zh": "Spot bitcoin ETFs on track for worst month on record as bear market drags on",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Spot bitcoin ETFs have already hit record monthly net outflows of $5.39 billion in November, with several trading days remaining.",
+        "highlights": [],
+        "discard_reason": "该条目属于纯市场行情与 ETF 资金流向播报，缺乏技术或安全信息量。"
+      },
+      {
+        "url": "https://www.theblock.co/news/markets/2026-11-26-swiss-bitcoin-etf-bbit-begins-trading-europes-only-446724",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T06:30:00.000Z",
+        "title_en": "Europe’s only spot bitcoin ETF starts trading in Switzerland, BIT says",
+        "title_zh": "Europe’s only spot bitcoin ETF starts trading in Switzerland, BIT says",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "BIT Asset Management's BBIT fund debuted on SIX Swiss Exchange with 350 BTC in assets and a 0.19% annual expense ratio.",
+        "highlights": [],
+        "discard_reason": "该条目属于常规金融产品上市与行情播报，缺乏底层技术或安全深度。"
+      },
+      {
+        "url": "https://www.theblock.co/newsletters/the-daily/2026-11-26-fidelity-chainlink-etf-musk-x-ruling-alleged-bitcoin-content-farm-case-more-crypto-news-446755",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-26T05:45:00.000Z",
+        "title_en": "Fidelity files for Chainlink ETF, Musk’s X wins ruling in alleged bitcoin content-farm case, and more",
+        "title_zh": "Fidelity files for Chainlink ETF, Musk’s X wins ruling in alleged bitcoin content-farm case, and more",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "In today's newsletter, Fidelity files for spot Chainlink ETF; Musk's X wins ruling in alleged bitcoin content-farm case; and more.",
+        "highlights": [],
+        "discard_reason": "该条目属于常规市场资讯与 ETF 申请简报汇编，缺乏核心技术与安全价值。"
+      },
+      {
+        "url": "https://www.chainalysis.com/blog/nodes-london-2026-chain-ai-workspace/",
+        "source_name": "Chainalysis",
+        "source_group": "安全机构",
+        "published_at": "2026-11-25T18:32:40.000Z",
+        "title_en": "Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders",
+        "title_zh": "Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "AI is accelerating the movement of money online and emboldening the criminals who seek to steal it. But AI is… The post Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders appeared first on Chainalysis.",
+        "highlights": [],
+        "discard_reason": "Chainalysis 伦敦会议及 AI 产品宣传，属于公司公关软文，缺乏实质安全分析。"
+      },
+      {
+        "url": "https://www.trmlabs.com/resources/blog/trm-labs-appoints-maria-tsani-former-aws-policy-leader-as-head-of-policy-emea",
+        "source_name": "TRM Labs",
+        "source_group": "安全机构",
+        "published_at": "2026-11-25T17:00:00.000Z",
+        "title_en": "TRM Labs Appoints Maria Tsani, Former AWS Policy Leader, as Head of Policy, EMEA | TRM Labs",
+        "title_zh": "TRM Labs Appoints Maria Tsani, Former AWS Policy Leader, as Head of Policy, EMEA | TRM Labs",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "TRM Labs appoints Maria Tsani, former AWS policy leader, as Head of Policy, EMEA, working with regulators across Europe, the Middle East, and Africa.",
+        "highlights": [],
+        "discard_reason": "TRM Labs 任命高管的人事变动公告，属于常规公关宣传软文，缺乏实质信息量。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-26T23:39:22.531Z"
+  }
+}

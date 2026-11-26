@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>区块链每日论文追踪 · 2026-11-26</title>
+<title>区块链每日论文追踪 · 2026-11-27</title>
 <style>
   :root {
     color-scheme: light dark;
@@ -379,7 +379,7 @@
   <header>
     <div>
       <h1>区块链每日论文追踪</h1>
-      <p class="subtitle">2026年11月26日周四 <span class="model-subtle" title="当日生成所用大模型">· openai-gemini-3.6-flash</span></p>
+      <p class="subtitle">2026年11月27日周五 <span class="model-subtle" title="当日生成所用大模型">· openai-gemini-3.6-flash</span></p>
     </div>
     <a class="archive-link" href="./archive.html">← 历史归档</a>
   </header>
@@ -387,122 +387,256 @@
   <nav class="primary-tabs" id="primaryTabs" role="tablist">
     <button class="primary-tab active" data-tab="arxiv" role="tab" aria-selected="true">
       arXiv 今日论文（区块链）
-      <span class="tab-badge">4</span>
+      <span class="tab-badge">9</span>
     </button>
     <button class="primary-tab" data-tab="venues" role="tab" aria-selected="false">
       会议 / 期刊正式发表论文
-      <span class="tab-badge">0</span>
+      <span class="tab-badge">1</span>
     </button>
     <button class="primary-tab" data-tab="news" role="tab" aria-selected="false">
       安全与行业快讯
-      <span class="tab-badge">25</span>
+      <span class="tab-badge">12</span>
     </button>
   </nav>
 
   <section class="tab-panel active" id="panel-arxiv" role="tabpanel">
     <div class="stats-row">
-    <span class="stat-pill">检索候选 <strong>4</strong> 篇</span>
-    <span class="stat-pill">保留 <strong>4</strong> 篇</span>
-    <span class="stat-pill">去噪过滤 <strong>0</strong> 篇</span>
+    <span class="stat-pill">检索候选 <strong>10</strong> 篇</span>
+    <span class="stat-pill">保留 <strong>9</strong> 篇</span>
+    <span class="stat-pill">去噪过滤 <strong>1</strong> 篇</span>
     <span class="stat-pill">关键词 <strong>blockchain / smart contract / defi</strong></span>
   </div>
-  <div class="date-notice">查询日期：<code>2026-11-25</code>（arXiv OAI-PMH <code>set=cs</code> 全量增量检索，含新投稿与版本更新）</div>
+  <div class="date-notice">查询日期：<code>2026-11-26</code>（arXiv OAI-PMH <code>set=cs</code> 全量增量检索，含新投稿与版本更新）</div>
   <div class="paper-list">
     <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">待分类</span>
-    <span class="tag tag-cat">cs.DC</span><span class="tag tag-cat">cs.CR</span>
-    <span class="paper-id">arXiv:2611.31468</span>
+    <span class="tag tag-topic">后量子加密实证度量</span>
+    <span class="tag tag-cat">cs.CR</span>
+    <span class="paper-id">arXiv:2611.34229</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.31468" target="_blank" rel="noopener noreferrer">Pearl: TEE-Enabled Fair Ordering with Minimal Replication</a>
+    <a href="https://arxiv.org/abs/2611.34229" target="_blank" rel="noopener noreferrer">区块链后量子与混合签名评估：性能、存储与账本膨胀度量</a>
   </h3>
-  <div class="paper-title-en">Pearl: TEE-Enabled Fair Ordering with Minimal Replication</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Vian Robotin, J\&#39;er\&#39;emie Decouchant, Shaokang Xie, Dakai Kang, Mohammad Sadoghi</div>
+  <div class="paper-title-en">Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Anthony Mikhaiel, Essam Ghadafi</div>
   
-  <p class="paper-summary">Recent research has investigated fair transaction ordering in blockchain consensus. An orthogonal line of work has demonstrated that equipping replicas with trusted execution environments (TEEs) enables more efficient consensus protocols with only $2f{+}1$ replicas. In this work, we bridge these two</p>
-  
+  <p class="paper-summary">评估区块链系统迁移至后量子密码学（PQC）的实际开销。研究在仿真框架下评估了ECDSA、Falcon、ML-DSA等13种签名配置，并投影至Bitcoin、Ethereum等5条主流公链。实验表明Falcon-512验证耗时仅30.1μs，但账本体积将膨胀79%~229%，表明存储开销相比验证计算开销是PQC迁移过程中更为严峻的挑战。</p>
+  <ul class="highlights"><li>针对5条主流公链评估13种PQC及混合签名的实证性能</li><li>发现Falcon-512验证速度比肩ECDSA但账本膨胀79%~229%</li><li>揭示存储开销而非验证计算是区块链PQC迁移的主要障碍</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2611.31468" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.31468" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+    <a class="btn-link" href="https://arxiv.org/abs/2611.34229" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.34229" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-03-27">v3 更新</span>
+    <span class="tag tag-topic">隐私支付与可读标识</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2603.26970</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2603.26970" target="_blank" rel="noopener noreferrer">HFIPay：面向人类可读标识符的隐身跨链加密货币支付协议</a>
+  </h3>
+  <div class="paper-title-en">HFIPay: Privacy-Preserving, Cross-Chain Cryptocurrency Payments to Human-Friendly Identifiers</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>34 pages, 1 figures</div>
+  <p class="paper-summary">针对直接将邮箱与手机号等可读标识符映射至区块链地址会导致资金历史与余额泄露的问题，提出中继辅助的隐私支付协议HFIPay。中继在链下解析标识符且仅在链上注册随机意图标识符与盲化绑定，实现提取前无标识符公开。结合ZK-ACE零知识证明验证资金提取权限，并提供可验证报价机制防止中继替换接收方，构建了防枚举性与提取前不可关联性。</p>
+  <ul class="highlights"><li>链上仅注册盲化意图，实现提取前标识符与地址彻底解耦</li><li>引入可验证报价机制，有效防止中继恶意篡改或替换收款人</li><li>基于零知识证明授权提取，兼顾易用性与跨链隐私安全</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2603.26970" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.26970" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-04-08">v2 更新</span>
+    <span class="tag tag-topic">MEV缓解与公平排序</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2604.07568</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2604.07568" target="_blank" rel="noopener noreferrer">MEV-ACE：基于身份认证公平排序的提议者可控 MEV 缓解协议</a>
+  </h3>
+  <div class="paper-title-en">MEV-ACE: Identity-Authenticated Fair Ordering for Proposer-Controlled MEV Mitigation</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>20 Pages</div>
+  <p class="paper-summary">针对区块提议者可任意观测未确认交易并单方面决定排序所带来的MEV安全威胁，提出MEV-ACE公平排序协议。协议融合基于ACE-GF链上质押的经济身份认证、带门限回执的提交-打开消息机制以及可验证延迟随机数。理论证明在惩罚金大于单区块不正当收益时，能彻底消除提议者单方面进行抢跑、夹心攻击及选择性审查的权力，且无需门限解密委员会。</p>
+  <ul class="highlights"><li>结合质押身份与门限回执，保证交易打包义务可独立审计</li><li>利用可验证延迟随机数在锁死集后随机排序，消除提议者操控权</li><li>保持单Slot架构且无需门限解密委员会，显著降低系统复杂度</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2604.07568" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2604.07568" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2025-09-11">v2 更新</span>
+    <span class="tag tag-topic">有序共识与MEV防范</span>
+    <span class="tag tag-cat">cs.DC</span><span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.MA</span>
+    <span class="paper-id">arXiv:2509.09868</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2509.09868" target="_blank" rel="noopener noreferrer">机会均等：有序共识的正确性条件及抢跑攻击缓解</a>
+  </h3>
+  <div class="paper-title-en">Equal Opportunity: A Correctness Condition for Ordered Consensus</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Yunhao Zhang, Haobin Ni, Soumya Basu, Shir Cohen, Maofan Yin, Lorenzo Alvisi, Robbert van Renesse, Qi Chen, Lidong Zhou</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>Proceedings of the 20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 26), 2026 · Extended version of the OSDI 2026 paper, with an appendix of proofs</div>
+  <p class="paper-summary">针对基于SMR的PoS区块链中即便满足现有有序共识条件仍易遭受网络延迟优势引发的MEV与抢跑攻击问题，提出基于“机会均等”概念的新型正确性条件与系统模型。通过定义 Secret Random Oracle (SRO) 容错抽象并基于可信硬件与门限VRF给出两种构建方案，设计出 Pompë-SRO 有序共识协议。实验评估表明该协议能以适度的延迟开销有效遏制抢跑与夹心攻击。</p>
+  <ul class="highlights"><li>引入法律界「机会均等」原则，形式化建模交易排序公平性</li><li>提出 Secret Random Oracle 抽象并给出硬件及tVRF实现</li><li>构建 Pompë-SRO 协议，在适度延迟下有效抵御抢跑与夹心攻击</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2509.09868" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2509.09868" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-03-09">v2 更新</span>
+    <span class="tag tag-topic">加密资产控制与托管</span>
+    <span class="tag tag-cat">cs.CR</span>
+    <span class="paper-id">arXiv:2603.07933</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2603.07933" target="_blank" rel="noopener noreferrer">基于休眠授权路径的条件触发型加密资产控制机制</a>
+  </h3>
+  <div class="paper-title-en">Condition-Triggered Cryptographic Asset Control via Dormant Authorization Paths</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>27 pages, 1 figure</div>
+  <p class="paper-summary">针对传统加密资产私钥永久持有模式无法支持合规监管、条件委托及无缝继承的问题，提出条件触发型休眠授权路径（CT-DAP）控制方法。该方法将控制权构建为由用户凭证与托管方因子共同组成的休眠路径，仅在满足预定义条件（如继承事件、时间触发）时释放因子激活路径，并通过销毁因子实现状态无关的永久撤销。原型评估显示激活延迟达亚秒级。</p>
+  <ul class="highlights"><li>提出休眠授权路径模型，无需持久暴露私钥或进行链上状态变更</li><li>支持继承与时间戳等条件触发因子释放及状态无关的确定性撤销</li><li>原型实现具备亚秒级激活延迟，满足高合规性加密资产托管需求</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2603.07933" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.07933" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-03-10">v2 更新</span>
+    <span class="tag tag-topic">零知识执行层架构</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2603.10242</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2603.10242" target="_blank" rel="noopener noreferrer">ACE Runtime：具备亚秒级密码学终局性的 ZKP 原生区块链执行层</a>
+  </h3>
+  <div class="paper-title-en">ACE Runtime - A ZKP-Native Blockchain Runtime with Sub-Second Cryptographic Finality</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>26 pages, 3 figures, 14 tables</div>
+  <p class="paper-summary">针对高性能区块链在关键路径上逐笔验证签名导致的高计算压力与O(N)验证开销问题，提出身份与授权分离的ZKP原生执行层ACE Runtime。热路径采用轻量级HMAC认证替代逐笔签名检查，并在异步证明阶段为每个区块生成单个聚合零知识终局证书。分析与原型表明该系统在提供亚秒级终局性的同时，可维持常数级区块验证开销并显著降低验证节点硬件需求。</p>
+  <ul class="highlights"><li>提出身份授权分离架构，热路径以 HMAC 替换逐笔签名验证</li><li>异步生成区块级零知识终局证书，实现亚秒级软/硬双层终局性</li><li>验证开销降低至常数级，大幅减轻非构建者验证节点的硬件压力</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2603.10242" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.10242" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-03-09">v4 更新</span>
+    <span class="tag tag-topic">后量子零知识授权</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2603.07974</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2603.07974" target="_blank" rel="noopener noreferrer">ZK-ACE：后量子区块链系统中基于身份的零知识授权机制</a>
+  </h3>
+  <div class="paper-title-en">ZK-ACE: Identity-Centric Zero-Knowledge Authorization for Post-Quantum Blockchain Systems</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>18 pages</div>
+  <p class="paper-summary">针对后量子签名方案在链上引入KB级高昂存储与证明电路内网格算术开销大的问题，提出ZK-ACE零知识授权机制。该机制以身份绑定零知识断言替代交易签名对象，证明者仅需向电路证明交易由符合链上承诺的确定性身份授权。实现Circle STARK与Groth16双后端，比电路内PQC签名验证体积缩减500~2300倍，在区块STARK聚合下单笔交易仅占用约160字节。</p>
+  <ul class="highlights"><li>以身份绑定 ZK 断言替代传统 PQC 签名，避免电路内高昂网格运算</li><li>包含 Circle STARK 与 Groth16 双后端，比电路内 PQC 验证缩小百倍</li><li>在区块级 STARK 聚合下将单笔交易共识数据降至约 160 字节</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2603.07974" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.07974" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-03-09">v2 更新</span>
+    <span class="tag tag-topic">后量子 Mempool 传播</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2603.07982</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2603.07982" target="_blank" rel="noopener noreferrer">基于 ACE-GF 的 PQC 证明中继：无需路径证明的轻量级 Mempool 传播</a>
+  </h3>
+  <div class="paper-title-en">ACE-GF-based Attestation Relay for PQC - Lightweight Mempool Propagation Without On-Path Proofs</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>12 pages</div>
+  <p class="paper-summary">针对后量子区块链中递归STARK方案在Mempool传播路径上产生高昂证明带宽开销的瓶颈，提出无路径证明中继协议AR-ACE。协议提出网络传播过程无需携带全量有效性证明，仅需轻量级保证；中继节点仅转发交易对象与紧凑认证，仅由区块构建者在最终环节执行单次聚合有效性证明。分析表明该设计使中继网络的证明带宽开销降低一个数量级。</p>
+  <ul class="highlights"><li>提出「证明剥离传播路径」设计，中继节点仅转发紧凑认证而非全量证明</li><li>仅在构建者节点进行一次性聚合证明，证明带宽降低一个数量级</li><li>原生支持 ACE-GF 统一身份模型，具备良好的后量子兼容性</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2603.07982" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.07982" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
   </div>
 </article>
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">待分类</span>
-    <span class="tag tag-cat">cs.SE</span>
-    <span class="paper-id">arXiv:2611.31929</span>
+    <span class="tag tag-topic">可验证FHE与隐私代币</span>
+    <span class="tag tag-cat">cs.CR</span>
+    <span class="paper-id">arXiv:2611.34417</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.31929" target="_blank" rel="noopener noreferrer">Shuttle: Dependency-Attributed Workflow Evolution for Smart Contract Auditing</a>
+    <a href="https://arxiv.org/abs/2611.34417" target="_blank" rel="noopener noreferrer">Northstar：高效可验证负循环多项式算术及其在加密 ERC-20 中的应用</a>
   </h3>
-  <div class="paper-title-en">Shuttle: Dependency-Attributed Workflow Evolution for Smart Contract Auditing</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Yue Xue, Yi Rong, Ziqiao Kong, Ronghui Gu, Dan She, Yuannan Yang, Zhiju Yang, Yuqiang Sun</div>
-  <div class="paper-comment"><span class="comment-label">备注：</span>15 pages, 9 figures, 11 tables</div>
-  <p class="paper-summary">In LLM-based smart contract auditing, detection quality depends on both model capability and workflow design. While coding agents can revise workflows from execution feedback, unconstrained rewrites rarely yield stable gains. Cross-function vulnerabilities require multi-step state tracking and bound</p>
-  
+  <div class="paper-title-en">Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Yeoh Wei Zhu, Shaltiel Eloul, Yash Satsangi, Rob Otter</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>Extended version of a paper accepted to Financial Cryptography and Data Security 2027 (FC 2027)</div>
+  <p class="paper-summary">针对基于格的全同态加密（FHE）链上验证计算成本昂贵的问题，提出了 Northstar 负循环多项式算术原生证明技术。该技术与 STARK 证明框架集成，在证明者与验证者时间及证明尺寸上均显著优于现有可验证 FHE 方案。研究团队利用该技术构建了首个支持智能合约高效验证的加密多资产（涵盖约 1000 种资产）ERC-20 协议变体，具备实际部署可行性。</p>
+  <ul class="highlights"><li>提出原生证明负循环算术的 Northstar 框架，优化 FHE 验证</li><li>实现首个链上可高效验证的加密多资产 ERC-20 变体协议</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2611.31929" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.31929" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
-    <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">待分类</span>
-    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">q-fin.GN</span>
-    <span class="paper-id">arXiv:2611.32389</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.32389" target="_blank" rel="noopener noreferrer">AgentBank: Banking on Blockchain Agentic Payments</a>
-  </h3>
-  <div class="paper-title-en">AgentBank: Banking on Blockchain Agentic Payments</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Yuexin Xiang, Martin Pere\v{s}\&#39;ini, Yuchen Lei, Yuquan Li, Yuanzhe Zhang, Andreas Deppeler, Tsz Hon Yuen, Shiping Chen, Qin Wang, Burkhard Stiller</div>
-  
-  <p class="paper-summary">AI agents increasingly pay for data and computation through protocols such as x402 and AP2, but individually funded wallets idle and require asset transfers for every payment. We present AgentBank, a smart-contract banking layer that lets agents spend bank liabilities under owner-issued mandates and</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2611.32389" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.32389" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
-    <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">待分类</span>
-    <span class="tag tag-cat">cs.DC</span>
-    <span class="paper-id">arXiv:2611.33019</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.33019" target="_blank" rel="noopener noreferrer">Blockchain-IoT Convergence for Spatiotemporal Data Systems: Challenges, Solutions, and Research Gaps</a>
-  </h3>
-  <div class="paper-title-en">Blockchain-IoT Convergence for Spatiotemporal Data Systems: Challenges, Solutions, and Research Gaps</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Natalia Chaudhry, Muhammad Murtaza Yousaf</div>
-  
-  <p class="paper-summary">Blockchain in conjunction with the Internet of Things (IoT) is changing the management of spatiotemporal data in a way that has never been possible before now. In the process of gathering geospatial and time-stamped data from a large network of IoT devices, data authenticity, accuracy, and timely pr</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2611.33019" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.33019" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+    <a class="btn-link" href="https://arxiv.org/abs/2611.34417" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.34417" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
   </div>
 </article>
   </div>
-  
+  <details class="filtered-box">
+  <summary>已去噪过滤论文（1 篇）— 点击展开复查</summary>
+  <ul class="filtered-list">
+<li class="filtered-item">
+  <div class="filtered-head">
+    
+    <a href="https://arxiv.org/abs/2611.34662" target="_blank" rel="noopener noreferrer">Multi-Party Authorization of Maintenance Prescriptions on a Permissioned Blockchain</a>
+  </div>
+  <div class="filtered-en">Multi-Party Authorization of Maintenance Prescriptions on a Permissioned Blockchain</div>
+  <div class="filtered-authors">Siyuan Chen, Ebru Turanoglu Bekar, Anders Skoogh</div>
+  <div class="filtered-reason">去噪原因：该文属于工业维护业务与许可链拼接应用，缺乏区块链核心技术创新。</div>
+</li>
+  </ul>
+</details>
   </section>
 
   <section class="tab-panel" id="panel-venues" role="tabpanel">
     <div class="stats-row">
     <span class="stat-pill">追踪会议 / 期刊 <strong>68</strong> 个</span>
-    <span class="stat-pill">新入库候选 <strong>0</strong> 篇</span>
-    <span class="stat-pill">保留 <strong>0</strong> 篇</span>
+    <span class="stat-pill">新入库候选 <strong>1</strong> 篇</span>
+    <span class="stat-pill">保留 <strong>1</strong> 篇</span>
     <span class="stat-pill">去噪过滤 <strong>0</strong> 篇</span>
   </div>
-  <div class="date-notice">查询 OpenAlex 入库日期：<code>2026-11-25</code></div>
-  
+  <div class="date-notice">查询 OpenAlex 入库日期：<code>2026-11-26</code></div>
+  <div class="subtab-bar" id="venueSubtabBar">
+  <button class="subtab-btn active" data-venue-filter="ALL">全部 (1)</button>
+  <button class="subtab-btn" data-venue-filter="TIFS">TIFS (1)</button>
+</div>
   <div class="paper-list" id="venuePaperList">
-    <div class="empty-state">前一天（2026-11-25）在追踪的 68 个会议与期刊中无新入库论文（数量：0）。</div>
+    <article class="paper-card venue-card" data-venue="TIFS">
+  <div class="paper-meta-row">
+    <span class="tag tag-venue-ccfa">TIFS · CCF-A</span>
+    <span class="tag tag-topic">可篡改区块链</span>
+    <span class="paper-id">2026-01-01</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://doi.org/10.1109/tifs.2026.3757536" target="_blank" rel="noopener noreferrer">基于预约束门限变色龙哈希的鲁棒可篡改区块链</a>
+  </h3>
+  <div class="paper-title-en">Robust and Redactable Blockchain From Pre-Constrained Threshold Chameleon Hash</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Chenhao Wang (Chang&#39;an University), Yang Ming (Chang&#39;an University), Hang Liu (Chang&#39;an University), Yutong Deng (Chang&#39;an University), Yi Zhao (Chang&#39;an University), Jianting Ning (Wuhan University)</div>
+  <div class="paper-comment"><span class="comment-label">出处：</span>IEEE Transactions on Information Forensics and Security · 发表 2026-01-01 · 入库 2026-11-26</div>
+  <p class="paper-summary">针对传统可篡改区块链在密钥管理与特权实体滥用防范上的局限，提出基于预约束门限变色龙哈希的鲁棒可篡改区块链方案。该方案通过在门限变色龙哈希中引入预约束机制，实现了修改权限的分布式协同治理与细粒度控制。在保障区块链整体安全性与鲁棒性的同时，为合规数据修正与违规信息擦除提供了高效且严密的技术支撑。</p>
+  <ul class="highlights"><li>结合预约束与门限变色龙哈希实现可控链上修改</li><li>提供分布式协同治理与细粒度权限控制机制</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://doi.org/10.1109/tifs.2026.3757536" target="_blank" rel="noopener noreferrer">DOI 论文页 ↗</a>
+    
+  </div>
+</article>
   </div>
   
   </section>
@@ -510,339 +644,67 @@
   <section class="tab-panel" id="panel-news" role="tabpanel">
     <div class="stats-row">
     <span class="stat-pill">监控信源 <strong>21</strong> 个</span>
-    <span class="stat-pill">前日候选 <strong>25</strong> 条</span>
-    <span class="stat-pill">保留 <strong>25</strong> 条</span>
-    <span class="stat-pill">去噪过滤 <strong>0</strong> 条</span>
+    <span class="stat-pill">前日候选 <strong>23</strong> 条</span>
+    <span class="stat-pill">保留 <strong>12</strong> 条</span>
+    <span class="stat-pill">去噪过滤 <strong>11</strong> 条</span>
   </div>
-  <div class="date-notice">查询发布日期：<code>2026-11-25</code>（覆盖链上攻击事件、安全情报机构、核心协议研究论坛与主流行业媒体）</div>
+  <div class="date-notice">查询发布日期：<code>2026-11-26</code>（覆盖链上攻击事件、安全情报机构、核心协议研究论坛与主流行业媒体）</div>
   <div class="subtab-bar" id="newsSubtabBar">
-  <button class="subtab-btn active" data-news-filter="ALL">全部 (25)</button>
+  <button class="subtab-btn active" data-news-filter="ALL">全部 (12)</button>
   <button class="subtab-btn" data-news-filter="安全事件与情报">安全事件与情报 (1)</button>
   <button class="subtab-btn" data-news-filter="安全与协议研究">安全与协议研究 (7)</button>
-  <button class="subtab-btn" data-news-filter="行业与监管动态">行业与监管动态 (17)</button>
+  <button class="subtab-btn" data-news-filter="行业与监管动态">行业与监管动态 (4)</button>
 </div>
   <div class="paper-list" id="newsItemList">
-    <article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">CoinDesk</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan" target="_blank" rel="noopener noreferrer">Crypto Long &amp; Short: Bitcoin investors can’t keep ignoring Japan</a>
-  </h3>
-  
-  <p class="paper-summary">Yen-funded carry trades ran an estimated $250 billion before the August 2024 selloff, and the Bank of Japan&#39;s policy rate is now around 1.25%. Phillip Lord of Bitcoin Japan explains how yen funding conditions reach bitcoin, and the shareholder test Japanese co</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.coindesk.com/coindesk-indices/2026/11/25/crypto-long-and-short-bitcoin-investors-can-t-keep-ignoring-japan" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Defiant</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/converge/tradfi-and-fintech/coinbase-wallet-adds-usdc-paycheck-deposits-on-base" target="_blank" rel="noopener noreferrer">Coinbase Wallet Adds USDC Paycheck Deposits on Base</a>
-  </h3>
-  
-  <p class="paper-summary">The US rollout converts incoming dollars one-for-one into USDC. Users must pass identity checks, and the resulting crypto balance is not an insured bank deposit.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://thedefiant.io/converge/tradfi-and-fintech/coinbase-wallet-adds-usdc-paycheck-deposits-on-base" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Defiant</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/frontier/markets/nasdaq-100-tests-bear-market-line-as-chip-shares-slide" target="_blank" rel="noopener noreferrer">Nasdaq 100 Tests Bear-Market Line as Chip Shares Slide</a>
-  </h3>
-  
-  <p class="paper-summary">The index was back above the 20% drawdown line by 10:01 a.m. ET, while earlier readings showed sharp daily losses in Nvidia and semiconductor shares.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://thedefiant.io/frontier/markets/nasdaq-100-tests-bear-market-line-as-chip-shares-slide" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Block</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/regulation/2026-11-25-novatech-founders-ordered-pay-1-3-million-crypto-ponzi-scheme-haitian-investors-446643" target="_blank" rel="noopener noreferrer">NovaTech founders ordered to pay $1.3 billion over crypto Ponzi scheme targeting Haitian investors</a>
-  </h3>
-  
-  <p class="paper-summary">NovaTech founders Cynthia and Eddy Petion have been ordered to pay over $1.3 billion for their role in defrauding thousands.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-25-novatech-founders-ordered-pay-1-3-million-crypto-ponzi-scheme-haitian-investors-446643" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Defiant</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/markets/us-growth-revised-to-4-3-ahead-of-fed-rate-decision" target="_blank" rel="noopener noreferrer">US Growth Revised to 4.3% Ahead of Fed Rate Decision</a>
-  </h3>
-  
-  <p class="paper-summary">Stronger investment and consumer spending drove the GDP upgrade as core PCE inflation topped forecasts ahead of the Fed’s Dec. 8–9 meeting.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://thedefiant.io/news/markets/us-growth-revised-to-4-3-ahead-of-fed-rate-decision" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">CoinDesk</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe" target="_blank" rel="noopener noreferrer">South Korean crypto exchange Bithumb warns of phishing after deeper October breach probe</a>
-  </h3>
-  
-  <p class="paper-summary">South Korea&#39;s second-largest crypto exchange said its trading systems were not breached, but stolen customer records could already be being used in future scams.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.coindesk.com/tech/2026/11/25/south-korean-crypto-exchange-bithumb-warns-of-phishing-after-deeper-october-breach-probe" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Block</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/regulation/2026-11-25-ukraine-passes-crypto-market-law-with-332-million-revenue-target-446182" target="_blank" rel="noopener noreferrer">Ukraine passes crypto market law, with $332 million revenue target</a>
-  </h3>
-  
-  <p class="paper-summary">Ukraine’s parliament passed a bill establishing a regulatory and tax framework projected to generate $332 million in state budget revenue.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-25-ukraine-passes-crypto-market-law-with-332-million-revenue-target-446182" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Block</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/business/2026-11-25-bit-digital-repays-50-million-to-galaxy-after-selling-29825-eth-446164" target="_blank" rel="noopener noreferrer">Bit Digital repays $50 million to Galaxy after selling 29,825 ETH</a>
-  </h3>
-  
-  <p class="paper-summary">Bit Digital sold 29,825 ETH and used the proceeds to reduce its secured borrowing with Galaxy to $50 million.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.theblock.co/news/business/2026-11-25-bit-digital-repays-50-million-to-galaxy-after-selling-29825-eth-446164" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Defiant</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/markets/us-pce-inflation-hits-3-8-core-exceeds-forecast" target="_blank" rel="noopener noreferrer">US PCE Inflation Hits 3.8%; Core Exceeds Forecast</a>
-  </h3>
-  
-  <p class="paper-summary">Core inflation reached 3.3%, above the 3.2% consensus, ahead of a December Fed meeting for which markets already favored a rate increase.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://thedefiant.io/news/markets/us-pce-inflation-hits-3-8-core-exceeds-forecast" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
-    <span class="tag tag-cat">ethresear.ch</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://ethresear.ch/t/optimal-dynamic-fees-for-l2s-a-vault-approach/26293" target="_blank" rel="noopener noreferrer">Optimal Dynamic Fees for L2s: A Vault Approach</a>
-  </h3>
-  
-  <p class="paper-summary">By Ulysse Pavloff (University of Bern) and Lin Oshitani @linoscope (Nethermind Research) TL;DR We recently published a paper exploring the optimal design of L2 fee-setting rules. Here are the main findings. The optimal fee rule depends on what we want to minim</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://ethresear.ch/t/optimal-dynamic-fees-for-l2s-a-vault-approach/26293" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Defiant</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/markets/layerzero-s-zro-falls-27-more-than-wormhole-or-axelar" target="_blank" rel="noopener noreferrer">LayerZero&#39;s ZRO Falls 27%, More Than Wormhole or Axelar</a>
-  </h3>
-  
-  <p class="paper-summary">W and AXL fell less over the same week, while BTC and ETH lost about 8%. Newly opened Zero staking offers holders no early exit.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://thedefiant.io/news/markets/layerzero-s-zro-falls-27-more-than-wormhole-or-axelar" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
-    <span class="tag tag-cat">ethresear.ch</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://ethresear.ch/t/focil-and-ethereums-pq-transition/26292" target="_blank" rel="noopener noreferrer">FOCIL and Ethereum&#39;s PQ transition</a>
-  </h3>
-  
-  <p class="paper-summary">by Jihoon Song Introduction This article explores how FOCIL could evolve as Ethereum adopts post-quantum cryptography. It examines how the PQ transition could affect the roles of includers, builders and attesters. IL Committee Selection IL committee are the fi</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://ethresear.ch/t/focil-and-ethereums-pq-transition/26292" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Block</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/business/2026-11-25-unicredit-offers-bitcoin-exposure-to-italian-retail-clients-with-capital-protection-at-maturity-446150" target="_blank" rel="noopener noreferrer">UniCredit offers bitcoin exposure to Italian retail clients with capital protection at maturity</a>
-  </h3>
-  
-  <p class="paper-summary">UniCredit is giving retail clients access to bitcoin performance through a six-year investment with protected principal and capped gains.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.theblock.co/news/business/2026-11-25-unicredit-offers-bitcoin-exposure-to-italian-retail-clients-with-capital-protection-at-maturity-446150" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">CoinDesk</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in" target="_blank" rel="noopener noreferrer">Fed’s preferred inflation gauge lands with a December rate increase already priced in</a>
-  </h3>
-  
-  <p class="paper-summary">Your day-ahead look for Nov. 25, 2026</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.coindesk.com/daybook-us/2026/11/25/fed-s-preferred-inflation-gauge-lands-with-a-december-rate-increase-already-priced-in" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">The Block</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/regulation/2026-11-25-dont-mess-with-x-elon-musk-says-after-platform-secures-default-judgment-in-alleged-bitcoin-content-farm-case-446151" target="_blank" rel="noopener noreferrer">‘Don’t mess with X,’ Elon Musk says after platform secures default judgment in alleged bitcoin content-farm case</a>
-  </h3>
-  
-  <p class="paper-summary">X secured a default judgment against two defendants in its lawsuit over an alleged $271,000 creator-payout scheme.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-25-dont-mess-with-x-elon-musk-says-after-platform-secures-default-judgment-in-alleged-bitcoin-content-farm-case-446151" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">CoinDesk</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes" target="_blank" rel="noopener noreferrer">Ether, DeFi fall twice as hard as bitcoin as equities selloff resumes</a>
-  </h3>
-  
-  <p class="paper-summary">Bitcoin (BTC) is down 1.2% since midnight UTC as the stock selloff resumes, with ether (ETH) and DeFi tokens falling about twice as far.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.coindesk.com/markets/2026/11/25/ether-defi-fall-twice-as-hard-as-bitcoin-as-equities-selloff-resumes" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="行业与监管动态">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">CoinDesk</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap" target="_blank" rel="noopener noreferrer">Italy’s UniCredit launches six-year bitcoin certificate with gains capped at 65%</a>
-  </h3>
-  
-  <p class="paper-summary">UniCredit brings bitcoin investing to its roughly 8 million retail customers in Italy, offering them a six-year product that caps the redemption value but promises to return their capital.</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://www.coindesk.com/business/2026/11/25/italy-s-unicredit-debuts-six-year-bitcoin-certificate-with-100-capital-protection-and-65-cap" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
-    <span class="tag tag-cat">Ethereum Magicians</span>
-    <span class="paper-id">2026-11-25</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/erc-8517-post-quantum-validator-seed-derivation/30516" target="_blank" rel="noopener noreferrer">ERC-8517: Post-Quantum Validator Seed Derivation</a>
-  </h3>
-  
-  <p class="paper-summary">This ERC defines how an Ethereum validator or builder derives its post-quantum seeds from a BIP-39 mnemonic. 2 posts - 2 participants Read full topic</p>
-  
-  <div class="paper-actions">
-    <a class="btn-link" href="https://ethereum-magicians.org/t/erc-8517-post-quantum-validator-seed-derivation/30516" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全事件与情报">
+    <article class="paper-card news-card" data-news-section="安全事件与情报">
   <div class="paper-meta-row">
     <span class="tag tag-sec-alert">安全事件与情报</span>
-    <span class="tag tag-topic">安全机构</span>
-    <span class="tag tag-cat">SlowMist 慢雾</span>
-    <span class="paper-id">2026-11-25</span>
+    <span class="tag tag-topic">安全事件</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://slowmist.medium.com/alerts-are-not-suspicion-how-crypto-aml-turns-risk-signals-into-actionable-intelligence-bc88082449d5?source=rss-4ceeedda40e8------2" target="_blank" rel="noopener noreferrer">Alerts Are Not Suspicion: How Crypto AML Turns Risk Signals into Actionable Intelligence</a>
+    <a href="https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information" target="_blank" rel="noopener noreferrer">渣打银行旗下加密托管机构 Zodia Custody 遭遇数据泄露</a>
   </h3>
-  
-  <p class="paper-summary"></p>
-  
+  <div class="paper-title-en">Standard Chartered&#39;s Zodia Custody suffers data breach, exposing client information</div>
+  <p class="paper-summary">渣打银行旗下的加密资产托管机构 Zodia Custody 发生数据泄露事件，部分客户和员工的联系方式信息被曝光。官方声明指出，目前未发生任何未经授权的资产交易或资金损失。</p>
+  <ul class="highlights"><li>Zodia Custody 泄露客户与员工联系方式，暂无资金损失</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://slowmist.medium.com/alerts-are-not-suspicion-how-crypto-aml-turns-risk-signals-into-actionable-intelligence-bc88082449d5?source=rss-4ceeedda40e8------2" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">密码学安全</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/ecosystems/2026-11-26-the-time-to-prepare-for-a-cryptographic-breakthrough-is-before-it-happens-zcash-team-urges-faster-deprecation-of-legacy-shielded-pool-447000" target="_blank" rel="noopener noreferrer">Zcash 团队呼吁加速废弃旧版 Sapling 隐蔽池以防范密码学突破</a>
+  </h3>
+  <div class="paper-title-en">‘The time to prepare for a cryptographic breakthrough is before it happens’: Zcash team urges faster deprecation of legacy shielded pool</div>
+  <p class="paper-summary">出于对 AI 辅助密码学破解等潜在数学突破的防范，Zcash 开发团队呼吁加快废弃早期的 Sapling 隐蔽池并禁用相关存款，提早应对未来密码学技术对隐私协议带来的潜在安全威胁。</p>
+  <ul class="highlights"><li>Zcash 团队建议提早关闭 Sapling 存款以抵御未来破解风险</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/ecosystems/2026-11-26-the-time-to-prepare-for-a-cryptographic-breakthrough-is-before-it-happens-zcash-team-urges-faster-deprecation-of-legacy-shielded-pool-447000" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">以太坊研究</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522" target="_blank" rel="noopener noreferrer">以太坊社区探讨后量子路线图及解耦共识架构设计</a>
+  </h3>
+  <div class="paper-title-en">A better pipeline toward PQ and censorship resistant Ethereum</div>
+  <p class="paper-summary">Ethereum Magicians 社区探讨如何加速以太坊后量子（PQ）转型与抗审查路线图。提案建议通过解耦共识（Decoupled Consensus）将签名聚合移出关键路径，降低后量子签名对共识层的性能影响。</p>
+  <ul class="highlights"><li>探讨后量子以太坊路线图及解耦共识架构设计</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="安全与协议研究">
@@ -850,105 +712,259 @@
     <span class="tag tag-sec-research">安全与协议研究</span>
     <span class="tag tag-topic">协议研究</span>
     <span class="tag tag-cat">Flashbots Collective</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147" target="_blank" rel="noopener noreferrer">Flashbots 研讨 DEX 大额交易路由优化与价格滑点基准测试</a>
+  </h3>
+  <div class="paper-title-en">How much price do routers leave on large swaps? A same-block benchmark (3,429 orders)</div>
+  <p class="paper-summary">Flashbots 社区对 3,429 笔大额 DEX 卖单进行同区块基准测试，研究发现拆分优化器（Split Optimizer）在扣除 Gas 费后产出比常规聚合器高出 0.2 至 4.8 bps，在 300 ETH 以上订单中增益扩至 5.4 bps。优化收益主要源自跨平行池拆分与路径合并。</p>
+  <ul class="highlights"><li>测试 3,429 笔大额订单路由性能</li><li>拆分优化器在大额交易中最多提升 5.4 bps 收益</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">EIP 提案</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/erc-xxxx-serial-numbered-fungible-tokens/30519" target="_blank" rel="noopener noreferrer">Ethereum Magicians 讨论带序列号的同质化代币标准 ERC-XXXX</a>
+  </h3>
+  <div class="paper-title-en">ERC-XXXX: Serial-Numbered Fungible Tokens</div>
+  <p class="paper-summary">针对加密资产盗用事件中稳定币冻结追踪的局限性，以太坊社区提出带序列号的同质化代币标准 ERC-XXXX。由于传统 ERC-20 仅记录账户总额度，资金在混币或拆分后难以定向追踪；该提案通过为代币引入序列号机制，支持对被盗单元的精确追踪与定向冻结。</p>
+  <ul class="highlights"><li>提出具序列号机制的 ERC-XXXX 标准</li><li>解决传统 ERC-20 被盗资金难以精细追查痛点</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/erc-xxxx-serial-numbered-fungible-tokens/30519" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">以太坊升级</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
     <span class="paper-id">2026-11-25</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://collective.flashbots.net/t/do-bid-cancellations-matter/6145" target="_blank" rel="noopener noreferrer">Do bid cancellations matter?</a>
+    <a href="https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518" target="_blank" rel="noopener noreferrer">Ethlabs 发布 Glamsterdam 升级立场声明：建议按原计划推进 EIP-8037</a>
   </h3>
-  
-  <p class="paper-summary">TL;DR. We ask whether proposers under ePBS will keep respecting bid cancellations, that is, signing each builder’s latest bid rather than the highest. We propose a common-value auction model and show that, if proposers can commit in advance to respecting or ig</p>
-  
+  <div class="paper-title-en">Ethlabs’ position on Glamsterdam</div>
+  <p class="paper-summary">Ethlabs 发布关于以太坊 Glamsterdam 升级的影响分析报告，建议维持现有方案推进。报告指出，重新定价状态创建虽带来短期影响，但作为以太坊实现 1000 倍扩容的必要步骤，保留 EIP-8037 可获得约 3 倍的 Gas 上限增长。</p>
+  <ul class="highlights"><li>建议按原计划推进 Glamsterdam，获得 3 倍 Gas 上限增长</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://collective.flashbots.net/t/do-bid-cancellations-matter/6145" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="安全与协议研究">
   <div class="paper-meta-row">
     <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
-    <span class="tag tag-cat">Ethereum Magicians</span>
-    <span class="paper-id">2026-11-24</span>
+    <span class="tag tag-topic">MEV 研究</span>
+    <span class="tag tag-cat">Flashbots Collective</span>
+    <span class="paper-id">2026-11-25</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/eip-eth-76-aggregated-proof-propagation/30502" target="_blank" rel="noopener noreferrer">EIP: eth/76 - Aggregated Proof Propagation</a>
+    <a href="https://collective.flashbots.net/t/the-mev-letter-163/6146" target="_blank" rel="noopener noreferrer">Flashbots 发布 MEV Letter #163：涵盖 ePBS 撤单模型与 Glamsterdam 区块限制研究</a>
   </h3>
-  
-  <p class="paper-summary">Discussion thread for Add EIP: eth/76 - Aggregated Proof Propagation by Marchhill · Pull Request #12713 · ethereum/EIPs · GitHub 1 post - 1 participant Read full topic</p>
-  
+  <div class="paper-title-en">The MEV Letter #163</div>
+  <p class="paper-summary">Flashbots 发布 MEV 通讯第 163 期，重点汇总了 ePBS 机制中竞标撤销对出块者收益与构建者风险影响的拍卖模型研究，以及 Glamsterdam 升级下 8 MiB 执行区块限制与 FOCIL 交易打包机制的相关深入探讨。</p>
+  <ul class="highlights"><li>涵盖 ePBS 竞标撤销模型与 Glamsterdam 区块限制研究</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://ethereum-magicians.org/t/eip-eth-76-aggregated-proof-propagation/30502" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://collective.flashbots.net/t/the-mev-letter-163/6146" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">开源芯片研究</span>
+    <span class="tag tag-cat">Vitalik Buterin</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html" target="_blank" rel="noopener noreferrer">Vitalik 撰文探讨开源芯片设计及其对去中心化硬件生态的意义</a>
+  </h3>
+  <div class="paper-title-en">A shallow dive into open-source chip design</div>
+  <p class="paper-summary">Vitalik 发文《开源芯片设计浅析》，探讨开源硬件在芯片领域的应用前景与挑战。文章分析了开源指令集与定制化芯片设计如何为去中心化基础设施、硬件加速及密码学计算提供更自主可控的技术底层支撑。</p>
+  <ul class="highlights"><li>开源芯片设计可为去中心化硬件与密码学加速提供支撑</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="行业与监管动态">
   <div class="paper-meta-row">
     <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">DL News</span>
-    <span class="paper-id">2026-11-24</span>
+    <span class="tag tag-topic">监管动态</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.dlnews.com/articles/regulation/fed-governor-waller-warns-of-zombie-chains-as-tokenization-grows/" target="_blank" rel="noopener noreferrer">Fed Governor Waller warns of &quot;zombie chains&quot; as tokenization grows</a>
+    <a href="https://thedefiant.io/news/regulation/spain-issues-decree-to-allow-temporary-crypto-account-freezes" target="_blank" rel="noopener noreferrer">西班牙拟允许反洗钱机构未经法院批准冻结加密账户 5 天</a>
   </h3>
-  
-  <p class="paper-summary">Fed Governor Christopher Waller warned that tokenized assets could be stranded on failed blockchains and called for clearer governance.</p>
-  
+  <div class="paper-title-en">Spain Issues Decree to Allow Temporary Crypto Account Freezes</div>
+  <p class="paper-summary">西班牙发布法令草案，若经国会表决通过，将于 1 月 25 日起生效。该法令授权反洗钱机构 Sepblac 在无需法院事先批准的情况下，可直接临时冻结加密资产账户最长 5 个工作日，旨在加强对涉嫌违法加密交易的预防性审查与资金拦截。</p>
+  <ul class="highlights"><li>Sepblac 可未经法院批准临时冻结加密账户最长 5 个工作日</li><li>该法令拟于 1 月 25 日生效，目前尚待国会表决通过</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://www.dlnews.com/articles/regulation/fed-governor-waller-warns-of-zombie-chains-as-tokenization-grows/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://thedefiant.io/news/regulation/spain-issues-decree-to-allow-temporary-crypto-account-freezes" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="行业与监管动态">
   <div class="paper-meta-row">
     <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业快讯</span>
-    <span class="tag tag-cat">DL News</span>
-    <span class="paper-id">2026-11-24</span>
+    <span class="tag tag-topic">监管动态</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.dlnews.com/articles/regulation/cftc-approves-backpack-to-run-derivatives-exchange-and-clearinghouse/" target="_blank" rel="noopener noreferrer">CFTC approves Backpack to run derivatives exchange and clearinghouse</a>
+    <a href="https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge" target="_blank" rel="noopener noreferrer">西班牙反洗钱机构获权可未经法官批准直接冻结加密账户</a>
   </h3>
-  
-  <p class="paper-summary">The CFTC approved Backpack’s US exchange and clearinghouse, paving the way for leveraged crypto perpetual futures and global liquidity.</p>
-  
+  <div class="paper-title-en">Spain gives anti-laundering unit power to freeze crypto accounts without a judge</div>
+  <p class="paper-summary">西班牙赋予其反洗钱机构 Sepblac 新的行政权力，允许其在无需法官事先批准的情况下直接冻结涉嫌洗钱的加密货币账户。此前 Sepblac 仅能在收到外国金融情报机构请求时暂停账户。</p>
+  <ul class="highlights"><li>西班牙 Sepblac 获权无需法院命令即可冻结加密账户</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://www.dlnews.com/articles/regulation/cftc-approves-backpack-to-run-derivatives-exchange-and-clearinghouse/" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
+<article class="paper-card news-card" data-news-section="行业与监管动态">
   <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
-    <span class="tag tag-cat">Ethereum Magicians</span>
-    <span class="paper-id">2026-11-24</span>
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">行业动态</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/all-core-devs-testing-acdt-105-november-30-2026/30500" target="_blank" rel="noopener noreferrer">All Core Devs - Testing (ACDT) #105, November 30, 2026</a>
+    <a href="https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources" target="_blank" rel="noopener noreferrer">香港加密做市商 Auros 宣布逐步清算并关停业务</a>
   </h3>
-  
-  <p class="paper-summary">Agenda UTC Date &amp; Time November 23, 2026, 14:00 UTC Agenda Glamsterdam EIP-8037/EIP-8038 status … Hegota Hegota Devnet Status: Bogota Devnet-2, Heze Devnet-2 … Bogota Devnet 3 … EL Breakout Led by @danceratopz ethereum/execution-api Engine API spec questions @</p>
-  
+  <div class="paper-title-en">Hong Kong-based crypto trading firm Auros is winding down operations</div>
+  <p class="paper-summary">曾经占全球加密交易所交易量约 4%、并在 FTX 倒闭后融资 1700 万美元的香港加密做市与交易机构 Auros 正在逐步清算关停其运营业务。</p>
+  <ul class="highlights"><li>曾占全球交易量 4% 的做市商 Auros 宣布关停业务</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://ethereum-magicians.org/t/all-core-devs-testing-acdt-105-november-30-2026/30500" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
+<article class="paper-card news-card" data-news-section="行业与监管动态">
   <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
-    <span class="tag tag-cat">Ethereum Magicians</span>
-    <span class="paper-id">2026-11-24</span>
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">监管动态</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/pq-cl-breakout-5-november-27-2026/30499" target="_blank" rel="noopener noreferrer">PQ-CL Breakout #5, November 27, 2026</a>
+    <a href="https://www.theblock.co/news/regulation/2026-11-26-switzerland-approves-57-jurisdictions-for-crypto-data-exchange-from-2028-446821" target="_blank" rel="noopener noreferrer">瑞士批准自2028年起与57个辖区共享加密资产税务数据</a>
   </h3>
-  
-  <p class="paper-summary">Agenda PQ Consensus Layer working session Meeting Time: Friday, November 27, 2026 at 14:00 UTC (120 minutes) GitHub Issue 1 post - 1 participant Read full topic</p>
-  
+  <div class="paper-title-en">Switzerland approves 57 jurisdictions for crypto data exchange from 2028</div>
+  <p class="paper-summary">瑞士联邦委员会批准了 57 个潜在合作辖区，计划自 2028 年起实施加密资产税务信息自动交换机制。该举措旨在遵循国际自动情报交换标准（CARF），全面加强跨国加密资产税收透明度、打击避税及强化反洗钱合规监管。</p>
+  <ul class="highlights"><li>自2028年起实施57个辖区加密税务数据交换</li></ul>
   <div class="paper-actions">
-    <a class="btn-link" href="https://ethereum-magicians.org/t/pq-cl-breakout-5-november-27-2026/30499" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-26-switzerland-approves-57-jurisdictions-for-crypto-data-exchange-from-2028-446821" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
   </div>
+  <details class="filtered-box">
+  <summary>已去噪过滤论文（11 篇）— 点击展开复查</summary>
+  <ul class="filtered-list">
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
+    <a href="https://thedefiant.io/news/nfts-and-web3/telegram-cuts-fee-to-2-on-gift-resales-paid-in-gram" target="_blank" rel="noopener noreferrer">Telegram Cuts Fee to 2% on Gift Resales Paid in Gram</a>
+  </div>
+  <div class="filtered-en">Telegram Cuts Fee to 2% on Gift Resales Paid in Gram</div>
   
+  <div class="filtered-reason">去噪原因：属于应用内功能更新与费率调整，缺乏技术与重大监管价值。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">CoinDesk</span>
+    <a href="https://www.coindesk.com/coindesk-indices/2026/11/26/crypto-for-advisors-four-questions-to-ask-before-trusting-a-crypto-exchange" target="_blank" rel="noopener noreferrer">Crypto for Advisors: Four questions to ask before trusting a crypto exchange</a>
+  </div>
+  <div class="filtered-en">Crypto for Advisors: Four questions to ask before trusting a crypto exchange</div>
+  
+  <div class="filtered-reason">去噪原因：属于泛化投顾科普与交易所选择建议，无实质技术或安全信息量。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
+    <a href="https://thedefiant.io/news/markets/ether-drops-28-in-four-weeks-lagging-bitcoin" target="_blank" rel="noopener noreferrer">Ether Drops 28% in Four Weeks, Lagging Bitcoin</a>
+  </div>
+  <div class="filtered-en">Ether Drops 28% in Four Weeks, Lagging Bitcoin</div>
+  
+  <div class="filtered-reason">去噪原因：属于纯粹的币价行情走势与 ETF 资金流出播报，无安全或技术信息。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
+    <a href="https://thedefiant.io/frontier/ai/huawei-to-detail-new-ai-memory-design-in-february" target="_blank" rel="noopener noreferrer">Huawei to Detail New AI Memory Design in February</a>
+  </div>
+  <div class="filtered-en">Huawei to Detail New AI Memory Design in February</div>
+  
+  <div class="filtered-reason">去噪原因：属于传统 AI 芯片硬件设计新闻，与 Web3 及区块链生态无直接关联。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
+    <a href="https://thedefiant.io/news/cefi/kucoin-to-delist-monero-ending-spot-trading-nov-30" target="_blank" rel="noopener noreferrer">KuCoin to Delist Monero, Ending Spot Trading Nov. 30</a>
+  </div>
+  <div class="filtered-en">KuCoin to Delist Monero, Ending Spot Trading Nov. 30</div>
+  
+  <div class="filtered-reason">去噪原因：属于交易所常规下币公告，缺乏智能合约安全或重大监管情报价值。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">CoinDesk</span>
+    <a href="https://www.coindesk.com/daybook-us/2026/11/26/bitcoin-etfs-are-bleeding-cash-and-the-fed-is-unlikely-to-help" target="_blank" rel="noopener noreferrer">Bitcoin ETFs are bleeding cash and the Fed is unlikely to help</a>
+  </div>
+  <div class="filtered-en">Bitcoin ETFs are bleeding cash and the Fed is unlikely to help</div>
+  
+  <div class="filtered-reason">去噪原因：属于常规宏观市场行情与 ETF 资金流向分析，无技术或安全信息量。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Block</span>
+    <a href="https://www.theblock.co/news/markets/2026-11-26-spot-bitcoin-etfs-worst-month-november-446814" target="_blank" rel="noopener noreferrer">Spot bitcoin ETFs on track for worst month on record as bear market drags on</a>
+  </div>
+  <div class="filtered-en">Spot bitcoin ETFs on track for worst month on record as bear market drags on</div>
+  
+  <div class="filtered-reason">去噪原因：该条目属于纯市场行情与 ETF 资金流向播报，缺乏技术或安全信息量。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Block</span>
+    <a href="https://www.theblock.co/news/markets/2026-11-26-swiss-bitcoin-etf-bbit-begins-trading-europes-only-446724" target="_blank" rel="noopener noreferrer">Europe’s only spot bitcoin ETF starts trading in Switzerland, BIT says</a>
+  </div>
+  <div class="filtered-en">Europe’s only spot bitcoin ETF starts trading in Switzerland, BIT says</div>
+  
+  <div class="filtered-reason">去噪原因：该条目属于常规金融产品上市与行情播报，缺乏底层技术或安全深度。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Block</span>
+    <a href="https://www.theblock.co/newsletters/the-daily/2026-11-26-fidelity-chainlink-etf-musk-x-ruling-alleged-bitcoin-content-farm-case-more-crypto-news-446755" target="_blank" rel="noopener noreferrer">Fidelity files for Chainlink ETF, Musk’s X wins ruling in alleged bitcoin content-farm case, and more</a>
+  </div>
+  <div class="filtered-en">Fidelity files for Chainlink ETF, Musk’s X wins ruling in alleged bitcoin content-farm case, and more</div>
+  
+  <div class="filtered-reason">去噪原因：该条目属于常规市场资讯与 ETF 申请简报汇编，缺乏核心技术与安全价值。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">Chainalysis</span>
+    <a href="https://www.chainalysis.com/blog/nodes-london-2026-chain-ai-workspace/" target="_blank" rel="noopener noreferrer">Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders</a>
+  </div>
+  <div class="filtered-en">Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders</div>
+  
+  <div class="filtered-reason">去噪原因：Chainalysis 伦敦会议及 AI 产品宣传，属于公司公关软文，缺乏实质安全分析。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">TRM Labs</span>
+    <a href="https://www.trmlabs.com/resources/blog/trm-labs-appoints-maria-tsani-former-aws-policy-leader-as-head-of-policy-emea" target="_blank" rel="noopener noreferrer">TRM Labs Appoints Maria Tsani, Former AWS Policy Leader, as Head of Policy, EMEA | TRM Labs</a>
+  </div>
+  <div class="filtered-en">TRM Labs Appoints Maria Tsani, Former AWS Policy Leader, as Head of Policy, EMEA | TRM Labs</div>
+  
+  <div class="filtered-reason">去噪原因：TRM Labs 任命高管的人事变动公告，属于常规公关宣传软文，缺乏实质信息量。</div>
+</li>
+  </ul>
+</details>
   </section>
 
   <footer>
