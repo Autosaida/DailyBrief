@@ -416,13 +416,13 @@
     <span class="paper-id">arXiv:2611.34229</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.34229" target="_blank" rel="noopener noreferrer">区块链后量子与混合签名评估：性能、存储与账本膨胀度量</a>
+    <a href="https://arxiv.org/abs/2611.34229" target="_blank" rel="noopener noreferrer">面向区块链的后量子及混合签名方案评估：性能、存储与账本增长</a>
   </h3>
   <div class="paper-title-en">Evaluating Post-Quantum and Hybrid Signatures for Blockchains: Performance, Storage and Ledger Growth</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Anthony Mikhaiel, Essam Ghadafi</div>
   
-  <p class="paper-summary">评估区块链系统迁移至后量子密码学（PQC）的实际开销。研究在仿真框架下评估了ECDSA、Falcon、ML-DSA等13种签名配置，并投影至Bitcoin、Ethereum等5条主流公链。实验表明Falcon-512验证耗时仅30.1μs，但账本体积将膨胀79%~229%，表明存储开销相比验证计算开销是PQC迁移过程中更为严峻的挑战。</p>
-  <ul class="highlights"><li>针对5条主流公链评估13种PQC及混合签名的实证性能</li><li>发现Falcon-512验证速度比肩ECDSA但账本膨胀79%~229%</li><li>揭示存储开销而非验证计算是区块链PQC迁移的主要障碍</li></ul>
+  <p class="paper-summary">针对量子计算对比特币、以太坊等区块链经典签名的威胁，评估了 ECDSA、Falcon、ML-DSA、SLH-DSA 及混合签名共 13 种配置的性能表现。在模拟框架中对签名验证延迟、吞吐量和数据体积进行测量，并向五大公链做账本增长预测。结果显示基于格的 Falcon-512 验证开销与 ECDSA 相当（30.1 μs 对 32.8 μs），但会导致账本体积大幅增加 79%–229%，揭示出存储开销才是 PQC 迁移的核心痛点。</p>
+  <ul class="highlights"><li>评估 13 种后量子与混合签名在 5 大公链的实际开销</li><li>Falcon-512 验证速度与 ECDSA 相当但账本膨胀 79%-229%</li><li>证实存储与脚本限制比签名验证延迟更有迁移瓶颈</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2611.34229" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.34229" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -431,18 +431,18 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2026-03-27">v3 更新</span>
-    <span class="tag tag-topic">隐私支付与可读标识</span>
+    <span class="tag tag-topic">隐私保护支付协议</span>
     <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
     <span class="paper-id">arXiv:2603.26970</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2603.26970" target="_blank" rel="noopener noreferrer">HFIPay：面向人类可读标识符的隐身跨链加密货币支付协议</a>
+    <a href="https://arxiv.org/abs/2603.26970" target="_blank" rel="noopener noreferrer">HFIPay：面向人性化标识符的隐身跨链加密货币支付协议</a>
   </h3>
   <div class="paper-title-en">HFIPay: Privacy-Preserving, Cross-Chain Cryptocurrency Payments to Human-Friendly Identifiers</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>34 pages, 1 figures</div>
-  <p class="paper-summary">针对直接将邮箱与手机号等可读标识符映射至区块链地址会导致资金历史与余额泄露的问题，提出中继辅助的隐私支付协议HFIPay。中继在链下解析标识符且仅在链上注册随机意图标识符与盲化绑定，实现提取前无标识符公开。结合ZK-ACE零知识证明验证资金提取权限，并提供可验证报价机制防止中继替换接收方，构建了防枚举性与提取前不可关联性。</p>
-  <ul class="highlights"><li>链上仅注册盲化意图，实现提取前标识符与地址彻底解耦</li><li>引入可验证报价机制，有效防止中继恶意篡改或替换收款人</li><li>基于零知识证明授权提取，兼顾易用性与跨链隐私安全</li></ul>
+  <p class="paper-summary">解决将邮箱或手机号等人性化标识符直接映射至区块链地址导致的资产与交易历史泄漏问题，提出一种中继辅助的隐私支付协议。中继节点仅在链上注册随机意图标识与盲化绑定，在出示前不暴露真实标识符或接收方标记。协议引入可验证报价机制防止中继篡改接收方，并结合 ZK-ACE 零知识证明实现身份控制权校验与资产提领，兼具不可枚举性与出示前不可关联性。</p>
+  <ul class="highlights"><li>链上仅注册盲化绑定与随机意图，防范标识符枚举</li><li>结合可验证报价机制防止中继节点非法替换接收方</li><li>采用 ZK-ACE 零知识证明授权提领，实现出示前不可关联</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2603.26970" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.26970" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -451,18 +451,18 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2026-04-08">v2 更新</span>
-    <span class="tag tag-topic">MEV缓解与公平排序</span>
+    <span class="tag tag-topic">MEV防护与交易排序</span>
     <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
     <span class="paper-id">arXiv:2604.07568</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2604.07568" target="_blank" rel="noopener noreferrer">MEV-ACE：基于身份认证公平排序的提议者可控 MEV 缓解协议</a>
+    <a href="https://arxiv.org/abs/2604.07568" target="_blank" rel="noopener noreferrer">MEV-ACE：基于身份认证与公平排序的出块者 MEV 缓解协议</a>
   </h3>
   <div class="paper-title-en">MEV-ACE: Identity-Authenticated Fair Ordering for Proposer-Controlled MEV Mitigation</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>20 Pages</div>
-  <p class="paper-summary">针对区块提议者可任意观测未确认交易并单方面决定排序所带来的MEV安全威胁，提出MEV-ACE公平排序协议。协议融合基于ACE-GF链上质押的经济身份认证、带门限回执的提交-打开消息机制以及可验证延迟随机数。理论证明在惩罚金大于单区块不正当收益时，能彻底消除提议者单方面进行抢跑、夹心攻击及选择性审查的权力，且无需门限解密委员会。</p>
-  <ul class="highlights"><li>结合质押身份与门限回执，保证交易打包义务可独立审计</li><li>利用可验证延迟随机数在锁死集后随机排序，消除提议者操控权</li><li>保持单Slot架构且无需门限解密委员会，显著降低系统复杂度</li></ul>
+  <p class="paper-summary">针对出块者控制交易顺序并抢跑/夹心攻击的 MEV 结构性威胁，提出一种单插槽公平排序协议。结合链上质押的 ACE-GF 经济身份、门限收据机制与可验证延迟随机数，在锁定可接受承诺集合后生成交易序列。协议在拜占庭模型下证明了序列不可预测性与可审计性，在出块者与用户罚没质押高于单插槽违约收益时，能彻底消除出块者对已提交交易的单边夹心与选择性审查。</p>
+  <ul class="highlights"><li>结合经济身份、门限收据与可验证延迟生成公平排序</li><li>单插槽结构且无需门限解密委员会，降低架构复杂度</li><li>严格证明经济惩罚高于攻击收益时可消除单边 MEV</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2604.07568" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2604.07568" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -471,18 +471,18 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2025-09-11">v2 更新</span>
-    <span class="tag tag-topic">有序共识与MEV防范</span>
+    <span class="tag tag-topic">交易排序公平性</span>
     <span class="tag tag-cat">cs.DC</span><span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.MA</span>
     <span class="paper-id">arXiv:2509.09868</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2509.09868" target="_blank" rel="noopener noreferrer">机会均等：有序共识的正确性条件及抢跑攻击缓解</a>
+    <a href="https://arxiv.org/abs/2509.09868" target="_blank" rel="noopener noreferrer">机会均等：面向排序共识的正确性条件与 Pompe-SRO 协议</a>
   </h3>
   <div class="paper-title-en">Equal Opportunity: A Correctness Condition for Ordered Consensus</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Yunhao Zhang, Haobin Ni, Soumya Basu, Shir Cohen, Maofan Yin, Lorenzo Alvisi, Robbert van Renesse, Qi Chen, Lidong Zhou</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>Proceedings of the 20th USENIX Symposium on Operating Systems Design and Implementation (OSDI 26), 2026 · Extended version of the OSDI 2026 paper, with an appendix of proofs</div>
-  <p class="paper-summary">针对基于SMR的PoS区块链中即便满足现有有序共识条件仍易遭受网络延迟优势引发的MEV与抢跑攻击问题，提出基于“机会均等”概念的新型正确性条件与系统模型。通过定义 Secret Random Oracle (SRO) 容错抽象并基于可信硬件与门限VRF给出两种构建方案，设计出 Pompë-SRO 有序共识协议。实验评估表明该协议能以适度的延迟开销有效遏制抢跑与夹心攻击。</p>
-  <ul class="highlights"><li>引入法律界「机会均等」原则，形式化建模交易排序公平性</li><li>提出 Secret Random Oracle 抽象并给出硬件及tVRF实现</li><li>构建 Pompë-SRO 协议，在适度延迟下有效抵御抢跑与夹心攻击</li></ul>
+  <p class="paper-summary">针对权益证明区块链中即使满足传统排序条件仍易受网络位置优势攻击的问题，将法律上的机会均等概念引入排序共识，要求具备同等资格的交易在全序排列中拥有同等被选中的概率。提出了可抵御故障的隐秘随机可信机构（SRO）抽象，基于可信硬件与门限 VRF 实现构造，并构建了 Pomp-SRO 共识协议。实验表明该协议能在适度延迟开销下有效缓解抢跑与夹心攻击。</p>
+  <ul class="highlights"><li>首创基于机会均等原则的排序共识模型与正确性条件</li><li>提出包含可信硬件与门限 VRF 的隐秘随机可信机构 SRO</li><li>构建 Pompe-SRO 协议，以适度延迟换取高效 MEV 防护</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2509.09868" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2509.09868" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -491,41 +491,21 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2026-03-09">v2 更新</span>
-    <span class="tag tag-topic">加密资产控制与托管</span>
+    <span class="tag tag-topic">资产控制与条件授权</span>
     <span class="tag tag-cat">cs.CR</span>
     <span class="paper-id">arXiv:2603.07933</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2603.07933" target="_blank" rel="noopener noreferrer">基于休眠授权路径的条件触发型加密资产控制机制</a>
+    <a href="https://arxiv.org/abs/2603.07933" target="_blank" rel="noopener noreferrer">基于休眠授权路径的条件触发型加密资产控制方案</a>
   </h3>
   <div class="paper-title-en">Condition-Triggered Cryptographic Asset Control via Dormant Authorization Paths</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>27 pages, 1 figure</div>
-  <p class="paper-summary">针对传统加密资产私钥永久持有模式无法支持合规监管、条件委托及无缝继承的问题，提出条件触发型休眠授权路径（CT-DAP）控制方法。该方法将控制权构建为由用户凭证与托管方因子共同组成的休眠路径，仅在满足预定义条件（如继承事件、时间触发）时释放因子激活路径，并通过销毁因子实现状态无关的永久撤销。原型评估显示激活延迟达亚秒级。</p>
-  <ul class="highlights"><li>提出休眠授权路径模型，无需持久暴露私钥或进行链上状态变更</li><li>支持继承与时间戳等条件触发因子释放及状态无关的确定性撤销</li><li>原型实现具备亚秒级激活延迟，满足高合规性加密资产托管需求</li></ul>
+  <p class="paper-summary">针对传统加密资产私钥永久拥有模式难以满足合规监管与条件委托的问题，提出基于可毁灭授权因子与根派生框架的 CT-DAP 方案。控制权被设计为由用户凭证与独立托管方因子共同构成的休眠授权路径，仅在事件触发或条件验证通过释放因子后激活。路径撤销无需修改密码学根即可通过销毁因子实现无状态永久作废，并给出了严格的安全性证明与亚秒级激活延迟性能验证。</p>
+  <ul class="highlights"><li>基于可毁灭因子的休眠授权路径，实现条件触发激活</li><li>因子销毁即完成无状态永久撤销，无需更改密码学根</li><li>原型系统达到亚秒级激活延迟，满足高安全性与性能需求</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2603.07933" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.07933" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card">
-  <div class="paper-meta-row">
-    <span class="tag tag-update" title="初版日期：2026-03-10">v2 更新</span>
-    <span class="tag tag-topic">零知识执行层架构</span>
-    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
-    <span class="paper-id">arXiv:2603.10242</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2603.10242" target="_blank" rel="noopener noreferrer">ACE Runtime：具备亚秒级密码学终局性的 ZKP 原生区块链执行层</a>
-  </h3>
-  <div class="paper-title-en">ACE Runtime - A ZKP-Native Blockchain Runtime with Sub-Second Cryptographic Finality</div>
-  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
-  <div class="paper-comment"><span class="comment-label">备注：</span>26 pages, 3 figures, 14 tables</div>
-  <p class="paper-summary">针对高性能区块链在关键路径上逐笔验证签名导致的高计算压力与O(N)验证开销问题，提出身份与授权分离的ZKP原生执行层ACE Runtime。热路径采用轻量级HMAC认证替代逐笔签名检查，并在异步证明阶段为每个区块生成单个聚合零知识终局证书。分析与原型表明该系统在提供亚秒级终局性的同时，可维持常数级区块验证开销并显著降低验证节点硬件需求。</p>
-  <ul class="highlights"><li>提出身份授权分离架构，热路径以 HMAC 替换逐笔签名验证</li><li>异步生成区块级零知识终局证书，实现亚秒级软/硬双层终局性</li><li>验证开销降低至常数级，大幅减轻非构建者验证节点的硬件压力</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://arxiv.org/abs/2603.10242" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
-    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.10242" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
   </div>
 </article>
 <article class="paper-card">
@@ -536,13 +516,13 @@
     <span class="paper-id">arXiv:2603.07974</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2603.07974" target="_blank" rel="noopener noreferrer">ZK-ACE：后量子区块链系统中基于身份的零知识授权机制</a>
+    <a href="https://arxiv.org/abs/2603.07974" target="_blank" rel="noopener noreferrer">ZK-ACE：面向后量子区块链系统的以身份为中心零知识授权</a>
   </h3>
   <div class="paper-title-en">ZK-ACE: Identity-Centric Zero-Knowledge Authorization for Post-Quantum Blockchain Systems</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>18 pages</div>
-  <p class="paper-summary">针对后量子签名方案在链上引入KB级高昂存储与证明电路内网格算术开销大的问题，提出ZK-ACE零知识授权机制。该机制以身份绑定零知识断言替代交易签名对象，证明者仅需向电路证明交易由符合链上承诺的确定性身份授权。实现Circle STARK与Groth16双后端，比电路内PQC签名验证体积缩减500~2300倍，在区块STARK聚合下单笔交易仅占用约160字节。</p>
-  <ul class="highlights"><li>以身份绑定 ZK 断言替代传统 PQC 签名，避免电路内高昂网格运算</li><li>包含 Circle STARK 与 Groth16 双后端，比电路内 PQC 验证缩小百倍</li><li>在区块级 STARK 聚合下将单笔交易共识数据降至约 160 字节</li></ul>
+  <p class="paper-summary">针对后量子签名方案链上开销大且电路内格密码验证极昂贵的问题，提出以身份为中心的零知识授权方案 ZK-ACE。该方案用链上身份承诺的零知识断言替代交易签名对象，无需在链上生成或验证后量子签名。提供 Circle STARK 与 Groth16/BN254 两种后端实现，证明开销较电路内 PQC 签名验证降低约 500-2300 倍，配合区块级 STARK 聚合可将单笔交易共识数据缩减至约 160 字节。</p>
+  <ul class="highlights"><li>以身份零知识断言替代链上 PQC 签名，大幅削减链上数据</li><li>提供 Circle STARK 与 Groth16 两种高性能后端实现</li><li>验证开销降低 500-2300 倍，结合聚合交易数据仅约 160B</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2603.07974" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.07974" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -551,18 +531,18 @@
 <article class="paper-card">
   <div class="paper-meta-row">
     <span class="tag tag-update" title="初版日期：2026-03-09">v2 更新</span>
-    <span class="tag tag-topic">后量子 Mempool 传播</span>
+    <span class="tag tag-topic">轻量级内存池传播</span>
     <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
     <span class="paper-id">arXiv:2603.07982</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2603.07982" target="_blank" rel="noopener noreferrer">基于 ACE-GF 的 PQC 证明中继：无需路径证明的轻量级 Mempool 传播</a>
+    <a href="https://arxiv.org/abs/2603.07982" target="_blank" rel="noopener noreferrer">AR-ACE：基于 ACE-GF 证明脱离传播路径的轻量级 Mempool 传播协议</a>
   </h3>
   <div class="paper-title-en">ACE-GF-based Attestation Relay for PQC - Lightweight Mempool Propagation Without On-Path Proofs</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>12 pages</div>
-  <p class="paper-summary">针对后量子区块链中递归STARK方案在Mempool传播路径上产生高昂证明带宽开销的瓶颈，提出无路径证明中继协议AR-ACE。协议提出网络传播过程无需携带全量有效性证明，仅需轻量级保证；中继节点仅转发交易对象与紧凑认证，仅由区块构建者在最终环节执行单次聚合有效性证明。分析表明该设计使中继网络的证明带宽开销降低一个数量级。</p>
-  <ul class="highlights"><li>提出「证明剥离传播路径」设计，中继节点仅转发紧凑认证而非全量证明</li><li>仅在构建者节点进行一次性聚合证明，证明带宽降低一个数量级</li><li>原生支持 ACE-GF 统一身份模型，具备良好的后量子兼容性</li></ul>
+  <p class="paper-summary">针对后量子区块链中递归 STARK 聚合证明导致交易池与中继网络带宽开销大的问题，提出证明脱离传播路径的 AR-ACE 协议。中继节点在传播过程中仅转发交易对象与紧凑认证（如身份绑定签名/承诺），不生成或转发完整有效性证明，仅由构建者或最终验证者进行单次聚合证明。该设计彻底去除了传播路径上的证明开销，相较递归 STARK 路径使中继证明相关带宽降低了一个数量级。</p>
+  <ul class="highlights"><li>提出证明脱离路径的传播架构，消除中继节点证明开销</li><li>基于 ACE-GF 派生认证密钥，兼容统一身份与后量子安全</li><li>使中继网络中与证明相关的传输带宽降低达一个数量级</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2603.07982" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.07982" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -570,19 +550,39 @@
 </article>
 <article class="paper-card">
   <div class="paper-meta-row">
+    <span class="tag tag-update" title="初版日期：2026-03-10">v2 更新</span>
+    <span class="tag tag-topic">ZKP原生运行时架构</span>
+    <span class="tag tag-cat">cs.CR</span><span class="tag tag-cat">cs.DC</span>
+    <span class="paper-id">arXiv:2603.10242</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://arxiv.org/abs/2603.10242" target="_blank" rel="noopener noreferrer">ACE Runtime：具备亚秒级密码学最终性的 ZKP 原生区块链运行时</a>
+  </h3>
+  <div class="paper-title-en">ACE Runtime - A ZKP-Native Blockchain Runtime with Sub-Second Cryptographic Finality</div>
+  <div class="paper-authors"><span class="authors-label">作者：</span>Jian Sheng Wang</div>
+  <div class="paper-comment"><span class="comment-label">备注：</span>26 pages, 3 figures, 14 tables</div>
+  <p class="paper-summary">针对高性能区块链在关键路径上逐笔验证签名导致的瓶颈，设计了基于身份授权分离的 ZKP 原生执行层系统 ACE Runtime。热路径中采用轻量级 HMAC 证明替代逐笔签名检查，并在异步证明阶段按区块生成单张聚合零知识最终性证书，形成包含 BFT 软最终性与 ZK 硬最终性的两级管线。分析与实测表明该系统可显著降低 CPU 编排开销，实现常数级单区块验证成本与亚秒级最终性。</p>
+  <ul class="highlights"><li>采用 HMAC 热路径认证加异步区块 ZK 证明的双级最终性</li><li>消除逐笔签名验证瓶颈，非出块验证节点硬件需求显著降低</li><li>实现常数级区块验证开销与亚秒级密码学最终性确权</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://arxiv.org/abs/2603.10242" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
+    <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2603.10242" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card">
+  <div class="paper-meta-row">
     <span class="tag tag-new">v1 新投稿</span>
-    <span class="tag tag-topic">可验证FHE与隐私代币</span>
+    <span class="tag tag-topic">链上隐私与FHE验证</span>
     <span class="tag tag-cat">cs.CR</span>
     <span class="paper-id">arXiv:2611.34417</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://arxiv.org/abs/2611.34417" target="_blank" rel="noopener noreferrer">Northstar：高效可验证负循环多项式算术及其在加密 ERC-20 中的应用</a>
+    <a href="https://arxiv.org/abs/2611.34417" target="_blank" rel="noopener noreferrer">Northstar：高效可验证负环多项式算术及其在加密 ERC-20 中的应用</a>
   </h3>
   <div class="paper-title-en">Northstar: Efficient Verifiable Negacyclic Polynomial Arithmetic with Applications to Encrypted Lattice-based Multi-Asset ERC-20 and Verifiable FHE</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Yeoh Wei Zhu, Shaltiel Eloul, Yash Satsangi, Rob Otter</div>
   <div class="paper-comment"><span class="comment-label">备注：</span>Extended version of a paper accepted to Financial Cryptography and Data Security 2027 (FC 2027)</div>
-  <p class="paper-summary">针对基于格的全同态加密（FHE）链上验证计算成本昂贵的问题，提出了 Northstar 负循环多项式算术原生证明技术。该技术与 STARK 证明框架集成，在证明者与验证者时间及证明尺寸上均显著优于现有可验证 FHE 方案。研究团队利用该技术构建了首个支持智能合约高效验证的加密多资产（涵盖约 1000 种资产）ERC-20 协议变体，具备实际部署可行性。</p>
-  <ul class="highlights"><li>提出原生证明负循环算术的 Northstar 框架，优化 FHE 验证</li><li>实现首个链上可高效验证的加密多资产 ERC-20 变体协议</li></ul>
+  <p class="paper-summary">针对在智能合约等资源受限链上环境中全同态加密（FHE）与格密码计算验证开销过高的痛点，提出原生证明负环多项式算术的高效方案 Northstar。将其集成至 STARK 证明框架后，在证明生成速度、验证开销与证明体积上均显著优于现有方案。基于该方案构建了首个支持链上智能合约高效验证的多资产加密 ERC-20 智能合约协议。</p>
+  <ul class="highlights"><li>提出 Northstar 实现高效的原生负环多项式算术证明</li><li>STARK 框架集成下证明生成与链上验证性能达 SOTA 水平</li><li>首次构建可被智能合约高效验证的多资产加密 ERC-20 协议</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://arxiv.org/abs/2611.34417" target="_blank" rel="noopener noreferrer">arXiv 摘要页 ↗</a>
     <a class="btn-link btn-pdf" href="https://arxiv.org/pdf/2611.34417" target="_blank" rel="noopener noreferrer">PDF 原文 ↗</a>
@@ -599,7 +599,7 @@
   </div>
   <div class="filtered-en">Multi-Party Authorization of Maintenance Prescriptions on a Permissioned Blockchain</div>
   <div class="filtered-authors">Siyuan Chen, Ebru Turanoglu Bekar, Anders Skoogh</div>
-  <div class="filtered-reason">去噪原因：该文属于工业维护业务与许可链拼接应用，缺乏区块链核心技术创新。</div>
+  <div class="filtered-reason">去噪原因：仅将许可链作为工业维护决策的存证与授权挂名框架，缺乏区块链核心技术创新。</div>
 </li>
   </ul>
 </details>
@@ -621,17 +621,17 @@
     <article class="paper-card venue-card" data-venue="TIFS">
   <div class="paper-meta-row">
     <span class="tag tag-venue-ccfa">TIFS · CCF-A</span>
-    <span class="tag tag-topic">可篡改区块链</span>
+    <span class="tag tag-topic">可篡改区块链密码学</span>
     <span class="paper-id">2026-01-01</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://doi.org/10.1109/tifs.2026.3757536" target="_blank" rel="noopener noreferrer">基于预约束门限变色龙哈希的鲁棒可篡改区块链</a>
+    <a href="https://doi.org/10.1109/tifs.2026.3757536" target="_blank" rel="noopener noreferrer">基于预约束门限变色龙哈希的强健可篡改区块链</a>
   </h3>
   <div class="paper-title-en">Robust and Redactable Blockchain From Pre-Constrained Threshold Chameleon Hash</div>
   <div class="paper-authors"><span class="authors-label">作者：</span>Chenhao Wang (Chang&#39;an University), Yang Ming (Chang&#39;an University), Hang Liu (Chang&#39;an University), Yutong Deng (Chang&#39;an University), Yi Zhao (Chang&#39;an University), Jianting Ning (Wuhan University)</div>
   <div class="paper-comment"><span class="comment-label">出处：</span>IEEE Transactions on Information Forensics and Security · 发表 2026-01-01 · 入库 2026-11-26</div>
-  <p class="paper-summary">针对传统可篡改区块链在密钥管理与特权实体滥用防范上的局限，提出基于预约束门限变色龙哈希的鲁棒可篡改区块链方案。该方案通过在门限变色龙哈希中引入预约束机制，实现了修改权限的分布式协同治理与细粒度控制。在保障区块链整体安全性与鲁棒性的同时，为合规数据修正与违规信息擦除提供了高效且严密的技术支撑。</p>
-  <ul class="highlights"><li>结合预约束与门限变色龙哈希实现可控链上修改</li><li>提供分布式协同治理与细粒度权限控制机制</li></ul>
+  <p class="paper-summary">针对传统可篡改区块链在陷门私钥管理与越权修饰上的安全隐患，提出基于预约束门限变色龙哈希（P-TCH）的强健可篡改区块链方案。该方案结合门限密码学实现分布式陷门控制，并引入预约束机制限定区块修改的合法条件与范围，在防范单点失效的同时实现细粒度数据纠错与合规修饰，显著提升了底层系统的强健性与安全性。</p>
+  <ul class="highlights"><li>提出预约束门限变色龙哈希原语，消除陷门单点失效风险</li><li>引入预约束机制，精准限定区块链数据修改的条件与范围</li><li>为可篡改区块链设计了兼具强健性与细粒度控制的新架构</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://doi.org/10.1109/tifs.2026.3757536" target="_blank" rel="noopener noreferrer">DOI 论文页 ↗</a>
     
@@ -659,18 +659,35 @@
     <article class="paper-card news-card" data-news-section="安全事件与情报">
   <div class="paper-meta-row">
     <span class="tag tag-sec-alert">安全事件与情报</span>
-    <span class="tag tag-topic">安全事件</span>
+    <span class="tag tag-topic">数据泄露</span>
     <span class="tag tag-cat">CoinDesk</span>
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information" target="_blank" rel="noopener noreferrer">渣打银行旗下加密托管机构 Zodia Custody 遭遇数据泄露</a>
+    <a href="https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information" target="_blank" rel="noopener noreferrer">渣打银行旗下加密托管商 Zodia Custody 发生数据泄露</a>
   </h3>
   <div class="paper-title-en">Standard Chartered&#39;s Zodia Custody suffers data breach, exposing client information</div>
-  <p class="paper-summary">渣打银行旗下的加密资产托管机构 Zodia Custody 发生数据泄露事件，部分客户和员工的联系方式信息被曝光。官方声明指出，目前未发生任何未经授权的资产交易或资金损失。</p>
-  <ul class="highlights"><li>Zodia Custody 泄露客户与员工联系方式，暂无资金损失</li></ul>
+  <p class="paper-summary">渣打银行支持的加密资产托管服务商 Zodia Custody 遭遇数据泄露事件，导致部分客户和员工的联系信息曝光。公司表示，本次事件未引发未经授权的交易，客户的加密资产安全未受影响。</p>
+  <ul class="highlights"><li>泄露客户与员工联系信息</li><li>官方称未发生未经授权的资金交易</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.coindesk.com/tech/2026/11/26/standard-chartered-s-zodia-custody-suffers-data-breach-exposing-client-information" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">以太坊协议</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522" target="_blank" rel="noopener noreferrer">Ethereum Magicians 探讨以太坊后量子抗性与抗审查演进路线</a>
+  </h3>
+  <div class="paper-title-en">A better pipeline toward PQ and censorship resistant Ethereum</div>
+  <p class="paper-summary">Ethereum Magicians 社区就加速以太坊后量子（PQ）转型路线展开探讨，重点评估“解耦共识”（Decoupled Consensus）设计。该方案通过将签名聚合移出关键路径，在提升共识层性能与抗审查能力的同时简化 PQ 转型。</p>
+  <ul class="highlights"><li>评估解耦共识以简化后量子转型</li><li>将签名聚合移出关键路径提升抗审查性</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="安全与协议研究">
@@ -681,11 +698,11 @@
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/ecosystems/2026-11-26-the-time-to-prepare-for-a-cryptographic-breakthrough-is-before-it-happens-zcash-team-urges-faster-deprecation-of-legacy-shielded-pool-447000" target="_blank" rel="noopener noreferrer">Zcash 团队呼吁加速废弃旧版 Sapling 隐蔽池以防范密码学突破</a>
+    <a href="https://www.theblock.co/news/ecosystems/2026-11-26-the-time-to-prepare-for-a-cryptographic-breakthrough-is-before-it-happens-zcash-team-urges-faster-deprecation-of-legacy-shielded-pool-447000" target="_blank" rel="noopener noreferrer">Zcash 团队呼吁加速废弃旧版 Sapling 屏蔽池以防范密码学破译</a>
   </h3>
   <div class="paper-title-en">‘The time to prepare for a cryptographic breakthrough is before it happens’: Zcash team urges faster deprecation of legacy shielded pool</div>
-  <p class="paper-summary">出于对 AI 辅助密码学破解等潜在数学突破的防范，Zcash 开发团队呼吁加快废弃早期的 Sapling 隐蔽池并禁用相关存款，提早应对未来密码学技术对隐私协议带来的潜在安全威胁。</p>
-  <ul class="highlights"><li>Zcash 团队建议提早关闭 Sapling 存款以抵御未来破解风险</li></ul>
+  <p class="paper-summary">出于对 AI 辅助密码学破解潜在风险的担忧，Zcash 开发团队提议加速淘汰旧版 Sapling 屏蔽池并禁用其存款功能。团队强调应在密码学突破实际发生前提前防范，确保协议的长期隐私与安全。</p>
+  <ul class="highlights"><li>防范 AI 辅助的密码学破译潜在风险</li><li>建议加速废弃旧版 Sapling 屏蔽池</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.theblock.co/news/ecosystems/2026-11-26-the-time-to-prepare-for-a-cryptographic-breakthrough-is-before-it-happens-zcash-team-urges-faster-deprecation-of-legacy-shielded-pool-447000" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -693,33 +710,16 @@
 <article class="paper-card news-card" data-news-section="安全与协议研究">
   <div class="paper-meta-row">
     <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">以太坊研究</span>
-    <span class="tag tag-cat">Ethereum Magicians</span>
-    <span class="paper-id">2026-11-26</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522" target="_blank" rel="noopener noreferrer">以太坊社区探讨后量子路线图及解耦共识架构设计</a>
-  </h3>
-  <div class="paper-title-en">A better pipeline toward PQ and censorship resistant Ethereum</div>
-  <p class="paper-summary">Ethereum Magicians 社区探讨如何加速以太坊后量子（PQ）转型与抗审查路线图。提案建议通过解耦共识（Decoupled Consensus）将签名聚合移出关键路径，降低后量子签名对共识层的性能影响。</p>
-  <ul class="highlights"><li>探讨后量子以太坊路线图及解耦共识架构设计</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://ethereum-magicians.org/t/a-better-pipeline-toward-pq-and-censorship-resistant-ethereum/30522" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">协议研究</span>
+    <span class="tag tag-topic">MEV与路由研究</span>
     <span class="tag tag-cat">Flashbots Collective</span>
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147" target="_blank" rel="noopener noreferrer">Flashbots 研讨 DEX 大额交易路由优化与价格滑点基准测试</a>
+    <a href="https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147" target="_blank" rel="noopener noreferrer">Flashbots发布大额Swap DEX路由基准测试：多路径拆分可有效提升交易收益</a>
   </h3>
   <div class="paper-title-en">How much price do routers leave on large swaps? A same-block benchmark (3,429 orders)</div>
-  <p class="paper-summary">Flashbots 社区对 3,429 笔大额 DEX 卖单进行同区块基准测试，研究发现拆分优化器（Split Optimizer）在扣除 Gas 费后产出比常规聚合器高出 0.2 至 4.8 bps，在 300 ETH 以上订单中增益扩至 5.4 bps。优化收益主要源自跨平行池拆分与路径合并。</p>
-  <ul class="highlights"><li>测试 3,429 笔大额订单路由性能</li><li>拆分优化器在大额交易中最多提升 5.4 bps 收益</li></ul>
+  <p class="paper-summary">Flashbots研究员对3429笔真实CoW Swap大额交易进行了同区块基准测试。结果显示，多路径拆分优化器相比常规聚合器最高可多获利4.8 bps，且在超300 ETH的订单中优势增加至5.4 bps，主要得益于跨平行流动性池的流量拆分与重聚合。</p>
+  <ul class="highlights"><li>基于3429笔大额真实Swap交易进行测试</li><li>多路径拆分在≥300 ETH订单中优势提升至5.4 bps</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://collective.flashbots.net/t/how-much-price-do-routers-leave-on-large-swaps-a-same-block-benchmark-3-429-orders/6147" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -727,16 +727,16 @@
 <article class="paper-card news-card" data-news-section="安全与协议研究">
   <div class="paper-meta-row">
     <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">EIP 提案</span>
+    <span class="tag tag-topic">EIP提案</span>
     <span class="tag tag-cat">Ethereum Magicians</span>
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/erc-xxxx-serial-numbered-fungible-tokens/30519" target="_blank" rel="noopener noreferrer">Ethereum Magicians 讨论带序列号的同质化代币标准 ERC-XXXX</a>
+    <a href="https://ethereum-magicians.org/t/erc-xxxx-serial-numbered-fungible-tokens/30519" target="_blank" rel="noopener noreferrer">Ethereum Magicians探讨ERC-XXXX带序列号同质化代币标准以优化链上追踪</a>
   </h3>
   <div class="paper-title-en">ERC-XXXX: Serial-Numbered Fungible Tokens</div>
-  <p class="paper-summary">针对加密资产盗用事件中稳定币冻结追踪的局限性，以太坊社区提出带序列号的同质化代币标准 ERC-XXXX。由于传统 ERC-20 仅记录账户总额度，资金在混币或拆分后难以定向追踪；该提案通过为代币引入序列号机制，支持对被盗单元的精确追踪与定向冻结。</p>
-  <ul class="highlights"><li>提出具序列号机制的 ERC-XXXX 标准</li><li>解决传统 ERC-20 被盗资金难以精细追查痛点</li></ul>
+  <p class="paper-summary">针对加密攻击中黑名单仅能冻结特定地址而无法防范资金拆分转移的问题，Ethereum Magicians提出ERC-XXXX标准。该提案旨在为同质化代币引入序列号标记机制，实现单位级别的链上追溯，提升防黑洗钱防范能力。</p>
+  <ul class="highlights"><li>为同质化代币引入序列号机制</li><li>解决黑名单无法追踪已拆分混币资金的缺陷</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://ethereum-magicians.org/t/erc-xxxx-serial-numbered-fungible-tokens/30519" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -744,16 +744,33 @@
 <article class="paper-card news-card" data-news-section="安全与协议研究">
   <div class="paper-meta-row">
     <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">以太坊升级</span>
+    <span class="tag tag-topic">硬件与零知识证明</span>
+    <span class="tag tag-cat">Vitalik Buterin</span>
+    <span class="paper-id">2026-11-26</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html" target="_blank" rel="noopener noreferrer">Vitalik 撰文探讨开源芯片设计及其对去中心化硬件生态的意义</a>
+  </h3>
+  <div class="paper-title-en">A shallow dive into open-source chip design</div>
+  <p class="paper-summary">Vitalik Buterin 发布最新文章浅析开源芯片设计。文章探讨了开源硬件在提高可验证性、降低零知识证明（ZK）硬件加速门槛以及推动去中心化基础设施安全方面的潜在价值与技术挑战。</p>
+  <ul class="highlights"><li>探讨开源芯片设计在 ZK 硬件加速与去中心化设施中的应用</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">协议升级</span>
     <span class="tag tag-cat">Ethereum Magicians</span>
     <span class="paper-id">2026-11-25</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518" target="_blank" rel="noopener noreferrer">Ethlabs 发布 Glamsterdam 升级立场声明：建议按原计划推进 EIP-8037</a>
+    <a href="https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518" target="_blank" rel="noopener noreferrer">Ethlabs 发布关于以太坊 Glamsterdam 升级评估立场</a>
   </h3>
   <div class="paper-title-en">Ethlabs’ position on Glamsterdam</div>
-  <p class="paper-summary">Ethlabs 发布关于以太坊 Glamsterdam 升级的影响分析报告，建议维持现有方案推进。报告指出，重新定价状态创建虽带来短期影响，但作为以太坊实现 1000 倍扩容的必要步骤，保留 EIP-8037 可获得约 3 倍的 Gas 上限增长。</p>
-  <ul class="highlights"><li>建议按原计划推进 Glamsterdam，获得 3 倍 Gas 上限增长</li></ul>
+  <p class="paper-summary">Ethlabs 建议按原计划推进以太坊 Glamsterdam 升级。虽然状态创建重新定价会带来挑战，但包含 EIP-8037 能够带来约 3 倍的 Gas 上限提升，是实现以太坊高阶扩容路径中的关键一步。</p>
+  <ul class="highlights"><li>建议按原计划推进 Glamsterdam 升级，Gas 上限可提升约 3 倍</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://ethereum-magicians.org/t/ethlabs-position-on-glamsterdam/30518" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -766,30 +783,13 @@
     <span class="paper-id">2026-11-25</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://collective.flashbots.net/t/the-mev-letter-163/6146" target="_blank" rel="noopener noreferrer">Flashbots 发布 MEV Letter #163：涵盖 ePBS 撤单模型与 Glamsterdam 区块限制研究</a>
+    <a href="https://collective.flashbots.net/t/the-mev-letter-163/6146" target="_blank" rel="noopener noreferrer">Flashbots 发布 MEV Letter #163：探讨 ePBS 撤单与区块限制</a>
   </h3>
   <div class="paper-title-en">The MEV Letter #163</div>
-  <p class="paper-summary">Flashbots 发布 MEV 通讯第 163 期，重点汇总了 ePBS 机制中竞标撤销对出块者收益与构建者风险影响的拍卖模型研究，以及 Glamsterdam 升级下 8 MiB 执行区块限制与 FOCIL 交易打包机制的相关深入探讨。</p>
-  <ul class="highlights"><li>涵盖 ePBS 竞标撤销模型与 Glamsterdam 区块限制研究</li></ul>
+  <p class="paper-summary">本期 MEV 周报汇总了最新 MEV 研究，重点关注 ePBS 机制下竞价撤单对提议者收益与构建者风险的影响模型，同时评估了 Glamsterdam 升级中 8 MiB 执行区块限制对网络的影响。</p>
+  <ul class="highlights"><li>分析 ePBS 竞价撤单对提议者与构建者的影响</li><li>解读 Glamsterdam 升级中 8 MiB 执行区块限制</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://collective.flashbots.net/t/the-mev-letter-163/6146" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
-  </div>
-</article>
-<article class="paper-card news-card" data-news-section="安全与协议研究">
-  <div class="paper-meta-row">
-    <span class="tag tag-sec-research">安全与协议研究</span>
-    <span class="tag tag-topic">开源芯片研究</span>
-    <span class="tag tag-cat">Vitalik Buterin</span>
-    <span class="paper-id">2026-11-26</span>
-  </div>
-  <h3 class="paper-title-zh">
-    <a href="https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html" target="_blank" rel="noopener noreferrer">Vitalik 撰文探讨开源芯片设计及其对去中心化硬件生态的意义</a>
-  </h3>
-  <div class="paper-title-en">A shallow dive into open-source chip design</div>
-  <p class="paper-summary">Vitalik 发文《开源芯片设计浅析》，探讨开源硬件在芯片领域的应用前景与挑战。文章分析了开源指令集与定制化芯片设计如何为去中心化基础设施、硬件加速及密码学计算提供更自主可控的技术底层支撑。</p>
-  <ul class="highlights"><li>开源芯片设计可为去中心化硬件与密码学加速提供支撑</li></ul>
-  <div class="paper-actions">
-    <a class="btn-link" href="https://vitalik.ca/general/2026/11/26/a_shallow_dive_into_open-source_chip_design.html" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
 </article>
 <article class="paper-card news-card" data-news-section="行业与监管动态">
@@ -800,11 +800,11 @@
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://thedefiant.io/news/regulation/spain-issues-decree-to-allow-temporary-crypto-account-freezes" target="_blank" rel="noopener noreferrer">西班牙拟允许反洗钱机构未经法院批准冻结加密账户 5 天</a>
+    <a href="https://thedefiant.io/news/regulation/spain-issues-decree-to-allow-temporary-crypto-account-freezes" target="_blank" rel="noopener noreferrer">西班牙拟出台法令 允许监管机构无须法院批准冻结加密账户</a>
   </h3>
   <div class="paper-title-en">Spain Issues Decree to Allow Temporary Crypto Account Freezes</div>
-  <p class="paper-summary">西班牙发布法令草案，若经国会表决通过，将于 1 月 25 日起生效。该法令授权反洗钱机构 Sepblac 在无需法院事先批准的情况下，可直接临时冻结加密资产账户最长 5 个工作日，旨在加强对涉嫌违法加密交易的预防性审查与资金拦截。</p>
-  <ul class="highlights"><li>Sepblac 可未经法院批准临时冻结加密账户最长 5 个工作日</li><li>该法令拟于 1 月 25 日生效，目前尚待国会表决通过</li></ul>
+  <p class="paper-summary">西班牙发布新法令草案，计划于 1 月 25 日提交国会表决。该法令拟授权反洗钱机构 Sepblac 在无需法院事先批准的情况下，直接将涉及异常交易的加密货币账户临时冻结最多 5 个工作日。</p>
+  <ul class="highlights"><li>Sepblac 可在无需法院事先批准下冻结加密账户最多 5 个工作日</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://thedefiant.io/news/regulation/spain-issues-decree-to-allow-temporary-crypto-account-freezes" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -817,11 +817,11 @@
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge" target="_blank" rel="noopener noreferrer">西班牙反洗钱机构获权可未经法官批准直接冻结加密账户</a>
+    <a href="https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge" target="_blank" rel="noopener noreferrer">西班牙授权反洗钱机构 Sepblac 可无需法官批准冻结加密账户</a>
   </h3>
   <div class="paper-title-en">Spain gives anti-laundering unit power to freeze crypto accounts without a judge</div>
-  <p class="paper-summary">西班牙赋予其反洗钱机构 Sepblac 新的行政权力，允许其在无需法官事先批准的情况下直接冻结涉嫌洗钱的加密货币账户。此前 Sepblac 仅能在收到外国金融情报机构请求时暂停账户。</p>
-  <ul class="highlights"><li>西班牙 Sepblac 获权无需法院命令即可冻结加密账户</li></ul>
+  <p class="paper-summary">西班牙新规定赋予该国反洗钱监管机构 Sepblac 更高权限，允许其在无需获得法院法官批准的情况下直接冻结涉嫌洗钱的加密货币账户。此前 Sepblac 仅在收到外国金融情报机构请求时才能暂停账户。</p>
+  <ul class="highlights"><li>Sepblac 获权无需司法批准直接冻结账户</li><li>此前仅在响应外国金融情报机构请求时可冻结</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.coindesk.com/business/2026/11/26/spain-gives-anti-laundering-unit-power-to-freeze-crypto-accounts-without-a-judge" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -829,16 +829,16 @@
 <article class="paper-card news-card" data-news-section="行业与监管动态">
   <div class="paper-meta-row">
     <span class="tag tag-sec-industry">行业与监管动态</span>
-    <span class="tag tag-topic">行业动态</span>
+    <span class="tag tag-topic">生态动态</span>
     <span class="tag tag-cat">CoinDesk</span>
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources" target="_blank" rel="noopener noreferrer">香港加密做市商 Auros 宣布逐步清算并关停业务</a>
+    <a href="https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources" target="_blank" rel="noopener noreferrer">香港加密做市商 Auros 正在逐步停止运营</a>
   </h3>
   <div class="paper-title-en">Hong Kong-based crypto trading firm Auros is winding down operations</div>
-  <p class="paper-summary">曾经占全球加密交易所交易量约 4%、并在 FTX 倒闭后融资 1700 万美元的香港加密做市与交易机构 Auros 正在逐步清算关停其运营业务。</p>
-  <ul class="highlights"><li>曾占全球交易量 4% 的做市商 Auros 宣布关停业务</li></ul>
+  <p class="paper-summary">据知情人士透露，总部位于香港的加密做市与交易机构 Auros 正逐步关闭业务。该公司曾处理全球加密交易所约 4% 的交易量，并在 FTX 倒闭后融资 1700 万美元，其关停反映出做市商领域的生存压力。</p>
+  <ul class="highlights"><li>曾处理全球约 4% 的加密交易量</li><li>FTX 倒闭后曾获 1700 万美元融资</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.coindesk.com/markets/2026/11/26/major-crypto-trading-firm-auros-is-winding-down-operations-sources" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -851,11 +851,11 @@
     <span class="paper-id">2026-11-26</span>
   </div>
   <h3 class="paper-title-zh">
-    <a href="https://www.theblock.co/news/regulation/2026-11-26-switzerland-approves-57-jurisdictions-for-crypto-data-exchange-from-2028-446821" target="_blank" rel="noopener noreferrer">瑞士批准自2028年起与57个辖区共享加密资产税务数据</a>
+    <a href="https://www.theblock.co/news/regulation/2026-11-26-switzerland-approves-57-jurisdictions-for-crypto-data-exchange-from-2028-446821" target="_blank" rel="noopener noreferrer">瑞士批准自2028年起与57个辖区开展加密资产税务数据共享</a>
   </h3>
   <div class="paper-title-en">Switzerland approves 57 jurisdictions for crypto data exchange from 2028</div>
-  <p class="paper-summary">瑞士联邦委员会批准了 57 个潜在合作辖区，计划自 2028 年起实施加密资产税务信息自动交换机制。该举措旨在遵循国际自动情报交换标准（CARF），全面加强跨国加密资产税收透明度、打击避税及强化反洗钱合规监管。</p>
-  <ul class="highlights"><li>自2028年起实施57个辖区加密税务数据交换</li></ul>
+  <p class="paper-summary">瑞士联邦委员会已批准57个潜在合作辖区，计划自2028年起启动加密资产税务信息自动交换（CARF）机制。该举措旨在提升加密资产领域的涉税透明度，配合国际反避税监管标准。</p>
+  <ul class="highlights"><li>瑞士批准57个合作辖区</li><li>计划自2028年启动加密税务数据自动共享</li></ul>
   <div class="paper-actions">
     <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-26-switzerland-approves-57-jurisdictions-for-crypto-data-exchange-from-2028-446821" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
   </div>
@@ -871,7 +871,7 @@
   </div>
   <div class="filtered-en">Telegram Cuts Fee to 2% on Gift Resales Paid in Gram</div>
   
-  <div class="filtered-reason">去噪原因：属于应用内功能更新与费率调整，缺乏技术与重大监管价值。</div>
+  <div class="filtered-reason">去噪原因：属于应用层功能更新与交易手续费调整，缺乏底层技术或安全深度。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -880,7 +880,7 @@
   </div>
   <div class="filtered-en">Crypto for Advisors: Four questions to ask before trusting a crypto exchange</div>
   
-  <div class="filtered-reason">去噪原因：属于泛化投顾科普与交易所选择建议，无实质技术或安全信息量。</div>
+  <div class="filtered-reason">去噪原因：属于针对投资顾问的通用教育性文章，缺乏实质技术与安全信息量。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -889,7 +889,7 @@
   </div>
   <div class="filtered-en">Ether Drops 28% in Four Weeks, Lagging Bitcoin</div>
   
-  <div class="filtered-reason">去噪原因：属于纯粹的币价行情走势与 ETF 资金流出播报，无安全或技术信息。</div>
+  <div class="filtered-reason">去噪原因：属于纯币价行情播报与 ETF 资金流向统计，无实质技术或安全价值。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -898,7 +898,7 @@
   </div>
   <div class="filtered-en">Huawei to Detail New AI Memory Design in February</div>
   
-  <div class="filtered-reason">去噪原因：属于传统 AI 芯片硬件设计新闻，与 Web3 及区块链生态无直接关联。</div>
+  <div class="filtered-reason">去噪原因：属于传统 AI 芯片与硬件相关新闻，与 Web3 及区块链生态无直接关联。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -907,7 +907,7 @@
   </div>
   <div class="filtered-en">KuCoin to Delist Monero, Ending Spot Trading Nov. 30</div>
   
-  <div class="filtered-reason">去噪原因：属于交易所常规下币公告，缺乏智能合约安全或重大监管情报价值。</div>
+  <div class="filtered-reason">去噪原因：属于交易所常规代币下币公告，缺乏底层技术研判或重大行业影响。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -916,7 +916,7 @@
   </div>
   <div class="filtered-en">Bitcoin ETFs are bleeding cash and the Fed is unlikely to help</div>
   
-  <div class="filtered-reason">去噪原因：属于常规宏观市场行情与 ETF 资金流向分析，无技术或安全信息量。</div>
+  <div class="filtered-reason">去噪原因：纯属行情播报与资金流向预测，缺乏区块链技术或安全信息。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -925,7 +925,7 @@
   </div>
   <div class="filtered-en">Spot bitcoin ETFs on track for worst month on record as bear market drags on</div>
   
-  <div class="filtered-reason">去噪原因：该条目属于纯市场行情与 ETF 资金流向播报，缺乏技术或安全信息量。</div>
+  <div class="filtered-reason">去噪原因：属于纯市场行情与ETF资金流向播报，缺乏技术与安全信息量。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -934,7 +934,7 @@
   </div>
   <div class="filtered-en">Europe’s only spot bitcoin ETF starts trading in Switzerland, BIT says</div>
   
-  <div class="filtered-reason">去噪原因：该条目属于常规金融产品上市与行情播报，缺乏底层技术或安全深度。</div>
+  <div class="filtered-reason">去噪原因：属于常规金融产品上市与市场播报，缺乏底层技术与监管突破。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
@@ -943,25 +943,25 @@
   </div>
   <div class="filtered-en">Fidelity files for Chainlink ETF, Musk’s X wins ruling in alleged bitcoin content-farm case, and more</div>
   
-  <div class="filtered-reason">去噪原因：该条目属于常规市场资讯与 ETF 申请简报汇编，缺乏核心技术与安全价值。</div>
+  <div class="filtered-reason">去噪原因：属于常规新闻通讯合集与ETF申请播报，缺乏高价值安全或技术突破。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
     <span class="tag tag-cat" style="margin-right:0.4rem">Chainalysis</span>
-    <a href="https://www.chainalysis.com/blog/nodes-london-2026-chain-ai-workspace/" target="_blank" rel="noopener noreferrer">Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders</a>
+    <a href="https://www.chainalysis.com/blog/nodes-london-2026-chain-ai-workspace/" target="_blank" rel="noopener noreferrer">Chainalysis 在 London 2026 推出 AI 工作空间 Chain</a>
   </div>
   <div class="filtered-en">Chainalysis Nodes London 2026: Chain, Our AI Workspace ‘Tips the Scales’ for Defenders</div>
   
-  <div class="filtered-reason">去噪原因：Chainalysis 伦敦会议及 AI 产品宣传，属于公司公关软文，缺乏实质安全分析。</div>
+  <div class="filtered-reason">去噪原因：属于企业产品发布与会议公关软文，缺少实质性技术与安全分析。</div>
 </li>
 <li class="filtered-item">
   <div class="filtered-head">
     <span class="tag tag-cat" style="margin-right:0.4rem">TRM Labs</span>
-    <a href="https://www.trmlabs.com/resources/blog/trm-labs-appoints-maria-tsani-former-aws-policy-leader-as-head-of-policy-emea" target="_blank" rel="noopener noreferrer">TRM Labs Appoints Maria Tsani, Former AWS Policy Leader, as Head of Policy, EMEA | TRM Labs</a>
+    <a href="https://www.trmlabs.com/resources/blog/trm-labs-appoints-maria-tsani-former-aws-policy-leader-as-head-of-policy-emea" target="_blank" rel="noopener noreferrer">TRM Labs 任命 Maria Tsani 为 EMEA 政策主管</a>
   </div>
   <div class="filtered-en">TRM Labs Appoints Maria Tsani, Former AWS Policy Leader, as Head of Policy, EMEA | TRM Labs</div>
   
-  <div class="filtered-reason">去噪原因：TRM Labs 任命高管的人事变动公告，属于常规公关宣传软文，缺乏实质信息量。</div>
+  <div class="filtered-reason">去噪原因：属于企业高管人事任命软文，缺乏区块链技术或安全情报信息。</div>
 </li>
   </ul>
 </details>
