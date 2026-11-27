@@ -1,0 +1,361 @@
+{
+  "date": "2026-11-28",
+  "model": "openai-gemini-3.6-flash",
+  "generated_at": "2026-11-27T23:29:24.828Z",
+  "arxiv": {
+    "date": "2026-11-28",
+    "query_date": "2026-11-27",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "total_fetched": 0,
+    "kept_count": 0,
+    "filtered_count": 0,
+    "papers": [],
+    "filtered_papers": [],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-27T23:26:16.963Z"
+  },
+  "venues": {
+    "date": "2026-11-28",
+    "query_date": "2026-11-27",
+    "keywords": [
+      "blockchain",
+      "smart contract",
+      "defi"
+    ],
+    "venue_count": 68,
+    "total_fetched": 0,
+    "kept_count": 0,
+    "filtered_count": 0,
+    "papers": [],
+    "filtered_papers": [],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-27T23:26:16.963Z"
+  },
+  "news": {
+    "date": "2026-11-28",
+    "query_date": "2026-11-27",
+    "source_count": 21,
+    "total_fetched": 20,
+    "kept_count": 15,
+    "filtered_count": 5,
+    "items": [
+      {
+        "url": "https://thedefiant.io/news/hacks/chainflip-tallies-hack-losses-payout-plan-still-pending",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T13:55:53.000Z",
+        "title_en": "Chainflip Tallies Hack Losses, Payout Plan Still Pending",
+        "title_zh": "Chainflip 统计金库盗窃损失，受害赔付方案仍未确定",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "链上黑客攻击",
+        "summary": "跨链去中心化交易所 Chainflip 在经历 11 月金库盗窃事件后，其原生协议仍保持暂停状态。目前团队正梳理具体损失，并计划通过 SwapKit 引导新交易，但针对用户的最终赔付方案仍待公布。",
+        "highlights": [
+          "11 月金库被盗后协议维持暂停",
+          "拟通过 SwapKit 引导交易，赔付方案待定"
+        ]
+      },
+      {
+        "url": "https://defillama.com/hacks",
+        "source_name": "DeFiLlama Hacks",
+        "source_group": "安全事件",
+        "published_at": "2026-11-27T00:00:00.000Z",
+        "title_en": "[Hack] Atoshi Bridge ($60.3K · Ethereum)",
+        "title_zh": "Atoshi Bridge 遭私钥泄露攻击 部署者私钥被盗损失约 6.03 万美元",
+        "keep": true,
+        "section": "安全事件与情报",
+        "topic": "链上攻击",
+        "summary": "以太坊链上 DeFi 协议 Atoshi Bridge 遭黑客攻击，导致约 6.03 万美元资金损失。据 DeFiLlama Hacks 披露，本次攻击原因为部署者私钥泄露（Deployer Key Compromised），黑客利用私钥权限获利。",
+        "highlights": [
+          "损失金额：约 6.03 万美元",
+          "根本原因：部署者私钥泄露"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/ecosystems/2026-11-27-ai-math-breakthroughs-revive-bitcoin-security-fears-but-practical-threat-remains-unproven-k33-447549",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T14:24:21.000Z",
+        "title_en": "AI math breakthroughs revive Bitcoin security fears, but practical threat remains unproven: K33",
+        "title_zh": "K33：AI 与数学突破引发比特币安全担忧，但实际威胁未证实",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "密码学安全",
+        "summary": "加密分析机构 K33 研究指出，尽管近期在数学算法和 AI 领域的突破再次引发了关于 Bitcoin 密码学安全的讨论，但目前尚无证据表明 Bitcoin 的椭圆曲线加密算法遭突破。尽管如此，K33 仍呼吁行业密切关注 AI 对区块链密码学安全的长期影响。",
+        "highlights": [
+          "目前尚无证据显示 Bitcoin 密码学被突破",
+          "建议行业持续关注 AI 对密码学破解的潜在加速作用"
+        ]
+      },
+      {
+        "url": "https://ethereum-magicians.org/t/erc-8519-post-quantum-validator-and-builder-keystore/30525",
+        "source_name": "Ethereum Magicians",
+        "source_group": "协议研究",
+        "published_at": "2026-11-27T13:56:41.000Z",
+        "title_en": "ERC-8519: Post-Quantum Validator and Builder Keystore",
+        "title_zh": "ERC-8519 提案：以太坊验证者与构建者后量子密钥库标准",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "密码学与提案",
+        "summary": "该 ERC 提案为以太坊验证者与区块构建者定义了后量子密钥库标准。随着量子计算风险临近，该标准旨在规范抗量子密钥的存储结构，提升以太坊底层基础设施的长期安全防护能力。",
+        "highlights": [
+          "规范验证者与 Builder 的抗量子密钥存储",
+          "应对量子计算对底层基础设施的威胁"
+        ]
+      },
+      {
+        "url": "https://ethresear.ch/t/stealth-addresses-after-secp256k1-falls-payer-clawback-signature-derived-keys-and-a-recovery-statement-for-erc-8441-outputs/26305",
+        "source_name": "ethresear.ch",
+        "source_group": "协议研究",
+        "published_at": "2026-11-27T13:35:36.000Z",
+        "title_en": "Stealth addresses after secp256k1 falls: payer clawback, signature-derived keys, and a recovery statement for ERC-8441 outputs",
+        "title_zh": "后量子时代隐蔽地址机制研究：基于 ERC-8441 的输出恢复方案",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "后量子隐私研究",
+        "summary": "研究探讨了 secp256k1 被破解后 ERC-5564 隐蔽地址的泄露风险。基于 ML-KEM 密钥的 ERC-8441 提案修正了隐蔽发现机制，并提出付款人回收与签名派生密钥方案，以提升后量子时代的隐私保护。",
+        "highlights": [
+          "评估后量子时代隐蔽地址资金泄露风险",
+          "结合 ML-KEM 提出 ERC-8441 输出保护机制"
+        ]
+      },
+      {
+        "url": "https://ethresear.ch/t/paths-to-post-quantum-execution-in-hegota-an-experimental-comparison/26304",
+        "source_name": "ethresear.ch",
+        "source_group": "协议研究",
+        "published_at": "2026-11-27T10:03:20.000Z",
+        "title_en": "Paths to post-quantum execution in Hegotá: an experimental comparison",
+        "title_zh": "以太坊 Hegotá 硬分叉抗量子执行路径实验与路线分析",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "密码学与抗量子",
+        "summary": "研究探讨了以太坊 Glamsterdam 之后的 Hegotá 硬分叉抗量子迁移方案。结合 EIP-8141、EIP-8298 及 EIP-8151，可实现在不变更地址的前提下迁移账户并限制传统 ECDSA 授权。目前关键缺口是引入 leanSPHINCS 无状态签名。",
+        "highlights": [
+          "结合多项 EIP 实现无需更换地址的抗量子迁移",
+          "提出了引入基于哈希的 leanSPHINCS 签名方案"
+        ]
+      },
+      {
+        "url": "https://ethresear.ch/t/a-state-backed-validation-of-setcodefrom/26300",
+        "source_name": "ethresear.ch",
+        "source_group": "协议研究",
+        "published_at": "2026-11-27T08:11:20.000Z",
+        "title_en": "A state-backed validation of SETCODEFROM",
+        "title_zh": "对 EIP-8298 (SETCODEFROM) 主网代码测试与修复建议",
+        "keep": true,
+        "section": "安全与协议研究",
+        "topic": "EIP 协议研究",
+        "summary": "研究人员针对 EIP-8298 草案在以太坊主网字节码上进行了深度的验证，发现原提案过于宽松的代码指向机制存在两种边界异常。论文提出了两条新增规则以进行补充修复，确保协议在主网部署前彻底规避安全隐患。",
+        "highlights": [
+          "主网字节码测试发现 EIP-8298 两处边界异常",
+          "提出了针对性补充规则以规避潜在风险"
+        ]
+      },
+      {
+        "url": "https://thedefiant.io/news/blockchains/layerzero-names-40-plus-validators-for-zero-launch",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T15:37:28.000Z",
+        "title_en": "LayerZero Names 40-Plus Validators for Zero Launch",
+        "title_zh": "LayerZero 公布 Zero 主网首批 40 余家验证节点名单",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "基础设施",
+        "summary": "跨链基础设施 LayerZero 宣布为其 Zero 主网上线指定了 40 多家初始验证节点，其中包括 Kakao Pay、Broadridge 以及 ZAN 等机构。LayerZero 官方质押网站初始阶段会将每笔 ZRO 质押资金等额分摊至各初始验证节点。",
+        "highlights": [
+          "涵盖 Kakao Pay、ZAN 等 40 多家机构节点",
+          "ZRO 质押资金将在上线初期均摊给各验证者"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/business/2026-11-27-tether-buys-10-million-of-bitdeer-shares-as-stock-hovers-near-all-time-low-447554",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T15:00:21.000Z",
+        "title_en": "Tether buys $10 million of Bitdeer shares as stock hovers near all-time low",
+        "title_zh": "Tether 斥资 1000 万美元增持 Bitdeer 股票",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "机构投资",
+        "summary": "USDT 发行商 Tether 在 Bitdeer（比特小鹿）股价处于历史低点附近时，出资约 1000 万美元购买了 372 万股 Bitdeer A 类普通股，进一步扩展其在加密挖矿与算力基础设施领域的战略布局。",
+        "highlights": [
+          "Tether 出资 1000 万美元购买 372 万股 Bitdeer 股票"
+        ]
+      },
+      {
+        "url": "https://thedefiant.io/converge/tradfi-and-fintech/halogen-s-shariah-bitcoin-etf-set-for-dec-2-bursa-debut",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T14:31:13.000Z",
+        "title_en": "Halogen’s Shariah Bitcoin ETF Set for Dec. 2 Bursa Debut",
+        "title_zh": "Halogen 的比特币 ETF 将于 12 月 2 日在马来西亚上市",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "现货 ETF",
+        "summary": "Halogen 推出的符合伊斯兰教法（Shariah）的 Bitcoin 现货 ETF 计划于 12 月 2 日在马来西亚证券交易所上市。该基金上市后，散户投资者可通过经纪商使用马来西亚林吉特或美元参与交易。",
+        "highlights": [
+          "马来西亚首个符合伊斯兰教法的 Bitcoin 现货 ETF",
+          "支持散户以林吉特或美元直接交易"
+        ]
+      },
+      {
+        "url": "https://www.coindesk.com/business/2026/11/27/kalshi-turns-to-small-businesses-as-legal-battles-threaten-forecasts-on-sports",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T13:19:10.000Z",
+        "title_en": "Kalshi turns to small businesses as legal battles threaten forecasts on sports",
+        "title_zh": "预测市场 Kalshi 面临体育诉讼压力，转向小微企业对冲服务",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管与预测市场",
+        "summary": "由于提供体育博彩预测合约面临法院监管诉讼挑战，去中心化预测市场 Kalshi 正向小微企业推广商业对冲服务，帮助其抵御关税变动、极端天气等商业风险，以缓解监管对抗。",
+        "highlights": [
+          "体育预测受法律诉讼挑战",
+          "转向小企业提供关税与天气风险对冲"
+        ]
+      },
+      {
+        "url": "https://www.coindesk.com/policy/2026/11/27/next-ecb-chief-favors-tokenized-bank-deposits-over-stablecoins-and-bitcoin",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T11:22:42.000Z",
+        "title_en": "Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin",
+        "title_zh": "下任欧洲央行行长倾向于代币化银行存款而非稳定币与比特币",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "欧洲央行下任行长人选 Pablo Hernández de Cos 表达了对基于区块链的代币化银行存款的偏好，同时警告商业银行不要持有比特币等加密资产，并警惕私营数字货币可能带来的系统性风险。",
+        "highlights": [
+          "倾向支持区块链代币化银行存款",
+          "对私营稳定币与银行持有比特币持谨慎态度"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/regulation/2026-11-27-bank-of-japan-official-says-stablecoins-need-reserve-rules-to-preserve-singleness-of-money-447059",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T10:45:02.000Z",
+        "title_en": "Bank of Japan official says stablecoins need reserve rules to preserve ‘singleness of money’",
+        "title_zh": "日本央行官员强调稳定币需制定储备规则以维护货币单一性",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "稳定币监管",
+        "summary": "日本央行官员表示，稳定币和代币化存款需要建立严格的储备与保障规则，以防止金融体系发生碎片化，并维护「货币单一性」（singleness of money），确保加密基础设施与传统体系安全融合。",
+        "highlights": [
+          "建议为稳定币与代币化存款制定储备规则",
+          "旨在维护货币单一性并防止金融体系切割"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/ecosystems/2026-11-27-ethereum-devs-schedule-glamsterdam-upgrade-hoodi-447051",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T07:51:14.000Z",
+        "title_en": "Ethereum devs schedule Glamsterdam upgrade for Hoodi testnet on Dec. 15",
+        "title_zh": "以太坊 Glamsterdam 升级将于 12 月 15 日部署至 Hoodi 测试网",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "以太坊升级",
+        "summary": "以太坊核心开发者已确定于 12 月 15 日在 Hoodi 测试网上线 Glamsterdam 升级。同时，开发团队还讨论了在随后的 Hegotá 升级中，抗量子准备工作是否应优先于其他提案。",
+        "highlights": [
+          "Glamsterdam 升级定于 12 月 15 日登陆 Hoodi 测试网",
+          "开发者讨论 Hegotá 升级中抗量子准备的优先级"
+        ]
+      },
+      {
+        "url": "https://www.theblock.co/news/regulation/2026-11-26-china-japan-south-korea-asean-digital-payments-447029",
+        "source_name": "The Block",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T04:18:40.000Z",
+        "title_en": "China, Japan, South Korea and ASEAN to form working group on digital payments, crypto regulation",
+        "title_zh": "中日韩与东盟拟成立工作组 推动跨境数字支付与加密货币监管合作",
+        "keep": true,
+        "section": "行业与监管动态",
+        "topic": "监管动态",
+        "summary": "中国、日本、韩国及东盟（ASEAN）决定成立专门工作组，重点推进跨境数字支付合作与加密货币监管框架。该决定源于此前在乌兹别克斯坦举行的会议，各方一致将跨境数字支付列为区域合作的新重点方向。",
+        "highlights": [
+          "中日韩与东盟组建联合工作组",
+          "聚焦跨境数字支付与加密监管"
+        ]
+      }
+    ],
+    "filtered_items": [
+      {
+        "url": "https://thedefiant.io/frontier/technology/tesla-files-to-buy-assets-from-german-toolmaker-emag",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T15:26:17.000Z",
+        "title_en": "Tesla Files to Buy Assets From German Toolmaker EMAG",
+        "title_zh": "Tesla Files to Buy Assets From German Toolmaker EMAG",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "EMAG makes equipment for electric motor shafts and humanoid robot joints. Germany’s competition authority hasn’t said which assets Tesla wants to buy.",
+        "highlights": [],
+        "discard_reason": "属于传统电动车及机器人制造领域的企业收购新闻，与 Web3 无关。"
+      },
+      {
+        "url": "https://thedefiant.io/frontier/ai/nvidia-blackwell-chips-found-in-shanghai-bloomberg-says",
+        "source_name": "The Defiant",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T14:52:21.000Z",
+        "title_en": "Nvidia Blackwell Chips Found in Shanghai, Bloomberg Says",
+        "title_zh": "Nvidia Blackwell Chips Found in Shanghai, Bloomberg Says",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Loan records identified a GB300 rack and a separate GB200 server at the same data center, Bloomberg reported. The filings don’t establish how the gear reached China.",
+        "highlights": [],
+        "discard_reason": "属于传统 AI 芯片与硬件供应链常规新闻，不包含 Web3 或区块链信息。"
+      },
+      {
+        "url": "https://www.coindesk.com/daybook-us/2026/11/27/bitcoin-death-cross-is-coming-here-s-what-happened-after-previous-13",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T12:16:07.000Z",
+        "title_en": "Bitcoin 'death cross' is coming. Here's what happened after previous 13.",
+        "title_zh": "Bitcoin 'death cross' is coming. Here's what happened after previous 13.",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Your day-ahead look for Nov. 27, 2026",
+        "highlights": [],
+        "discard_reason": "纯粹的比特币 K 线死亡交叉分析与历史走势预测，缺乏实质信息。"
+      },
+      {
+        "url": "https://www.coindesk.com/markets/2026/11/27/bitcoin-on-course-to-end-seven-week-losing-streak-while-trailing-stock-rebound",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T11:45:47.000Z",
+        "title_en": "Bitcoin on course to end seven-week losing streak while trailing stock rebound",
+        "title_zh": "Bitcoin on course to end seven-week losing streak while trailing stock rebound",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Bitcoin (BTC) has risen 1.8% since midnight UTC to around $61,600 and is on course to end seven straight weekly losses.",
+        "highlights": [],
+        "discard_reason": "常规代币价格涨跌播报与周线收盘分析，不符合提炼标准。"
+      },
+      {
+        "url": "https://www.coindesk.com/tech/2026/11/27/live-news-bitcoin-rebounds-above-usd61-000-as-ai-stocks-lead-premarket-gains",
+        "source_name": "CoinDesk",
+        "source_group": "行业快讯",
+        "published_at": "2026-11-27T11:34:37.000Z",
+        "title_en": "Live updates: Bitcoin's Thanksgiving gains prove fleeting",
+        "title_zh": "Live updates: Bitcoin's Thanksgiving gains prove fleeting",
+        "keep": false,
+        "section": "行业与监管动态",
+        "topic": "快讯",
+        "summary": "Stocks are broadly higher, but bitcoin has slipped back near $60,000, reversing a turkey day advance.",
+        "highlights": [],
+        "discard_reason": "属于纯比特币价格波动与美股连动的短线行情播报，缺乏技术与安全价值。"
+      }
+    ],
+    "model": "openai-gemini-3.6-flash",
+    "generated_at": "2026-11-27T23:29:24.828Z"
+  }
+}

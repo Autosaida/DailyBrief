@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>区块链每日论文追踪 · 2026-11-28</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f8fa;
+    --card: #ffffff;
+    --border: #e5e7eb;
+    --text: #111827;
+    --title-en: #374151;
+    --authors: #0f766e;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-soft: #eff6ff;
+    --tag-bg: #f3f4f6;
+    --notice-bg: #f0f9ff;
+    --notice-border: #bae6fd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1117;
+      --card: #171b24;
+      --border: #262c3a;
+      --text: #f3f4f6;
+      --title-en: #d1d5db;
+      --authors: #5eead4;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --accent-soft: #1e293b;
+      --tag-bg: #232938;
+      --notice-bg: #112236;
+      --notice-border: #1e3a5f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.25rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 1.65rem;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    margin: 0.25rem 0 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .model-subtle {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.78rem;
+    color: var(--muted);
+    opacity: 0.78;
+    margin-left: 0.45rem;
+  }
+  .archive-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .archive-link:hover { text-decoration: underline; }
+
+  /* Primary Tabs */
+  .primary-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1.4rem;
+  }
+  .primary-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 10px;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .primary-tab:hover { border-color: var(--accent); color: var(--accent); }
+  .primary-tab.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+  }
+  .tab-badge {
+    display: inline-block;
+    min-width: 1.4rem;
+    text-align: center;
+    padding: 0.05rem 0.45rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: var(--tag-bg);
+    color: var(--text);
+  }
+  .primary-tab.active .tab-badge {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+  }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* Secondary Venue Sub-tabs */
+  .subtab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .subtab-btn {
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .subtab-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .subtab-btn.active {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+  .stat-pill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.84rem;
+    color: var(--muted);
+  }
+  .stat-pill strong { color: var(--text); }
+  .date-notice {
+    background: var(--notice-bg);
+    border: 1px solid var(--notice-border);
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.88rem;
+    margin-bottom: 1.35rem;
+  }
+  .date-notice code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85em;
+  }
+  .paper-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.15rem;
+  }
+  .paper-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.35rem;
+  }
+  .paper-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.65rem;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  .tag-topic {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .tag-new {
+    background: #dcfce7;
+    color: #166534;
+  }
+  .tag-update {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  .tag-venue-ccfa {
+    background: #ede9fe;
+    color: #5b21b6;
+    font-weight: 600;
+  }
+  .tag-venue-custom {
+    background: #fce7f3;
+    color: #9d174d;
+    font-weight: 600;
+  }
+  .tag-sec-alert {
+    background: #fee2e2;
+    color: #991b1b;
+    font-weight: 600;
+  }
+  .tag-sec-research {
+    background: #e0f2fe;
+    color: #075985;
+    font-weight: 600;
+  }
+  .tag-sec-industry {
+    background: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+  }
+  @media (prefers-color-scheme: dark) {
+    .tag-new { background: #14532d; color: #86efac; }
+    .tag-update { background: #451a03; color: #fcd34d; }
+    .tag-venue-ccfa { background: #3b0764; color: #ddd6fe; }
+    .tag-venue-custom { background: #500724; color: #fbcfe8; }
+    .tag-sec-alert { background: #7f1d1d; color: #fecaca; }
+    .tag-sec-research { background: #0c4a6e; color: #bae6fd; }
+    .tag-sec-industry { background: #374151; color: #e5e7eb; }
+  }
+  .tag-cat {
+    background: var(--tag-bg);
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .paper-id {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .paper-title-zh {
+    margin: 0 0 0.3rem;
+    font-size: 1.12rem;
+    line-height: 1.45;
+  }
+  .paper-title-zh a {
+    color: var(--text);
+    text-decoration: none;
+  }
+  .paper-title-zh a:hover { color: var(--accent); text-decoration: underline; }
+  .paper-title-en {
+    font-size: 0.9rem;
+    color: var(--title-en);
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+  }
+  .paper-authors {
+    font-size: 0.84rem;
+    color: var(--authors);
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
+  .authors-label, .comment-label { font-weight: 600; }
+  .paper-comment {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  .paper-summary {
+    margin: 0 0 0.75rem;
+    font-size: 0.95rem;
+  }
+  .highlights {
+    margin: 0 0 0.85rem;
+    padding-left: 1.2rem;
+    font-size: 0.88rem;
+    color: var(--muted);
+  }
+  .highlights li { margin-bottom: 0.25rem; }
+  .paper-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding-top: 0.65rem;
+    border-top: 1px dashed var(--border);
+  }
+  .btn-link {
+    font-size: 0.84rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .btn-link:hover { text-decoration: underline; }
+  .empty-state {
+    background: var(--card);
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .filtered-box {
+    margin-top: 2rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.9rem 1.2rem;
+  }
+  .filtered-box summary {
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .filtered-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .filtered-item {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+  }
+  .filtered-head {
+    font-size: 0.92rem;
+    font-weight: 500;
+  }
+  .filtered-head a { color: var(--text); text-decoration: none; }
+  .filtered-head a:hover { color: var(--accent); text-decoration: underline; }
+  .filtered-en { font-size: 0.84rem; color: var(--title-en); margin-top: 0.15rem; }
+  .filtered-authors { font-size: 0.8rem; color: var(--authors); margin-top: 0.15rem; }
+  .filtered-reason { font-size: 0.84rem; color: var(--muted); margin-top: 0.3rem; }
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.82rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>区块链每日论文追踪</h1>
+      <p class="subtitle">2026年11月28日周六 <span class="model-subtle" title="当日生成所用大模型">· openai-gemini-3.6-flash</span></p>
+    </div>
+    <a class="archive-link" href="../archive.html">← 历史归档</a>
+  </header>
+
+  <nav class="primary-tabs" id="primaryTabs" role="tablist">
+    <button class="primary-tab active" data-tab="arxiv" role="tab" aria-selected="true">
+      arXiv 今日论文（区块链）
+      <span class="tab-badge">0</span>
+    </button>
+    <button class="primary-tab" data-tab="venues" role="tab" aria-selected="false">
+      会议 / 期刊正式发表论文
+      <span class="tab-badge">0</span>
+    </button>
+    <button class="primary-tab" data-tab="news" role="tab" aria-selected="false">
+      安全与行业快讯
+      <span class="tab-badge">15</span>
+    </button>
+  </nav>
+
+  <section class="tab-panel active" id="panel-arxiv" role="tabpanel">
+    <div class="stats-row">
+    <span class="stat-pill">检索候选 <strong>0</strong> 篇</span>
+    <span class="stat-pill">保留 <strong>0</strong> 篇</span>
+    <span class="stat-pill">去噪过滤 <strong>0</strong> 篇</span>
+    <span class="stat-pill">关键词 <strong>blockchain / smart contract / defi</strong></span>
+  </div>
+  <div class="date-notice">查询日期：<code>2026-11-27</code>（arXiv OAI-PMH <code>set=cs</code> 全量增量检索，含新投稿与版本更新）</div>
+  <div class="paper-list">
+    <div class="empty-state">前一天（2026-11-27）无新投稿：可能由于 arXiv 当日无匹配投稿、节假日休刊或索引延迟（数量：0）。</div>
+  </div>
+  
+  </section>
+
+  <section class="tab-panel" id="panel-venues" role="tabpanel">
+    <div class="stats-row">
+    <span class="stat-pill">追踪会议 / 期刊 <strong>68</strong> 个</span>
+    <span class="stat-pill">新入库候选 <strong>0</strong> 篇</span>
+    <span class="stat-pill">保留 <strong>0</strong> 篇</span>
+    <span class="stat-pill">去噪过滤 <strong>0</strong> 篇</span>
+  </div>
+  <div class="date-notice">查询 OpenAlex 入库日期：<code>2026-11-27</code></div>
+  
+  <div class="paper-list" id="venuePaperList">
+    <div class="empty-state">前一天（2026-11-27）在追踪的 68 个会议与期刊中无新入库论文（数量：0）。</div>
+  </div>
+  
+  </section>
+
+  <section class="tab-panel" id="panel-news" role="tabpanel">
+    <div class="stats-row">
+    <span class="stat-pill">监控信源 <strong>21</strong> 个</span>
+    <span class="stat-pill">前日候选 <strong>20</strong> 条</span>
+    <span class="stat-pill">保留 <strong>15</strong> 条</span>
+    <span class="stat-pill">去噪过滤 <strong>5</strong> 条</span>
+  </div>
+  <div class="date-notice">查询发布日期：<code>2026-11-27</code>（覆盖链上攻击事件、安全情报机构、核心协议研究论坛与主流行业媒体）</div>
+  <div class="subtab-bar" id="newsSubtabBar">
+  <button class="subtab-btn active" data-news-filter="ALL">全部 (15)</button>
+  <button class="subtab-btn" data-news-filter="安全事件与情报">安全事件与情报 (2)</button>
+  <button class="subtab-btn" data-news-filter="安全与协议研究">安全与协议研究 (5)</button>
+  <button class="subtab-btn" data-news-filter="行业与监管动态">行业与监管动态 (8)</button>
+</div>
+  <div class="paper-list" id="newsItemList">
+    <article class="paper-card news-card" data-news-section="安全事件与情报">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-alert">安全事件与情报</span>
+    <span class="tag tag-topic">链上黑客攻击</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/news/hacks/chainflip-tallies-hack-losses-payout-plan-still-pending" target="_blank" rel="noopener noreferrer">Chainflip 统计金库盗窃损失，受害赔付方案仍未确定</a>
+  </h3>
+  <div class="paper-title-en">Chainflip Tallies Hack Losses, Payout Plan Still Pending</div>
+  <p class="paper-summary">跨链去中心化交易所 Chainflip 在经历 11 月金库盗窃事件后，其原生协议仍保持暂停状态。目前团队正梳理具体损失，并计划通过 SwapKit 引导新交易，但针对用户的最终赔付方案仍待公布。</p>
+  <ul class="highlights"><li>11 月金库被盗后协议维持暂停</li><li>拟通过 SwapKit 引导交易，赔付方案待定</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/news/hacks/chainflip-tallies-hack-losses-payout-plan-still-pending" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全事件与情报">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-alert">安全事件与情报</span>
+    <span class="tag tag-topic">链上攻击</span>
+    <span class="tag tag-cat">DeFiLlama Hacks</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://defillama.com/hacks" target="_blank" rel="noopener noreferrer">Atoshi Bridge 遭私钥泄露攻击 部署者私钥被盗损失约 6.03 万美元</a>
+  </h3>
+  <div class="paper-title-en">[Hack] Atoshi Bridge ($60.3K · Ethereum)</div>
+  <p class="paper-summary">以太坊链上 DeFi 协议 Atoshi Bridge 遭黑客攻击，导致约 6.03 万美元资金损失。据 DeFiLlama Hacks 披露，本次攻击原因为部署者私钥泄露（Deployer Key Compromised），黑客利用私钥权限获利。</p>
+  <ul class="highlights"><li>损失金额：约 6.03 万美元</li><li>根本原因：部署者私钥泄露</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://defillama.com/hacks" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">密码学安全</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/ecosystems/2026-11-27-ai-math-breakthroughs-revive-bitcoin-security-fears-but-practical-threat-remains-unproven-k33-447549" target="_blank" rel="noopener noreferrer">K33：AI 与数学突破引发比特币安全担忧，但实际威胁未证实</a>
+  </h3>
+  <div class="paper-title-en">AI math breakthroughs revive Bitcoin security fears, but practical threat remains unproven: K33</div>
+  <p class="paper-summary">加密分析机构 K33 研究指出，尽管近期在数学算法和 AI 领域的突破再次引发了关于 Bitcoin 密码学安全的讨论，但目前尚无证据表明 Bitcoin 的椭圆曲线加密算法遭突破。尽管如此，K33 仍呼吁行业密切关注 AI 对区块链密码学安全的长期影响。</p>
+  <ul class="highlights"><li>目前尚无证据显示 Bitcoin 密码学被突破</li><li>建议行业持续关注 AI 对密码学破解的潜在加速作用</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/ecosystems/2026-11-27-ai-math-breakthroughs-revive-bitcoin-security-fears-but-practical-threat-remains-unproven-k33-447549" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">密码学与提案</span>
+    <span class="tag tag-cat">Ethereum Magicians</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethereum-magicians.org/t/erc-8519-post-quantum-validator-and-builder-keystore/30525" target="_blank" rel="noopener noreferrer">ERC-8519 提案：以太坊验证者与构建者后量子密钥库标准</a>
+  </h3>
+  <div class="paper-title-en">ERC-8519: Post-Quantum Validator and Builder Keystore</div>
+  <p class="paper-summary">该 ERC 提案为以太坊验证者与区块构建者定义了后量子密钥库标准。随着量子计算风险临近，该标准旨在规范抗量子密钥的存储结构，提升以太坊底层基础设施的长期安全防护能力。</p>
+  <ul class="highlights"><li>规范验证者与 Builder 的抗量子密钥存储</li><li>应对量子计算对底层基础设施的威胁</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethereum-magicians.org/t/erc-8519-post-quantum-validator-and-builder-keystore/30525" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">后量子隐私研究</span>
+    <span class="tag tag-cat">ethresear.ch</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethresear.ch/t/stealth-addresses-after-secp256k1-falls-payer-clawback-signature-derived-keys-and-a-recovery-statement-for-erc-8441-outputs/26305" target="_blank" rel="noopener noreferrer">后量子时代隐蔽地址机制研究：基于 ERC-8441 的输出恢复方案</a>
+  </h3>
+  <div class="paper-title-en">Stealth addresses after secp256k1 falls: payer clawback, signature-derived keys, and a recovery statement for ERC-8441 outputs</div>
+  <p class="paper-summary">研究探讨了 secp256k1 被破解后 ERC-5564 隐蔽地址的泄露风险。基于 ML-KEM 密钥的 ERC-8441 提案修正了隐蔽发现机制，并提出付款人回收与签名派生密钥方案，以提升后量子时代的隐私保护。</p>
+  <ul class="highlights"><li>评估后量子时代隐蔽地址资金泄露风险</li><li>结合 ML-KEM 提出 ERC-8441 输出保护机制</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethresear.ch/t/stealth-addresses-after-secp256k1-falls-payer-clawback-signature-derived-keys-and-a-recovery-statement-for-erc-8441-outputs/26305" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">密码学与抗量子</span>
+    <span class="tag tag-cat">ethresear.ch</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethresear.ch/t/paths-to-post-quantum-execution-in-hegota-an-experimental-comparison/26304" target="_blank" rel="noopener noreferrer">以太坊 Hegotá 硬分叉抗量子执行路径实验与路线分析</a>
+  </h3>
+  <div class="paper-title-en">Paths to post-quantum execution in Hegotá: an experimental comparison</div>
+  <p class="paper-summary">研究探讨了以太坊 Glamsterdam 之后的 Hegotá 硬分叉抗量子迁移方案。结合 EIP-8141、EIP-8298 及 EIP-8151，可实现在不变更地址的前提下迁移账户并限制传统 ECDSA 授权。目前关键缺口是引入 leanSPHINCS 无状态签名。</p>
+  <ul class="highlights"><li>结合多项 EIP 实现无需更换地址的抗量子迁移</li><li>提出了引入基于哈希的 leanSPHINCS 签名方案</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethresear.ch/t/paths-to-post-quantum-execution-in-hegota-an-experimental-comparison/26304" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="安全与协议研究">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-research">安全与协议研究</span>
+    <span class="tag tag-topic">EIP 协议研究</span>
+    <span class="tag tag-cat">ethresear.ch</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://ethresear.ch/t/a-state-backed-validation-of-setcodefrom/26300" target="_blank" rel="noopener noreferrer">对 EIP-8298 (SETCODEFROM) 主网代码测试与修复建议</a>
+  </h3>
+  <div class="paper-title-en">A state-backed validation of SETCODEFROM</div>
+  <p class="paper-summary">研究人员针对 EIP-8298 草案在以太坊主网字节码上进行了深度的验证，发现原提案过于宽松的代码指向机制存在两种边界异常。论文提出了两条新增规则以进行补充修复，确保协议在主网部署前彻底规避安全隐患。</p>
+  <ul class="highlights"><li>主网字节码测试发现 EIP-8298 两处边界异常</li><li>提出了针对性补充规则以规避潜在风险</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://ethresear.ch/t/a-state-backed-validation-of-setcodefrom/26300" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">基础设施</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/news/blockchains/layerzero-names-40-plus-validators-for-zero-launch" target="_blank" rel="noopener noreferrer">LayerZero 公布 Zero 主网首批 40 余家验证节点名单</a>
+  </h3>
+  <div class="paper-title-en">LayerZero Names 40-Plus Validators for Zero Launch</div>
+  <p class="paper-summary">跨链基础设施 LayerZero 宣布为其 Zero 主网上线指定了 40 多家初始验证节点，其中包括 Kakao Pay、Broadridge 以及 ZAN 等机构。LayerZero 官方质押网站初始阶段会将每笔 ZRO 质押资金等额分摊至各初始验证节点。</p>
+  <ul class="highlights"><li>涵盖 Kakao Pay、ZAN 等 40 多家机构节点</li><li>ZRO 质押资金将在上线初期均摊给各验证者</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/news/blockchains/layerzero-names-40-plus-validators-for-zero-launch" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">机构投资</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/business/2026-11-27-tether-buys-10-million-of-bitdeer-shares-as-stock-hovers-near-all-time-low-447554" target="_blank" rel="noopener noreferrer">Tether 斥资 1000 万美元增持 Bitdeer 股票</a>
+  </h3>
+  <div class="paper-title-en">Tether buys $10 million of Bitdeer shares as stock hovers near all-time low</div>
+  <p class="paper-summary">USDT 发行商 Tether 在 Bitdeer（比特小鹿）股价处于历史低点附近时，出资约 1000 万美元购买了 372 万股 Bitdeer A 类普通股，进一步扩展其在加密挖矿与算力基础设施领域的战略布局。</p>
+  <ul class="highlights"><li>Tether 出资 1000 万美元购买 372 万股 Bitdeer 股票</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/business/2026-11-27-tether-buys-10-million-of-bitdeer-shares-as-stock-hovers-near-all-time-low-447554" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">现货 ETF</span>
+    <span class="tag tag-cat">The Defiant</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://thedefiant.io/converge/tradfi-and-fintech/halogen-s-shariah-bitcoin-etf-set-for-dec-2-bursa-debut" target="_blank" rel="noopener noreferrer">Halogen 的比特币 ETF 将于 12 月 2 日在马来西亚上市</a>
+  </h3>
+  <div class="paper-title-en">Halogen’s Shariah Bitcoin ETF Set for Dec. 2 Bursa Debut</div>
+  <p class="paper-summary">Halogen 推出的符合伊斯兰教法（Shariah）的 Bitcoin 现货 ETF 计划于 12 月 2 日在马来西亚证券交易所上市。该基金上市后，散户投资者可通过经纪商使用马来西亚林吉特或美元参与交易。</p>
+  <ul class="highlights"><li>马来西亚首个符合伊斯兰教法的 Bitcoin 现货 ETF</li><li>支持散户以林吉特或美元直接交易</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://thedefiant.io/converge/tradfi-and-fintech/halogen-s-shariah-bitcoin-etf-set-for-dec-2-bursa-debut" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">监管与预测市场</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/business/2026/11/27/kalshi-turns-to-small-businesses-as-legal-battles-threaten-forecasts-on-sports" target="_blank" rel="noopener noreferrer">预测市场 Kalshi 面临体育诉讼压力，转向小微企业对冲服务</a>
+  </h3>
+  <div class="paper-title-en">Kalshi turns to small businesses as legal battles threaten forecasts on sports</div>
+  <p class="paper-summary">由于提供体育博彩预测合约面临法院监管诉讼挑战，去中心化预测市场 Kalshi 正向小微企业推广商业对冲服务，帮助其抵御关税变动、极端天气等商业风险，以缓解监管对抗。</p>
+  <ul class="highlights"><li>体育预测受法律诉讼挑战</li><li>转向小企业提供关税与天气风险对冲</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/business/2026/11/27/kalshi-turns-to-small-businesses-as-legal-battles-threaten-forecasts-on-sports" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">监管动态</span>
+    <span class="tag tag-cat">CoinDesk</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.coindesk.com/policy/2026/11/27/next-ecb-chief-favors-tokenized-bank-deposits-over-stablecoins-and-bitcoin" target="_blank" rel="noopener noreferrer">下任欧洲央行行长倾向于代币化银行存款而非稳定币与比特币</a>
+  </h3>
+  <div class="paper-title-en">Next ECB chief favors tokenized bank deposits over stablecoins and bitcoin</div>
+  <p class="paper-summary">欧洲央行下任行长人选 Pablo Hernández de Cos 表达了对基于区块链的代币化银行存款的偏好，同时警告商业银行不要持有比特币等加密资产，并警惕私营数字货币可能带来的系统性风险。</p>
+  <ul class="highlights"><li>倾向支持区块链代币化银行存款</li><li>对私营稳定币与银行持有比特币持谨慎态度</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.coindesk.com/policy/2026/11/27/next-ecb-chief-favors-tokenized-bank-deposits-over-stablecoins-and-bitcoin" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">稳定币监管</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/regulation/2026-11-27-bank-of-japan-official-says-stablecoins-need-reserve-rules-to-preserve-singleness-of-money-447059" target="_blank" rel="noopener noreferrer">日本央行官员强调稳定币需制定储备规则以维护货币单一性</a>
+  </h3>
+  <div class="paper-title-en">Bank of Japan official says stablecoins need reserve rules to preserve ‘singleness of money’</div>
+  <p class="paper-summary">日本央行官员表示，稳定币和代币化存款需要建立严格的储备与保障规则，以防止金融体系发生碎片化，并维护「货币单一性」（singleness of money），确保加密基础设施与传统体系安全融合。</p>
+  <ul class="highlights"><li>建议为稳定币与代币化存款制定储备规则</li><li>旨在维护货币单一性并防止金融体系切割</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-27-bank-of-japan-official-says-stablecoins-need-reserve-rules-to-preserve-singleness-of-money-447059" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">以太坊升级</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/ecosystems/2026-11-27-ethereum-devs-schedule-glamsterdam-upgrade-hoodi-447051" target="_blank" rel="noopener noreferrer">以太坊 Glamsterdam 升级将于 12 月 15 日部署至 Hoodi 测试网</a>
+  </h3>
+  <div class="paper-title-en">Ethereum devs schedule Glamsterdam upgrade for Hoodi testnet on Dec. 15</div>
+  <p class="paper-summary">以太坊核心开发者已确定于 12 月 15 日在 Hoodi 测试网上线 Glamsterdam 升级。同时，开发团队还讨论了在随后的 Hegotá 升级中，抗量子准备工作是否应优先于其他提案。</p>
+  <ul class="highlights"><li>Glamsterdam 升级定于 12 月 15 日登陆 Hoodi 测试网</li><li>开发者讨论 Hegotá 升级中抗量子准备的优先级</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/ecosystems/2026-11-27-ethereum-devs-schedule-glamsterdam-upgrade-hoodi-447051" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+<article class="paper-card news-card" data-news-section="行业与监管动态">
+  <div class="paper-meta-row">
+    <span class="tag tag-sec-industry">行业与监管动态</span>
+    <span class="tag tag-topic">监管动态</span>
+    <span class="tag tag-cat">The Block</span>
+    <span class="paper-id">2026-11-27</span>
+  </div>
+  <h3 class="paper-title-zh">
+    <a href="https://www.theblock.co/news/regulation/2026-11-26-china-japan-south-korea-asean-digital-payments-447029" target="_blank" rel="noopener noreferrer">中日韩与东盟拟成立工作组 推动跨境数字支付与加密货币监管合作</a>
+  </h3>
+  <div class="paper-title-en">China, Japan, South Korea and ASEAN to form working group on digital payments, crypto regulation</div>
+  <p class="paper-summary">中国、日本、韩国及东盟（ASEAN）决定成立专门工作组，重点推进跨境数字支付合作与加密货币监管框架。该决定源于此前在乌兹别克斯坦举行的会议，各方一致将跨境数字支付列为区域合作的新重点方向。</p>
+  <ul class="highlights"><li>中日韩与东盟组建联合工作组</li><li>聚焦跨境数字支付与加密监管</li></ul>
+  <div class="paper-actions">
+    <a class="btn-link" href="https://www.theblock.co/news/regulation/2026-11-26-china-japan-south-korea-asean-digital-payments-447029" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a>
+  </div>
+</article>
+  </div>
+  <details class="filtered-box">
+  <summary>已去噪过滤论文（5 篇）— 点击展开复查</summary>
+  <ul class="filtered-list">
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
+    <a href="https://thedefiant.io/frontier/technology/tesla-files-to-buy-assets-from-german-toolmaker-emag" target="_blank" rel="noopener noreferrer">Tesla Files to Buy Assets From German Toolmaker EMAG</a>
+  </div>
+  <div class="filtered-en">Tesla Files to Buy Assets From German Toolmaker EMAG</div>
+  
+  <div class="filtered-reason">去噪原因：属于传统电动车及机器人制造领域的企业收购新闻，与 Web3 无关。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">The Defiant</span>
+    <a href="https://thedefiant.io/frontier/ai/nvidia-blackwell-chips-found-in-shanghai-bloomberg-says" target="_blank" rel="noopener noreferrer">Nvidia Blackwell Chips Found in Shanghai, Bloomberg Says</a>
+  </div>
+  <div class="filtered-en">Nvidia Blackwell Chips Found in Shanghai, Bloomberg Says</div>
+  
+  <div class="filtered-reason">去噪原因：属于传统 AI 芯片与硬件供应链常规新闻，不包含 Web3 或区块链信息。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">CoinDesk</span>
+    <a href="https://www.coindesk.com/daybook-us/2026/11/27/bitcoin-death-cross-is-coming-here-s-what-happened-after-previous-13" target="_blank" rel="noopener noreferrer">Bitcoin &#39;death cross&#39; is coming. Here&#39;s what happened after previous 13.</a>
+  </div>
+  <div class="filtered-en">Bitcoin &#39;death cross&#39; is coming. Here&#39;s what happened after previous 13.</div>
+  
+  <div class="filtered-reason">去噪原因：纯粹的比特币 K 线死亡交叉分析与历史走势预测，缺乏实质信息。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">CoinDesk</span>
+    <a href="https://www.coindesk.com/markets/2026/11/27/bitcoin-on-course-to-end-seven-week-losing-streak-while-trailing-stock-rebound" target="_blank" rel="noopener noreferrer">Bitcoin on course to end seven-week losing streak while trailing stock rebound</a>
+  </div>
+  <div class="filtered-en">Bitcoin on course to end seven-week losing streak while trailing stock rebound</div>
+  
+  <div class="filtered-reason">去噪原因：常规代币价格涨跌播报与周线收盘分析，不符合提炼标准。</div>
+</li>
+<li class="filtered-item">
+  <div class="filtered-head">
+    <span class="tag tag-cat" style="margin-right:0.4rem">CoinDesk</span>
+    <a href="https://www.coindesk.com/tech/2026/11/27/live-news-bitcoin-rebounds-above-usd61-000-as-ai-stocks-lead-premarket-gains" target="_blank" rel="noopener noreferrer">Live updates: Bitcoin&#39;s Thanksgiving gains prove fleeting</a>
+  </div>
+  <div class="filtered-en">Live updates: Bitcoin&#39;s Thanksgiving gains prove fleeting</div>
+  
+  <div class="filtered-reason">去噪原因：属于纯比特币价格波动与美股连动的短线行情播报，缺乏技术与安全价值。</div>
+</li>
+  </ul>
+</details>
+  </section>
+
+  <footer>
+    <span>数据来源：arXiv OAI-PMH · OpenAlex · 安全机构与行业 RSS · 仅作研究摘要与去噪参考</span>
+    <span>模型：openai-gemini-3.6-flash</span>
+  </footer>
+</div>
+
+<script>
+(function() {
+  const primaryBar = document.getElementById("primaryTabs");
+  if (primaryBar) {
+    const tabs = primaryBar.querySelectorAll(".primary-tab");
+    const panels = document.querySelectorAll(".tab-panel");
+    primaryBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".primary-tab");
+      if (!btn) return;
+      const target = btn.getAttribute("data-tab");
+      tabs.forEach((t) => {
+        const active = t === btn;
+        t.classList.toggle("active", active);
+        t.setAttribute("aria-selected", String(active));
+      });
+      panels.forEach((p) => {
+        p.classList.toggle("active", p.id === "panel-" + target);
+      });
+    });
+  }
+
+  const subBar = document.getElementById("venueSubtabBar");
+  if (subBar) {
+    const btns = subBar.querySelectorAll(".subtab-btn");
+    const cards = document.querySelectorAll(".venue-card");
+    subBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".subtab-btn");
+      if (!btn) return;
+      const filter = btn.getAttribute("data-venue-filter");
+      btns.forEach((b) => b.classList.toggle("active", b === btn));
+      cards.forEach((c) => {
+        const show = filter === "ALL" || c.getAttribute("data-venue") === filter;
+        c.style.display = show ? "" : "none";
+      });
+    });
+  }
+  const newsSubBar = document.getElementById("newsSubtabBar");
+  if (newsSubBar) {
+    const btns = newsSubBar.querySelectorAll(".subtab-btn");
+    const cards = document.querySelectorAll(".news-card");
+    newsSubBar.addEventListener("click", (e) => {
+      const btn = e.target.closest(".subtab-btn");
+      if (!btn) return;
+      const filter = btn.getAttribute("data-news-filter");
+      btns.forEach((b) => b.classList.toggle("active", b === btn));
+      cards.forEach((c) => {
+        const show = filter === "ALL" || c.getAttribute("data-news-section") === filter;
+        c.style.display = show ? "" : "none";
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
